@@ -1,5 +1,6 @@
 site_name: GitHub Star 知识库
 site_description: qiansekai 的 GitHub star 中文速览知识库
+docs_dir: wiki
 theme:
   name: material
   language: zh
