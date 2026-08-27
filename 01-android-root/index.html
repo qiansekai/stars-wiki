@@ -1,0 +1,1901 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="qiansekai 的 GitHub star 中文速览知识库">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../02-android-reverse/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>安卓内核与 Root - GitHub Star 知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#root" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="GitHub Star 知识库" class="md-header__button md-logo" aria-label="GitHub Star 知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GitHub Star 知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              安卓内核与 Root
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GitHub Star 知识库" class="md-nav__button md-logo" aria-label="GitHub Star 知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    GitHub Star 知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安卓内核与 Root
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安卓内核与 Root
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dr-tsnghide-my-applist-5543-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dr-TSNG/Hide-My-Applist · ⭐5543 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boxproxybox-1533-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        boxproxy/box · ⭐1533 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xfqwdsjiamnotadeveloper-584-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xfqwdsj/IAmNotADeveloper · ⭐584 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chainfirelibrootjava-409-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chainfire/librootjava · ⭐409 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#astidelabsandroid_kernel_xiaomi_sm8250-254-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AstideLabs/android_kernel_xiaomi_sm8250 · ⭐254 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hana-ci-build-projectmagisk-module-template-72-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HANA-CI-Build-Project/magisk-module-template · ⭐72 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bmax121apatch-7865-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bmax121/APatch · ⭐7865 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theheptaandroid-jailbreak-54-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thehepta/android-jailbreak · ⭐54 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abcz316skroot-linuxkernelroot-3905-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        abcz316/SKRoot-linuxKernelRoot · ⭐3905 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aurora-nasa-1armias-70-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aurora-Nasa-1/ARMIAS · ⭐70 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#btkpdcnxiaomi-bootloader-unlock-code-variant-generator-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        btkpdcn/xiaomi-bootloader-unlock-code-variant-generator · ⭐22 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alhyossmagiskless-riru-5-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alhyoss/MagiskLess-Riru · ⭐5 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ptx64android_xiaomi_edl-1-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PTX64/android_xiaomi_edl · ⭐1 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mygodvpnhotspot-6359-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mygod/VPNHotspot · ⭐6359 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#svoboda18android_tools-9-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        svoboda18/android_tools · ⭐9 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ramanveerjiguide-to-disable-flag-secure-in-miui-and-hyperos-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ramanveerji/Guide-to-disable-flag-secure-in-miui-and-HyperOS · ⭐1 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lsposedlsposed-24516-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LSPosed/LSPosed · ⭐24516 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wxxsfxyzminstallerx-revived-6347-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        wxxsfxyzm/InstallerX-Revived · ⭐6347 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lsposeddirtysepolicy-442-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LSPosed/DirtySepolicy · ⭐442 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tiannadb_root-281-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tiann/adb_root · ⭐281 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thepiemonsterhidemocklocation-236-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ThePieMonster/HideMockLocation · ⭐236 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#althafvlyamlogickitchen-214-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        althafvly/AmlogicKitchen · ⭐214 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sekaiacgerofs-tools-179-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sekaiacg/erofs-tools · ⭐179 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ng-dstflashable-android-rootkit-79-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ng-dst/flashable-android-rootkit · ⭐79 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frknkrc44hma-oss-2983-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        frknkrc44/HMA-OSS · ⭐2983 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#magisk-modules-alt-repomagisk-tailscaled-210-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Magisk-Modules-Alt-Repo/Magisk-Tailscaled · ⭐210 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gawasvedrajhideroot-42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gawasvedraj/HideRoot · ⭐42 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uotan-devmagiskboot-1-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uotan-Dev/magiskboot · ⭐1 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssutpayload-dumper-go-3485-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ssut/payload-dumper-go · ⭐3485 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#newbit1rootavd-1820-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        newbit1/rootAVD · ⭐1820 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vvb2060magica-419-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vvb2060/Magica · ⭐419 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mingzun09chunqiu-detector-problem-solution-357-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mingzun09/Chunqiu-Detector-Problem-solution · ⭐357 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcboyadb-insecure-patcher-75-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pcboy/adb-insecure-patcher · ⭐75 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xishang0128payload-dumper-go-28-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xishang0128/payload-dumper-go · ⭐28 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xayahsususuandroid-databackup-7275-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XayahSuSuSu/Android-DataBackup · ⭐7275 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yawasaubackup_script-1773-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        YAWAsau/backup_script · ⭐1773 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xhyeaxsoftaphelper-419-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XhyEax/SoftApHelper · ⭐419 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#magisk-modules-repo-cnmagisk-module-template-73-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Magisk-Modules-Repo-CN/magisk-module-template · ⭐73 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shatyukaadbex-58-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shatyuka/adbex · ⭐58 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asutoshpalaiabdb_patcher-11-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        asutoshpalai/abdb_patcher · ⭐11 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yu13140yuhideroot-8-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        yu13140/yuhideroot · ⭐8 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#efidroidmodules_sepolicyinject-3-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        efidroid/modules_sepolicyinject · ⭐3 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-android-reverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安卓逆向与 Hook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-device-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    设备互联与刷机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-ai-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Agent 与 MCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-dev-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发工具与基础设施
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全与 CTF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自动化与脚本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-media-game/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音游、媒体与图像
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    学习与考试
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dr-tsnghide-my-applist-5543-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dr-TSNG/Hide-My-Applist · ⭐5543 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boxproxybox-1533-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        boxproxy/box · ⭐1533 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xfqwdsjiamnotadeveloper-584-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xfqwdsj/IAmNotADeveloper · ⭐584 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chainfirelibrootjava-409-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chainfire/librootjava · ⭐409 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#astidelabsandroid_kernel_xiaomi_sm8250-254-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AstideLabs/android_kernel_xiaomi_sm8250 · ⭐254 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hana-ci-build-projectmagisk-module-template-72-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HANA-CI-Build-Project/magisk-module-template · ⭐72 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bmax121apatch-7865-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bmax121/APatch · ⭐7865 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theheptaandroid-jailbreak-54-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thehepta/android-jailbreak · ⭐54 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abcz316skroot-linuxkernelroot-3905-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        abcz316/SKRoot-linuxKernelRoot · ⭐3905 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aurora-nasa-1armias-70-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aurora-Nasa-1/ARMIAS · ⭐70 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#btkpdcnxiaomi-bootloader-unlock-code-variant-generator-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        btkpdcn/xiaomi-bootloader-unlock-code-variant-generator · ⭐22 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alhyossmagiskless-riru-5-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alhyoss/MagiskLess-Riru · ⭐5 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ptx64android_xiaomi_edl-1-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PTX64/android_xiaomi_edl · ⭐1 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mygodvpnhotspot-6359-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mygod/VPNHotspot · ⭐6359 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#svoboda18android_tools-9-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        svoboda18/android_tools · ⭐9 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ramanveerjiguide-to-disable-flag-secure-in-miui-and-hyperos-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ramanveerji/Guide-to-disable-flag-secure-in-miui-and-HyperOS · ⭐1 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lsposedlsposed-24516-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LSPosed/LSPosed · ⭐24516 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wxxsfxyzminstallerx-revived-6347-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        wxxsfxyzm/InstallerX-Revived · ⭐6347 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lsposeddirtysepolicy-442-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LSPosed/DirtySepolicy · ⭐442 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tiannadb_root-281-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tiann/adb_root · ⭐281 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thepiemonsterhidemocklocation-236-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ThePieMonster/HideMockLocation · ⭐236 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#althafvlyamlogickitchen-214-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        althafvly/AmlogicKitchen · ⭐214 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sekaiacgerofs-tools-179-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sekaiacg/erofs-tools · ⭐179 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ng-dstflashable-android-rootkit-79-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ng-dst/flashable-android-rootkit · ⭐79 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frknkrc44hma-oss-2983-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        frknkrc44/HMA-OSS · ⭐2983 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#magisk-modules-alt-repomagisk-tailscaled-210-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Magisk-Modules-Alt-Repo/Magisk-Tailscaled · ⭐210 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gawasvedrajhideroot-42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gawasvedraj/HideRoot · ⭐42 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uotan-devmagiskboot-1-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uotan-Dev/magiskboot · ⭐1 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssutpayload-dumper-go-3485-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ssut/payload-dumper-go · ⭐3485 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#newbit1rootavd-1820-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        newbit1/rootAVD · ⭐1820 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vvb2060magica-419-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vvb2060/Magica · ⭐419 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mingzun09chunqiu-detector-problem-solution-357-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mingzun09/Chunqiu-Detector-Problem-solution · ⭐357 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcboyadb-insecure-patcher-75-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pcboy/adb-insecure-patcher · ⭐75 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xishang0128payload-dumper-go-28-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xishang0128/payload-dumper-go · ⭐28 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xayahsususuandroid-databackup-7275-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XayahSuSuSu/Android-DataBackup · ⭐7275 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yawasaubackup_script-1773-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        YAWAsau/backup_script · ⭐1773 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xhyeaxsoftaphelper-419-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XhyEax/SoftApHelper · ⭐419 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#magisk-modules-repo-cnmagisk-module-template-73-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Magisk-Modules-Repo-CN/magisk-module-template · ⭐73 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shatyukaadbex-58-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shatyuka/adbex · ⭐58 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asutoshpalaiabdb_patcher-11-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        asutoshpalai/abdb_patcher · ⭐11 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yu13140yuhideroot-8-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        yu13140/yuhideroot · ⭐8 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#efidroidmodules_sepolicyinject-3-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        efidroid/modules_sepolicyinject · ⭐3 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="root">安卓内核与 Root<a class="headerlink" href="#root" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>共 42 个仓库 · 来自 qiansekai 的 GitHub star · 生成时间 2026-08-28</p>
+</blockquote>
+<h3 id="dr-tsnghide-my-applist-5543-kotlin"><code>Dr-TSNG/Hide-My-Applist</code> · ⭐5543 · Kotlin<a class="headerlink" href="#dr-tsnghide-my-applist-5543-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Xposed/LSPosed 模块，拦截应用列表检测、隐藏敏感 App。</li>
+<li><strong>做什么</strong>: 通过 Hook 隐藏已装 App 或拒绝某些应用的 applist 请求，防止凭 root 相关应用（如假定位、存储隔离）被识别为已 root，也阻止用应用列表做指纹追踪，内置检测方法验证隐藏是否生效。</li>
+<li><strong>适用场景</strong>: 装过 root/破解工具又不想被检测类 App 或银行 App 识别时的隐藏手段。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="boxproxybox-1533-shell"><code>boxproxy/box</code> · ⭐1533 · Shell<a class="headerlink" href="#boxproxybox-1533-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Android Root 环境的透明代理工具箱模块。</li>
+<li><strong>做什么</strong>: 面向 Magisk/KernelSU/APatch 的统一代理模块，集中管理 mihomo/sing-box/xray/v2fly/hysteria 等代理核心，编排 TProxy/Redirect/Tun 等透明代理规则，维护订阅、Geo 资源、核心二进制与 WebUI，工作目录在 /data/adb/box/。</li>
+<li><strong>适用场景</strong>: Root 手机上想灵活切换代理内核、做透明代理规则编排时。</li>
+<li><strong>标签</strong>: <code>android-root</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="xfqwdsjiamnotadeveloper-584-kotlin"><code>xfqwdsj/IAmNotADeveloper</code> · ⭐584 · Kotlin<a class="headerlink" href="#xfqwdsjiamnotadeveloper-584-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: Xposed 模块，隐藏 Android 开发者相关开关状态。</li>
+<li><strong>做什么</strong>: 通过 LSPosed 注入目标应用，隐藏开发者模式、USB 调试、无线调试等系统开关状态，避免被检测；内置功能可自查这些开关当前状态但不上传。</li>
+<li><strong>适用场景</strong>: 开了 USB 调试/开发者选项又不想被某些 App 检测到时。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="chainfirelibrootjava-409-java"><code>Chainfire/librootjava</code> · ⭐409 · Java<a class="headerlink" href="#chainfirelibrootjava-409-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 以 root 权限运行 Java/Kotlin 代码的库。</li>
+<li><strong>做什么</strong>: 由 Chainfire 出品，提供 libRootJava、Daemon 插件及示例项目，让 Android 应用能以 root 身份执行 Java/Kotlin 逻辑，属于其 Spaghetti Sauce 项目的一部分。</li>
+<li><strong>适用场景</strong>: 需要 root 权限跑 Java/Kotlin 代码的 Android 开发场景。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="astidelabsandroid_kernel_xiaomi_sm8250-254-c"><code>AstideLabs/android_kernel_xiaomi_sm8250</code> · ⭐254 · C<a class="headerlink" href="#astidelabsandroid_kernel_xiaomi_sm8250-254-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 小米 SM8250（骁龙865/870）设备的内核，基于 LineageOS 并集成多种 mod。</li>
+<li><strong>做什么</strong>: 面向 SM8250 平台小米设备的内核源码，整合社区多个仓库，支持 ReSukiSU/SuSFS，NoKernelSU 版支持 Magisk/APatch，含 F2FS、EROFS、zRAM 多算法、BPF 回移、LE9EC 内存优化、Binder 回移、修电量 1% 卡死、BBG 等特性，适配 MIUI/HyperOS 及 AOSP ROM。</li>
+<li><strong>适用场景</strong>: 给骁龙 865/870 小米机型编译/刷第三方内核，配合 KernelSU/APatch 使用时。</li>
+<li><strong>标签</strong>: <code>android-root</code> <code>kernel</code></li>
+</ul>
+<h3 id="hana-ci-build-projectmagisk-module-template-72-shell"><code>HANA-CI-Build-Project/magisk-module-template</code> · ⭐72 · Shell<a class="headerlink" href="#hana-ci-build-projectmagisk-module-template-72-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: Magisk 20.3+ 模块安装器的模板仓库。</li>
+<li><strong>做什么</strong>: 一个 Magisk 模块模板，供开发者按官方 Developer Guides 快速搭建 Magisk Module Installer 骨架，兼容 Magisk 20.3+。</li>
+<li><strong>适用场景</strong>: 开始写新 Magisk 模块时作为起步脚手架。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="bmax121apatch-7865-kotlin"><code>bmax121/APatch</code> · ⭐7865 · Kotlin<a class="headerlink" href="#bmax121apatch-7865-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 新一代基于内核 patch 的 Android Root 方案。</li>
+<li><strong>做什么</strong>: 通过 KernelPatch 给 Android 内核和系统打补丁获取 root，支持类似 Magisk 的 APM 模块，以及能往内核注入代码的 KPM 模块（inline-hook、syscall-table-hook）。仅支持 ARM64、内核 3.18~6.12。</li>
+<li><strong>适用场景</strong>: 需要在 Magisk / KernelSU 之外选一种新的 root 方案、或想在内核层做 hook 时使用。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="theheptaandroid-jailbreak-54-c"><code>Thehepta/android-jailbreak</code> · ⭐54 · C++<a class="headerlink" href="#theheptaandroid-jailbreak-54-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 一本讲解 Android/iOS 越狱原理与防护的笔记。</li>
+<li><strong>做什么</strong>: 作者整理的越狱概论，涵盖有根/无根 root、漏洞提权、固件提权、板载驱动提权，重点剖析 Android 从早期无 SELinux 时代到 AVB/回滚保护/selinux 的加固演进、DAC 与 MAC 区别等，重在讲原理思路而非工具。</li>
+<li><strong>适用场景</strong>: 想系统了解移动端越狱/提权与防护攻防思路时作为学习资料阅读。</li>
+<li><strong>标签</strong>: <code>android-root</code> <code>security</code></li>
+</ul>
+<h3 id="abcz316skroot-linuxkernelroot-3905-c"><code>abcz316/SKRoot-linuxKernelRoot</code> · ⭐3905 · C++<a class="headerlink" href="#abcz316skroot-linuxkernelroot-3905-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 内核级隐藏 Root 方案，免源码直接 Patch 原厂内核，宣称过全网检测。</li>
+<li><strong>做什么</strong>: 通过修补原厂 kernel 实现 SELinux 零触碰、无挂载的隐藏 Root，支持 LINUX 3.10~6.12 内核，寄生在其他 APP 内无外显实体；Pro 版还带授权管理、内核模块、自研 hook 框架和漏洞利用修复。</li>
+<li><strong>适用场景</strong>: 需要隐藏 Root 环境过 App 检测、做内核级提权或模块开发时使用，与 Magisk/KernelSU 属同类竞品。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="aurora-nasa-1armias-70-shell"><code>Aurora-Nasa-1/ARMIAS</code> · ⭐70 · Shell<a class="headerlink" href="#aurora-nasa-1armias-70-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 高自定义度的自动安装模块与补丁框架，兼容 Magisk/KernelSU/APatch。</li>
+<li><strong>做什么</strong>: 提供批量安装模块(zip)、一键复制配置到 /data 或 /sdcard、批量安装 APK、从 GitHub release 下载文件、安装后模块修补、自定义 settings.sh 与语言文件等，基于 AMMF 框架。</li>
+<li><strong>适用场景</strong>: 刷机后批量部署多个 Magisk/KernelSU 模块、自动化配置时使用，面向深度定制玩家。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="btkpdcnxiaomi-bootloader-unlock-code-variant-generator-22"><code>btkpdcn/xiaomi-bootloader-unlock-code-variant-generator</code> · ⭐22 ·<a class="headerlink" href="#btkpdcnxiaomi-bootloader-unlock-code-variant-generator-22" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 利用 RSA 同余性质从一个小米解锁码生成无数个等价有效解锁码。</li>
+<li><strong>做什么</strong>: 基于 RSA 签名只需满足 M ≡ S^e mod n 的性质，用 S' = S + k×N 从原始解锁码 S 和公钥模数 N 生成新的等效解锁码，附计算器；仅学术研究，无法凭空生成或绕过官方解锁权限。</li>
+<li><strong>适用场景</strong>: 研究 RSA 密码学特性、备份多个可用的 Bootloader 解锁码时使用（纯数学研究）。</li>
+<li><strong>标签</strong>: <code>security</code> <code>android-root</code></li>
+</ul>
+<h3 id="alhyossmagiskless-riru-5-c"><code>Alhyoss/MagiskLess-Riru</code> · ⭐5 · C++<a class="headerlink" href="#alhyossmagiskless-riru-5-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 不需要 Magisk 就能注入 zygote 进程的 Riru fork。</li>
+<li><strong>做什么</strong>: Riru（已废弃）的分支，把 libriruloader.so 作为 native bridge 注入 zygote，实现免 Magisk 的注入框架，兼容 Android 6+，需 permissive SELinux 与无 dm-verity，可配合 Riru 模块使用。</li>
+<li><strong>适用场景</strong>: 在无法或不愿装 Magisk 的设备上做 zygote 注入与模块开发时使用，偏技术研究。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="ptx64android_xiaomi_edl-1-python"><code>PTX64/android_xiaomi_edl</code> · ⭐1 · Python<a class="headerlink" href="#ptx64android_xiaomi_edl-1-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 高通 Sahara/Firehose EDL 刷机与 Diag 工具的小米修复版。</li>
+<li><strong>做什么</strong>: 基于 bkerler 的 edl，本 fork 修复了 Sahara V3 协议无法读取芯片信息的问题，用 cmd=0x0A 读取 V3 设备 MSM_ID/OEM_ID 等扩展信息并恢复 loader 自动检测，支持内存 dump、firehose 攻击、diag 工具，已测骁龙与小米设备。</li>
+<li><strong>适用场景</strong>: EDL 9008 救砖、dump 手机内存、深度刷机与研究高通 Sahara/Firehose 协议时使用。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>android-root</code></li>
+</ul>
+<h3 id="mygodvpnhotspot-6359-kotlin"><code>Mygod/VPNHotspot</code> · ⭐6359 · Kotlin<a class="headerlink" href="#mygodvpnhotspot-6359-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 把手机的 VPN 连接通过热点或中继共享给其他设备（需 root）。</li>
+<li><strong>做什么</strong>: 让不支持 VPN 的设备（如 Chromecast）、不方便装 VPN 的设备通过手机热点共享代理上网，可识别、监控、屏蔽连接的客户端，还能绕过运营商热点限制。部分高级功能需装成系统应用获得特权权限。</li>
+<li><strong>适用场景</strong>: 公司防火墙后给机顶盒/游戏机翻墙、共享科学上网给没 VPN 能力的设备，安卓上类似的还有 TetherMe(iOS)。</li>
+<li><strong>标签</strong>: <code>android-root</code> <code>device-tools</code></li>
+</ul>
+<h3 id="svoboda18android_tools-9-c"><code>svoboda18/android_tools</code> · ⭐9 · C<a class="headerlink" href="#svoboda18android_tools-9-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 从 Linux 移植到 Windows(MINGW) 的安卓工具集。</li>
+<li><strong>做什么</strong>: 提供 e2fsdroid、mke2fs、make_ext4fs、simg2img、img2simg、magiskboot 等安卓系统镜像/文件系统工具，以及 libsparse、libext2fs 等迷你移植库。修复了原版多处未定义行为，支持生成合法稀疏镜像。</li>
+<li><strong>适用场景</strong>: 在 Windows 下处理 ext4 镜像、做 ROM/刷机包制作或 unpack/repack 稀疏镜像时用，替代需 Linux 环境的同名工具。</li>
+<li><strong>标签</strong>: <code>android-root</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="ramanveerjiguide-to-disable-flag-secure-in-miui-and-hyperos-1"><code>ramanveerji/Guide-to-disable-flag-secure-in-miui-and-HyperOS</code> · ⭐1 ·<a class="headerlink" href="#ramanveerjiguide-to-disable-flag-secure-in-miui-and-hyperos-1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: MIUI/HyperOS 禁用截屏录屏限制（flag_secure）的指南。</li>
+<li><strong>做什么</strong>: 通过 MT Manager 修改 services.jar 和 miui-services.jar，替换 isScreenCaptureAllowed、getScreenCaptureDisabled、setSecure、notAllowCaptureDisplay 等方法，解除所有应用截图/录屏时出现的黑屏限制。</li>
+<li><strong>适用场景</strong>: 需要在 MIUI/HyperOS 上给防截屏的 App（如某些银行/视频）截图录屏时，按教程改动系统 jar 实现。</li>
+<li><strong>标签</strong>: <code>android-root</code> <code>misc</code></li>
+</ul>
+<h3 id="lsposedlsposed-24516-java"><code>LSPosed/LSPosed</code> · ⭐24516 · Java<a class="headerlink" href="#lsposedlsposed-24516-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 基于 Zygisk/Riru 的 Xposed 框架继任者，ART Hook 神器。</li>
+<li><strong>做什么</strong>: 提供一个与原版 Xposed API 兼容的 ART Hook 框架，底层用 LSPlant，支持 Android 8.1~14。模块只在内存里改系统/应用行为，不动 APK，停用重启即还原，多个模块还能同时生效。</li>
+<li><strong>适用场景</strong>: 需要在已 root（Magisk）设备上跑 Xposed 模块、按系统框架 Hook 定制功能的场景，是 LSPosed 模块的宿主管家。</li>
+<li><strong>标签</strong>: <code>android-root</code> <code>android-reverse</code></li>
+</ul>
+<h3 id="wxxsfxyzminstallerx-revived-6347-kotlin"><code>wxxsfxyzm/InstallerX-Revived</code> · ⭐6347 · Kotlin<a class="headerlink" href="#wxxsfxyzminstallerx-revived-6347-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 现代 Android 应用安装器，InstallerX 的社区续作。</li>
+<li><strong>做什么</strong>: 替代系统自带安装器，支持 APK/APKS/APKM/XAPK/ZIP 批量安装、静默安装；通过 Shizuku/Root/Dhizuku 获取高权限实现自动安装，可自定义安装配置档，Material 3/Miuix 双风格 UI。</li>
+<li><strong>适用场景</strong>: 频繁装大量 APK、想要静默/自动安装和更精致安装体验的折腾党，配合 Shizuku/Root 使用。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>android-root</code></li>
+</ul>
+<h3 id="lsposeddirtysepolicy-442-java"><code>LSPosed/DirtySepolicy</code> · ⭐442 · Java<a class="headerlink" href="#lsposeddirtysepolicy-442-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 利用 App Zygote 检测 Android 设备 SELinux"脏规则"的方法。</li>
+<li><strong>做什么</strong>: 公开一种检测手段，通过 App Zygote 进程的 SELinux 查询权限（compute_av/check_context/setcurrent）扫描系统全局策略里被 root/Hook 方案注入的"脏规则"，能精确识别所有用户空间的 su 方案且用户态无法绕过。</li>
+<li><strong>适用场景</strong>: 做 Root 检测、反作弊、设备风控时需要更硬核的 su 检测手段时参考。</li>
+<li><strong>标签</strong>: <code>security</code> <code>android-root</code></li>
+</ul>
+<h3 id="tiannadb_root-281-shell"><code>tiann/adb_root</code> · ⭐281 · Shell<a class="headerlink" href="#tiannadb_root-281-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 让 Android 11+ 量产机的 adb root 可用的 Magisk 模块。</li>
+<li><strong>做什么</strong>: 一个 Magisk 模块，安装后启用生产构建设备（user 版系统）上的 adb root，方便调试。基于 wuxianlin 的 adb_root 整理。</li>
+<li><strong>适用场景</strong>: 调试 user 版设备想临时开 adb root（推送文件、跑 shell 命令）时刷入。</li>
+<li><strong>标签</strong>: <code>android-root</code> <code>device-tools</code></li>
+</ul>
+<h3 id="thepiemonsterhidemocklocation-236-java"><code>ThePieMonster/HideMockLocation</code> · ⭐236 · Java<a class="headerlink" href="#thepiemonsterhidemocklocation-236-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 隐藏"允许模拟位置"开关状态的 Xposed 模块。</li>
+<li><strong>做什么</strong>: 一个 Xposed（现 LSPosed）模块，用来向应用隐藏系统里"允许模拟位置"设置的信息，让检测不到 mock location 状态。启用后勾选 System Framework 重启即可。</li>
+<li><strong>适用场景</strong>: 用模拟位置 App 跑测试/定位类应用、又不想被检测出 mock 开关时用。</li>
+<li><strong>标签</strong>: <code>android-root</code> <code>android-reverse</code></li>
+</ul>
+<h3 id="althafvlyamlogickitchen-214-python"><code>althafvly/AmlogicKitchen</code> · ⭐214 · Python<a class="headerlink" href="#althafvlyamlogickitchen-214-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 面向 Amlogic/Rockchip/AllWinner 的 Android 固件厨房。</li>
+<li><strong>做什么</strong>: 解包/重打包 Amlogic、Rockchip、AllWinner 固件镜像，处理 boot、recovery、logo、dtb、super 分区，支持从可刷 ZIP 生成 Amlogic 镜像、mask ROM 模式 dump ROM、自定义密钥签名 ROM。</li>
+<li><strong>适用场景</strong>: 折腾电视盒子/晶晨、瑞芯微设备的固件定制、魔改 ROM 时用（仅 Linux x86_64）。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>android-root</code></li>
+</ul>
+<h3 id="sekaiacgerofs-tools-179-c"><code>sekaiacg/erofs-tools</code> · ⭐179 · C++<a class="headerlink" href="#sekaiacgerofs-tools-179-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 提取 erofs 镜像（含 fs_config/files_context）的工具。</li>
+<li><strong>做什么</strong>: 基于 erofs-utils 实现的 erofs 镜像提取工具，能解出文件并额外提取 fs_config、files_context、mkfs_option 等元数据，支持多线程、按路径提取、只提取配置等选项。</li>
+<li><strong>适用场景</strong>: 解包 Android 固件里的 erofs 分区镜像、还原文件权限和 SELinux 上下文时用。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>android-root</code></li>
+</ul>
+<h3 id="ng-dstflashable-android-rootkit-79-c"><code>ng-dst/flashable-android-rootkit</code> · ⭐79 · C++<a class="headerlink" href="#ng-dstflashable-android-rootkit-79-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 装入 boot 分区的 systemless 持久后门（rootkit）。</li>
+<li><strong>做什么</strong>: 一个实验性的可刷入后门，把守护进程注入到 <em>init</em> 二进制，开机即以 root + 非受限 SELinux 上下文运行，藏在 ramdisk 里、隐藏进程，能绕过多数 root 检测和 SafetyNet，用于授权安全研究。</li>
+<li><strong>适用场景</strong>: 红队/安全研究在解锁 bootloader 的自有测试设备上做持久化与隐藏演示时用。</li>
+<li><strong>标签</strong>: <code>security</code> <code>android-root</code></li>
+</ul>
+<h3 id="frknkrc44hma-oss-2983-kotlin"><code>frknkrc44/HMA-OSS</code> · ⭐2983 · Kotlin<a class="headerlink" href="#frknkrc44hma-oss-2983-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用 Zygisk 重写的 Hide My Applist fork，隐藏应用列表/设置/安装器。</li>
+<li><strong>做什么</strong>: HMA-OSS 是 Hide My Applist 的分支，把原版的 LSPosed 依赖替换成 Zygisk，作为 Zygisk 模块工作。它能隐藏指定应用、拒绝应用列表查询请求，防止 App 通过检测相关应用（如假定位、存储隔离）来推断设备已 Root，也阻止拿应用列表当指纹或恶意用途。</li>
+<li><strong>适用场景</strong>: 已 Root 设备上想对特定 App 隐藏其他应用、规避 Root/环境检测指纹的场合。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="magisk-modules-alt-repomagisk-tailscaled-210-shell"><code>Magisk-Modules-Alt-Repo/Magisk-Tailscaled</code> · ⭐210 · Shell<a class="headerlink" href="#magisk-modules-alt-repomagisk-tailscaled-210-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 在已 Root 的 Android 上跑 Tailscale 的 Magisk/KernelSU 模块。</li>
+<li><strong>做什么</strong>: 把 Tailscale 以 tailscaled 守护进程方式跑在 Root 设备上，开机自启。相比 Play Store 的 Tailscale App（占用系统 VPN，无法与其他 VPN 并存），这个模块能让 Android VPN 和 Tailscale 同时使用。支持 tailscale/tailscaled 命令，局限：仅 arm/arm64、MagicDNS 暂不可用、userspace 模式、子网路由需手动配。</li>
+<li><strong>适用场景</strong>: 想把 Root 手机加入 Tailscale 内网、同时还想用其他 VPN 时。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="gawasvedrajhideroot-42"><code>gawasvedraj/HideRoot</code> · ⭐42 ·<a class="headerlink" href="#gawasvedrajhideroot-42" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 一份 Android 隐藏 Root 的方案/指南清单。</li>
+<li><strong>做什么</strong>: 汇总隐藏 Root 的推荐组合：Root 方案（KernelSU GKI/Non-GKI、Magisk Alpha/Beta、APatch，建议回避 Magisk Stable 和 Kitsune）、模块（Zygisk Next、LSPosed、Tricky Store、Play Integrity Fix/Fork、Sensitive Props）、APatch KPM、KernelSU metamodule（mountify）、HMA-OSS 以及检测工具（Duck Detector、Native Detector）。</li>
+<li><strong>适用场景</strong>: 想让 Root 设备通过银行/游戏等 App 的 Root 检测、过 Play Integrity 时按图索骥选方案。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="uotan-devmagiskboot-1-c"><code>Uotan-Dev/magiskboot</code> · ⭐1 · C<a class="headerlink" href="#uotan-devmagiskboot-1-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 面向多平台的 magiskboot 非官方 CMake 构建系统与移植（无需 NDK）。</li>
+<li><strong>做什么</strong>: 一个便携的 CMake 构建系统，用于编译 magiskboot（Magisk 的 boot 镜像解包/重打包工具），宣称无需 NDK 即可跨平台构建。依赖 LZMA/LZ4/bzip2/zlib，构建依赖 pkg-config、Clang（GCC 不行）、Rust（用 RUSTC_BOOTSTRAP hack）、CMake、可选 libc++。支持 Android(Including Termux)、Linux、macOS 构建。</li>
+<li><strong>适用场景</strong>: 想在普通 Linux/macOS/Termux 上自己编译 magiskboot，而非依赖 Android NDK 交叉编译时。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="ssutpayload-dumper-go-3485-go"><code>ssut/payload-dumper-go</code> · ⭐3485 · Go<a class="headerlink" href="#ssutpayload-dumper-go-3485-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用 Go 写的 Android OTA payload 解包工具</li>
+<li><strong>做什么</strong>: 把 Android 增量/完整 OTA 里的 payload.bin 高速并行解压出来，支持增量 OTA（delta）、自动校验 sha256、就地读取原始 zip、还能当 Go 库用。比原型快很多，只需系统装个 xz。</li>
+<li><strong>适用场景</strong>: 刷机党从官方 OTA 包提取 system/boot/vendor 等分区镜像时用（个别 delta 操作暂不支持）。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>android-root</code></li>
+</ul>
+<h3 id="newbit1rootavd-1820-shell"><code>newbit1/rootAVD</code> · ⭐1820 · Shell<a class="headerlink" href="#newbit1rootavd-1820-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 一键给 Android Studio 模拟器（AVD）刷 Magisk root 的脚本</li>
+<li><strong>做什么</strong>: 用 Magisk（稳定/Canary/Alpha）给 QEMU 模拟器 root，顺带打 fstab 补丁、装 USB Host 权限模块，还能装自定义或 AOSP 预编译内核。仓库已于 2023-10 归档迁去 GitLab。</li>
+<li><strong>适用场景</strong>: 需要在 Android Studio 模拟器里跑需要 root 的测试、装还原模块时用，别去找真机。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="vvb2060magica-419-c"><code>vvb2060/Magica</code> · ⭐419 · C++<a class="headerlink" href="#vvb2060magica-419-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 针对 Android 10~16 seccomp 关闭场景的提权 PoC</li>
+<li><strong>做什么</strong>: 利用「SELinux permissive 时 Zygote 不装 setuid seccomp 过滤器」的漏洞，让 app zygote 能切换任意 UID 实现提权；Android 17 改用 SafeSetID 后失效。v-vb2060（Magisk 开发者）的研究性 PoC，附触发脚本。</li>
+<li><strong>适用场景</strong>: Android 安全/内核研究，理解 seccomp 与 UID 隔离机制、做漏洞复现（授权研究用途）。</li>
+<li><strong>标签</strong>: <code>android-root</code> <code>security</code></li>
+</ul>
+<h3 id="mingzun09chunqiu-detector-problem-solution-357-shell"><code>mingzun09/Chunqiu-Detector-Problem-solution</code> · ⭐357 · Shell<a class="headerlink" href="#mingzun09chunqiu-detector-problem-solution-357-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 「春秋检测器」常见检测项问题的解决方案合集</li>
+<li><strong>做什么</strong>: 把针对安卓环境检测器（属性、证书 Patch、Shamiko 属性空洞、KSU/APatch 侧信道等）的绕过/修复方法整理成文档，附自动化修复脚本和 KPM 模块（如 APatch 隐藏模块）。内容来自实测探索而非扒检测源码。</li>
+<li><strong>适用场景</strong>: 玩 Magisk/KSU/APatch 过环境检测、隐藏 root 失败时对照排查修问题。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="pcboyadb-insecure-patcher-75-shell"><code>pcboy/adb-insecure-patcher</code> · ⭐75 · Shell<a class="headerlink" href="#pcboyadb-insecure-patcher-75-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 让任意 ROM 的 adbd 能以 root 运行的补丁脚本</li>
+<li><strong>做什么</strong>: 遇到 <code>adb root</code> 提示「production builds 不能以 root 运行」时，运行脚本 patch ROM 的内核/ramdisk（改 default.prop），产出可 fastboot 刷入的 boot.img，从而开启 adbd root。针对小米 eu 等 Treble ROM 有说明。</li>
+<li><strong>适用场景</strong>: 老设备刷机/调试需要 adb root 权限、但官方 ROM 禁止时用。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>android-root</code></li>
+</ul>
+<h3 id="xishang0128payload-dumper-go-28-go"><code>xishang0128/payload-dumper-go</code> · ⭐28 · Go<a class="headerlink" href="#xishang0128payload-dumper-go-28-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 提取 Android OTA payload 的 Go 库与命令行工具</li>
+<li><strong>做什么</strong>: 多线程高性能解包 Android OTA payload，支持本地文件、HTTP URL 和 ZIP，支持增量 OTA，可提取单分区、列分区、取元数据，也提供 Termux 变体。功能与 ssut 版类似。</li>
+<li><strong>适用场景</strong>: 刷机党从 OTA 包或在线链接里抽取 boot/system 等分区，或作为 Go 库嵌入自己的工具。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>android-root</code></li>
+</ul>
+<h3 id="xayahsususuandroid-databackup-7275-kotlin"><code>XayahSuSuSu/Android-DataBackup</code> · ⭐7275 · Kotlin<a class="headerlink" href="#xayahsususuandroid-databackup-7275-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 需要 Root 的安卓应用数据备份/恢复工具</li>
+<li><strong>做什么</strong>: 基于 speed-backup 脚本做的图形化备份应用，支持完整备份应用数据、APK、OBB、SSAID、权限等，多用户、云备份，号称 100% 数据完整性。需 Magisk/KernelSU/APatch 等 Root 环境。</li>
+<li><strong>适用场景</strong>: 换机、刷机、重装系统后想完整还原 App 数据时使用。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="yawasaubackup_script-1773-java"><code>YAWAsau/backup_script</code> · ⭐1773 · Java<a class="headerlink" href="#yawasaubackup_script-1773-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 安卓应用数据备份/恢复 Shell 脚本（DataBackup 的原型）</li>
+<li><strong>做什么</strong>: 专为 Android 设计的备份脚本，能备份应用数据、Split APK、SSAID、权限、AppOps、OBB、Wi-Fi 配置等，支持本地和 WebDAV/SMB 远程备份、zstd 压缩、增量 fast-skip，需要 Root。</li>
+<li><strong>适用场景</strong>: Root 用户换机/刷机前后批量备份还原 App 完整状态。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="xhyeaxsoftaphelper-419-java"><code>XhyEax/SoftApHelper</code> · ⭐419 · Java<a class="headerlink" href="#xhyeaxsoftaphelper-419-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Xposed 模块，固定安卓热点 IP 并锁定 5G 信道</li>
+<li><strong>做什么</strong>: 通过 Hook 系统热点相关函数，实现固定 WiFi/USB/蓝牙热点 IP（如 192.168.43.1）、隐藏热点类型、锁定 5G 信道和频宽，需 LSPosed 指定作用域（系统框架/Tethering）。</li>
+<li><strong>适用场景</strong>: 做热点共享、USB 网络连通又不想每次 IP 随机变化时使用。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="magisk-modules-repo-cnmagisk-module-template-73-shell"><code>Magisk-Modules-Repo-CN/magisk-module-template</code> · ⭐73 · Shell<a class="headerlink" href="#magisk-modules-repo-cnmagisk-module-template-73-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: Magisk 模块制作模板</li>
+<li><strong>做什么</strong>: 一个 Magisk 模块的目录结构模板和说明文档，指导如何组织模块文件、设置模块 id、写 README 以便在 Magisk Manager 中展示，供开发者上传模块到在线仓库。</li>
+<li><strong>适用场景</strong>: 制作自己的 Magisk 模块时作为起始模板。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="shatyukaadbex-58-c"><code>shatyuka/adbex</code> · ⭐58 · C<a class="headerlink" href="#shatyukaadbex-58-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用于 adb root 和 shell 替换的 adbd 扩展模块</li>
+<li><strong>做什么</strong>: 一个 Magisk/KernelSU 模块，扩展 adbd 功能，让生产版设备也能 <code>adb root</code>，并替换 shell，需 Magisk v24+ 或 KernelSU v0.4.0+，与特定版本 ZygiskNext 不兼容。</li>
+<li><strong>适用场景</strong>: Root 设备上想让 adb 直接以 root 权限操作或替换 shell 时使用。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="asutoshpalaiabdb_patcher-11-python"><code>asutoshpalai/abdb_patcher</code> · ⭐11 · Python<a class="headerlink" href="#asutoshpalaiabdb_patcher-11-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 给 adbd 打补丁以启用 adb root</li>
+<li><strong>做什么</strong>: 用 radare2+r2pipe 给 adb 守护进程二进制打补丁，在不设 ro.debuggable 的情况下尝试启用 <code>adb root</code>，仅限已 Root 设备，重启后失效，作者标注实测并不生效。</li>
+<li><strong>适用场景</strong>: 研究 adbd root 机制、或想在老设备上免改系统属性拿 adb root 时参考。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="yu13140yuhideroot-8-shell"><code>yu13140/yuhideroot</code> · ⭐8 · Shell<a class="headerlink" href="#yu13140yuhideroot-8-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 隐藏 Root 的小仓库（yuhideroot）</li>
+<li><strong>做什么</strong>: 一个 Shell 脚本小仓库，作者自述"这是一个小仓库"，从命名看用于隐藏 Root 状态，但 README 内容极少，未提供具体功能说明。</li>
+<li><strong>适用场景</strong>: 需要隐藏 Root 绕过某些 App 检测时可能有用，但资料匮乏需自行查看源码。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+<h3 id="efidroidmodules_sepolicyinject-3-c"><code>efidroid/modules_sepolicyinject</code> · ⭐3 · C<a class="headerlink" href="#efidroidmodules_sepolicyinject-3-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 向 SELinux 内核策略注入 allow 规则的工具</li>
+<li><strong>做什么</strong>: 一个命令行工具，能往二进制 SELinux 策略文件注入 allow 规则、设置/取消 permissive 域，示例展示了给 shell 域添加文件读取规则的操作。</li>
+<li><strong>适用场景</strong>: 定制内核/ROM 时需要修改 SELinux 策略放通某些权限时使用。</li>
+<li><strong>标签</strong>: <code>android-root</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

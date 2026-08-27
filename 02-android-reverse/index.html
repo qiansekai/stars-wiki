@@ -1,0 +1,1991 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="qiansekai 的 GitHub star 中文速览知识库">
+      
+      
+      
+      
+        <link rel="prev" href="../01-android-root/">
+      
+      
+        <link rel="next" href="../03-device-tools/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>安卓逆向与 Hook - GitHub Star 知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hook" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="GitHub Star 知识库" class="md-header__button md-logo" aria-label="GitHub Star 知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GitHub Star 知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              安卓逆向与 Hook
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GitHub Star 知识库" class="md-nav__button md-logo" aria-label="GitHub Star 知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    GitHub Star 知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-android-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安卓内核与 Root
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安卓逆向与 Hook
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安卓逆向与 Hook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zhaoxuya520reverse-skill-29847-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zhaoxuya520/reverse-skill · ⭐29847 · PowerShell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firerpalamda-8249-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        firerpa/lamda · ⭐8249 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zinja-coderjadx-ai-mcp-2718-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zinja-coder/jadx-ai-mcp · ⭐2718 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5ec1cffpayload-dumper-847-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5ec1cff/payload-dumper · ⭐847 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsingshuiida-agent-bridge-108-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TsingShui/ida-agent-bridge · ⭐108 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thka2016lpunpack_and_lpmake_cmake-34-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        thka2016/lpunpack_and_lpmake_cmake · ⭐34 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skylotjadx-50237-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        skylot/jadx · ⭐50237 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ylarodflorida-2180" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ylarod/Florida · ⭐2180 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zhufucdevmotionemulator-409-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zhufucdev/MotionEmulator · ⭐409 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zhizhuodemaoandroid_proxy_mcp-222-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zhizhuodemao/android_proxy_mcp · ⭐222 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zai-orgopen-autoglm-26110-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zai-org/Open-AutoGLM · ⭐26110 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credittonehooker-5288-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CreditTone/hooker · ⭐5288 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xihan123signhook-1354-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xihan123/SignHook · ⭐1354 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qqbackupqq-win-db-key-1067-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QQBackup/qq-win-db-key · ⭐1067 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#googlesmali-390-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        google/smali · ⭐390 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kin9-0rzapkutils-142-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        kin9-0rz/apkutils · ⭐142 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r0ysuer0capture-7754-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        r0ysue/r0capture · ⭐7754 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zhizhuodemaojs-reverse-mcp-2615-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zhizhuodemao/js-reverse-mcp · ⭐2615 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saitamasahilapk-compare-tool-186-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        saitamasahil/APK-Compare-Tool · ⭐186 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemk1tlamda_android-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sYstemk1t/lamda_Android · ⭐4 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lsposedlsposed-24516-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LSPosed/LSPosed · ⭐24516 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mousewwanything-analyzer-3587-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mouseww/anything-analyzer · ⭐3587 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perfarezygisk-il2cppdumper-3276-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perfare/Zygisk-Il2CppDumper · ⭐3276 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bytedanceandroid-inline-hook-2373-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bytedance/android-inline-hook · ⭐2373 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zinja-coderapktool-mcp-server-640-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zinja-coder/apktool-mcp-server · ⭐640 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moli13337arcaea-6150c-547-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Moli13337/Arcaea-6.15.0c · ⭐547 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thepiemonsterhidemocklocation-236-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ThePieMonster/HideMockLocation · ⭐236 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soybeanmilkxfunny-50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SoyBeanMilkx/funny · ⭐50 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fishiateearcmodwiki-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fishiatee/arcmodwiki · ⭐21 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disawdcbabxxxxzip-fast-patcher-8-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DisaWdcba/BxxxxZip-Fast-Patcher · ⭐8 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wanghongenpinproxypin-13840-dart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        wanghongenpin/proxypin · ⭐13840 · Dart
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hzzheyangstrongr-frida-android-1684" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hzzheyang/strongR-frida-android · ⭐1684 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anestisbvdexextractor-1134-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        anestisb/vdexExtractor · ⭐1134 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noone-hubjsreverser-mcp-987-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NoOne-hub/JSReverser-MCP · ⭐987 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credittoneandroid-reverse-engineering-skill-430-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CreditTone/android-reverse-engineering-skill · ⭐430 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mjx0andkittyinjector-369-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MJx0/AndKittyInjector · ⭐369 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libxzroplushidezoomwindow-67-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        libxzr/OplusHideZoomWindow · ⭐67 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reandroidapkeditor-2291-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REAndroid/APKEditor · ⭐2291 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#googleandroid-arscblamer-950-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        google/android-arscblamer · ⭐950 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zclwyapkparser-8-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zclwy/apkparser · ⭐8 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jmpewsdobby-4815-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        jmpews/Dobby · ⭐4815 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patrickfavuber-apk-signer-2721-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        patrickfav/uber-apk-signer · ⭐2721 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eltavineduck-detector-refactoring-897-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eltavine/Duck-Detector-Refactoring · ⭐897 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#albatrosshookalbatrossandroid-314-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AlbatrossHook/AlbatrossAndroid · ⭐314 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#araafroyalltelegram-speed-hook-158-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AraafRoyall/Telegram-Speed-Hook · ⭐158 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-device-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    设备互联与刷机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-ai-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Agent 与 MCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-dev-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发工具与基础设施
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全与 CTF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自动化与脚本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-media-game/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音游、媒体与图像
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    学习与考试
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zhaoxuya520reverse-skill-29847-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zhaoxuya520/reverse-skill · ⭐29847 · PowerShell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firerpalamda-8249-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        firerpa/lamda · ⭐8249 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zinja-coderjadx-ai-mcp-2718-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zinja-coder/jadx-ai-mcp · ⭐2718 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5ec1cffpayload-dumper-847-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5ec1cff/payload-dumper · ⭐847 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsingshuiida-agent-bridge-108-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TsingShui/ida-agent-bridge · ⭐108 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thka2016lpunpack_and_lpmake_cmake-34-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        thka2016/lpunpack_and_lpmake_cmake · ⭐34 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skylotjadx-50237-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        skylot/jadx · ⭐50237 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ylarodflorida-2180" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ylarod/Florida · ⭐2180 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zhufucdevmotionemulator-409-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zhufucdev/MotionEmulator · ⭐409 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zhizhuodemaoandroid_proxy_mcp-222-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zhizhuodemao/android_proxy_mcp · ⭐222 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zai-orgopen-autoglm-26110-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zai-org/Open-AutoGLM · ⭐26110 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credittonehooker-5288-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CreditTone/hooker · ⭐5288 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xihan123signhook-1354-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xihan123/SignHook · ⭐1354 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qqbackupqq-win-db-key-1067-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QQBackup/qq-win-db-key · ⭐1067 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#googlesmali-390-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        google/smali · ⭐390 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kin9-0rzapkutils-142-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        kin9-0rz/apkutils · ⭐142 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r0ysuer0capture-7754-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        r0ysue/r0capture · ⭐7754 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zhizhuodemaojs-reverse-mcp-2615-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zhizhuodemao/js-reverse-mcp · ⭐2615 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saitamasahilapk-compare-tool-186-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        saitamasahil/APK-Compare-Tool · ⭐186 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemk1tlamda_android-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sYstemk1t/lamda_Android · ⭐4 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lsposedlsposed-24516-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LSPosed/LSPosed · ⭐24516 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mousewwanything-analyzer-3587-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mouseww/anything-analyzer · ⭐3587 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perfarezygisk-il2cppdumper-3276-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perfare/Zygisk-Il2CppDumper · ⭐3276 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bytedanceandroid-inline-hook-2373-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bytedance/android-inline-hook · ⭐2373 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zinja-coderapktool-mcp-server-640-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zinja-coder/apktool-mcp-server · ⭐640 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moli13337arcaea-6150c-547-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Moli13337/Arcaea-6.15.0c · ⭐547 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thepiemonsterhidemocklocation-236-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ThePieMonster/HideMockLocation · ⭐236 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soybeanmilkxfunny-50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SoyBeanMilkx/funny · ⭐50 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fishiateearcmodwiki-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fishiatee/arcmodwiki · ⭐21 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disawdcbabxxxxzip-fast-patcher-8-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DisaWdcba/BxxxxZip-Fast-Patcher · ⭐8 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wanghongenpinproxypin-13840-dart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        wanghongenpin/proxypin · ⭐13840 · Dart
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hzzheyangstrongr-frida-android-1684" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hzzheyang/strongR-frida-android · ⭐1684 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anestisbvdexextractor-1134-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        anestisb/vdexExtractor · ⭐1134 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noone-hubjsreverser-mcp-987-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NoOne-hub/JSReverser-MCP · ⭐987 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credittoneandroid-reverse-engineering-skill-430-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CreditTone/android-reverse-engineering-skill · ⭐430 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mjx0andkittyinjector-369-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MJx0/AndKittyInjector · ⭐369 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libxzroplushidezoomwindow-67-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        libxzr/OplusHideZoomWindow · ⭐67 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reandroidapkeditor-2291-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REAndroid/APKEditor · ⭐2291 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#googleandroid-arscblamer-950-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        google/android-arscblamer · ⭐950 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zclwyapkparser-8-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zclwy/apkparser · ⭐8 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jmpewsdobby-4815-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        jmpews/Dobby · ⭐4815 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patrickfavuber-apk-signer-2721-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        patrickfav/uber-apk-signer · ⭐2721 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eltavineduck-detector-refactoring-897-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eltavine/Duck-Detector-Refactoring · ⭐897 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#albatrosshookalbatrossandroid-314-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AlbatrossHook/AlbatrossAndroid · ⭐314 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#araafroyalltelegram-speed-hook-158-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AraafRoyall/Telegram-Speed-Hook · ⭐158 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="hook">安卓逆向与 Hook<a class="headerlink" href="#hook" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>共 45 个仓库 · 来自 qiansekai 的 GitHub star · 生成时间 2026-08-28</p>
+</blockquote>
+<h3 id="zhaoxuya520reverse-skill-29847-powershell"><code>zhaoxuya520/reverse-skill</code> · ⭐29847 · PowerShell<a class="headerlink" href="#zhaoxuya520reverse-skill-29847-powershell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 给 AI 编码客户端用的逆向/渗透/安全技能路由包，自动路由 + 按需自举工具链。</li>
+<li><strong>做什么</strong>: 当 AI agent 遇到 APK、二进制、前端 JS 加密、CTF 或渗透目标时，按规则路由到正确方法论并编排工具（jadx、Frida、IDA、BurpSuite 等），把散落的工具和脚本串成可复现流程，含经验库自动进化。支持 Claude Code、Kiro、Cursor、Cline 等。</li>
+<li><strong>适用场景</strong>: 让 AI 助手做逆向和授权渗透时不再瞎猜命令，系统化接各类分析任务。</li>
+<li><strong>标签</strong>: <code>security</code> <code>android-reverse</code></li>
+</ul>
+<h3 id="firerpalamda-8249-python"><code>firerpa/lamda</code> · ⭐8249 · Python<a class="headerlink" href="#firerpalamda-8249-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Android 全栈设备控制平台，一站式远程桌面/自动化/抓包/Hook。</li>
+<li><strong>做什么</strong>: 服务端直接跑在设备上（有无 root 皆可），通过统一 Python 客户端编排 UI 自动化、WebRTC/H.264 远程桌面、一键 MITM、内置 Frida、代理/VPN/frp/P2P 组网、MCP/Agent 和 160+ API，面向多设备集群和工程化长期运行。</li>
+<li><strong>适用场景</strong>: 替代 Appium+mitmproxy+frida+adb+uiautomator2 的拼装，做移动端批量自动化、动态分析与远程控制。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>android-reverse</code></li>
+</ul>
+<h3 id="zinja-coderjadx-ai-mcp-2718-java"><code>zinja-coder/jadx-ai-mcp</code> · ⭐2718 · Java<a class="headerlink" href="#zinja-coderjadx-ai-mcp-2718-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 给 JADX 加 MCP server，让 LLM 直接分析 Android APK。</li>
+<li><strong>做什么</strong>: JADX 插件 + MCP server 一体，把反编译的 APK 暴露给 Claude 等 LLM 做漏洞挖掘、APK 分析和逆向，让模型通过 MCP 直接读代码、找问题，属于逆向 + LLM 结合的自动化方案。</li>
+<li><strong>适用场景</strong>: 逆向/安全分析时让 AI 助手直接上手 APK 代码，做 SAST/渗透辅助。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="5ec1cffpayload-dumper-847-python"><code>5ec1cff/payload-dumper</code> · ⭐847 · Python<a class="headerlink" href="#5ec1cffpayload-dumper-847-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 从 Android 的 payload.bin 里解出分区的 Python 工具。</li>
+<li><strong>做什么</strong>: 从 OTA 包或 URL 的 payload.bin 直接抽取指定分区，支持不下载完整文件（网络流式）、不解压 zip、多线程下载与提取，快速拿下 boot/init_boot/vbmeta 等小分区，也能对旧镜像打 OTA diff。</li>
+<li><strong>适用场景</strong>: 刷机/逆向时只想要某个分区镜像，省时省空间地解 OTA 包。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>device-tools</code></li>
+</ul>
+<h3 id="tsingshuiida-agent-bridge-108-python"><code>TsingShui/ida-agent-bridge</code> · ⭐108 · Python<a class="headerlink" href="#tsingshuiida-agent-bridge-108-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 无头 CLI 优先的 IDA Pro 桥，让 AI 像读源码一样读二进制。</li>
+<li><strong>做什么</strong>: 把 IDA 的反编译、交叉引用、类型、字节操作暴露成纯文本短连接协议，反编译结果实时同步到本地文件系统，重命名/注释/patch 瞬间落盘，Agent 靠 cat、grep、nc 就能管道化分析，含增量导出和文件系统即 API 设计。</li>
+<li><strong>适用场景</strong>: 让 Claude Code 等 agent 以 Unix 方式流水线式逆向二进制、找签名/加密逻辑时。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="thka2016lpunpack_and_lpmake_cmake-34-c"><code>thka2016/lpunpack_and_lpmake_cmake</code> · ⭐34 · C++<a class="headerlink" href="#thka2016lpunpack_and_lpmake_cmake-34-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: lpunpack 与 lpmake 的 CMake 构建版。</li>
+<li><strong>做什么</strong>: 提供 linux/cygwin 下用 CMake 编译 lpunpack（解包 super 动态分区镜像）和 lpmake 的脚本，README 极简，只给构建方法与一个编译报错处理提示。</li>
+<li><strong>适用场景</strong>: 需要解/打包 Android super 分区（动态分区）且想用 CMake 构建工具链时。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="skylotjadx-50237-java"><code>skylot/jadx</code> · ⭐50237 · Java<a class="headerlink" href="#skylotjadx-50237-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 把 Android 的 dex/apk 反编译回 Java 源码的经典神器。</li>
+<li><strong>做什么</strong>: 从 APK、dex、aar、aab 甚至 zip 里反编译 Dalvik 字节码为 Java 代码，还能解析 AndroidManifest.xml 和 resources.arsc，自带反混淆。有命令行 <code>jadx</code> 和图形界面 <code>jadx-gui</code> 两种用法。</li>
+<li><strong>适用场景</strong>: 安卓逆向、分析 APK 逻辑、找接口/签名时必备；对标 dex2jar + JD-GUI，但体验和还原度更强。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="ylarodflorida-2180"><code>Ylarod/Florida</code> · ⭐2180 ·<a class="headerlink" href="#ylarodflorida-2180" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 跟随 FRIDA 上游自动 patch 出的反检测版 frida-server。</li>
+<li><strong>做什么</strong>: 自动追踪 FRIDA 官方上游并修补，为 Android 构建一个不易被检测到的 frida-server，用于对抗常见的 Frida 检测手段。提示不要 fork，直接下载 Release 用即可。</li>
+<li><strong>适用场景</strong>: 逆向/Hook Android 应用、需要绕过目标 App 的 Frida 检测时使用；对标 strong-frida 等反检测方案。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="zhufucdevmotionemulator-409-kotlin"><code>zhufucdev/MotionEmulator</code> · ⭐409 · Kotlin<a class="headerlink" href="#zhufucdevmotionemulator-409-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 支持传感器模拟的 Xposed 定位/传感器伪造应用。</li>
+<li><strong>做什么</strong>: 一个应用平台，可用多种方式（含 Xposed、调试选项）mock 位置和传感器数据，用来骗过健身类 App 或游戏。依赖高德和 Google Maps SDK，需自行填 API key 构建。</li>
+<li><strong>适用场景</strong>: 模拟定位/步数/运动数据、研究传感器 hook 时参考；自用娱乐为主。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>automation</code></li>
+</ul>
+<h3 id="zhizhuodemaoandroid_proxy_mcp-222-python"><code>zhizhuodemao/android_proxy_mcp</code> · ⭐222 · Python<a class="headerlink" href="#zhizhuodemaoandroid_proxy_mcp-222-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 基于 MCP 的 Android 抓包服务，让 AI 用自然语言分析网络请求。</li>
+<li><strong>做什么</strong>: 用 mitmdump 做代理抓 HTTP/HTTPS 流量，数据落 SQLite，再由 MCP 服务暴露给 Claude，支持按域名/状态码/类型筛选、内容搜索、大响应分片读取。含证书安装、Magisk 移系统证书等指引。</li>
+<li><strong>适用场景</strong>: 想用自然语言让 AI 辅助抓包分析安卓 App 流量时用；离线本地运行，保护隐私。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="zai-orgopen-autoglm-26110-python"><code>zai-org/Open-AutoGLM</code> · ⭐26110 · Python<a class="headerlink" href="#zai-orgopen-autoglm-26110-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 智谱开源的手机端 Agent 框架，用自然语言让 AI 自动操控手机屏幕完成任务。</li>
+<li><strong>做什么</strong>: 通过 ADB/HDC 连接 Android 或鸿蒙设备，多模态视觉语言模型（AutoGLM-Phone-9B）理解屏幕内容并规划执行操作，支持敏感操作确认、验证码人工接管，以及远程 ADB 调试。也提供模型下载与 Midscene.js 集成。</li>
+<li><strong>适用场景</strong>: 想做"手机自动操作"——比如自动刷小红书搜索美食、批量执行 App 流程，或研究 phone-use agent，对标各种手机 Agent 方案。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>android-reverse</code></li>
+</ul>
+<h3 id="credittonehooker-5288-javascript"><code>CreditTone/hooker</code> · ⭐5288 · JavaScript<a class="headerlink" href="#credittonehooker-5288-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 基于 Frida 的 Android 逆向工具包，给逆向工程师一个舒适 CLI 和一键通杀脚本。</li>
+<li><strong>做什么</strong>: 提供 frida 版 JustTrustMe（含 BoringSSL）全网 APP SSL 通杀、自动化 hook 脚本生成、内存漫游探测 activity/service、一键 SOCKS5 无感代理、嵌入式 webserver 把 App 能力暴露成 HTTP 接口，还集成了 r0capture 抓包。</li>
+<li><strong>适用场景</strong>: 安卓逆向、抓包、脱 SSL pinning、Hook 加密逻辑时使用，把大量重复性 hook 工作自动化。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="xihan123signhook-1354-kotlin"><code>xihan123/SignHook</code> · ⭐1354 · Kotlin<a class="headerlink" href="#xihan123signhook-1354-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 一个 Xposed 签名校验通杀模块，伪装应用签名绕过非官方检测。</li>
+<li><strong>做什么</strong>: 基于 LSPosed 的模块，对勾选的宿主应用（如 QQ/微信）在查询签名时返回你填写的伪装签名，解决修改版 App 无法调用官方登录、提示非官方正版的问题；需 Android 9+ 和 libxposed 框架。</li>
+<li><strong>适用场景</strong>: 逆向调试、自用修改版应用接入官方 SDK 登录时使用，属于安卓逆向签名绕过工具。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="qqbackupqq-win-db-key-1067-python"><code>QQBackup/qq-win-db-key</code> · ⭐1067 · Python<a class="headerlink" href="#qqbackupqq-win-db-key-1067-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 全平台 QQ 聊天数据库解密密钥提取脚本集合。</li>
+<li><strong>做什么</strong>: 提供 Windows NTQQ/旧版 PCQQ、Android/IOS、Linux、macOS(ARM 免 SIP) 的数据库密钥提取、导出和重加密脚本，配合 QQDecrypt 文档库完成聊天记录解密导出，部分需 Frida 注入。</li>
+<li><strong>适用场景</strong>: 想备份/迁移自己的 QQ 聊天记录、解密本地数据库时使用，需一定逆向与脚本调整能力。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>security</code></li>
+</ul>
+<h3 id="googlesmali-390-java"><code>google/smali</code> · ⭐390 · Java<a class="headerlink" href="#googlesmali-390-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: dex 格式的汇编/反汇编工具 smali/baksmali 的 Google 官方 fork。</li>
+<li><strong>做什么</strong>: 提供 Android dalvik dex 格式的 assembler(smali) 和 disassembler(baksmali)，支持注解、调试信息、行号等完整 dex 特性；本 fork 把命名空间从 org.jf 改为 com.android.tools.smali 并在 Google Maven 发布。</li>
+<li><strong>适用场景</strong>: 逆向 Android 应用、修改 smali 代码加补丁、理解字节码时使用，Android 逆向的基础工具链。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="kin9-0rzapkutils-142-python"><code>kin9-0rz/apkutils</code> · ⭐142 · Python<a class="headerlink" href="#kin9-0rzapkutils-142-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 解析 APK、Dex、AXML、ARSC、ELF 的 Python 库。</li>
+<li><strong>做什么</strong>: 提供 APK 清单/资源/证书/字符串/方法引用等的解析，带 apkutils 命令行（certs/manifest/strings/xref 等子命令）和 Python API，从 1.3.0 起按需解析清单与 Dex，参考了 enjarify 和 androguard。</li>
+<li><strong>适用场景</strong>: 写脚本批量解析 APK 信息、提取字符串和清单时使用，属于安卓逆向辅助库。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="r0ysuer0capture-7754-python"><code>r0ysue/r0capture</code> · ⭐7754 · Python<a class="headerlink" href="#r0ysuer0capture-7754-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 安卓应用层抓包「通杀」脚本，无视证书校验和加固。</li>
+<li><strong>做什么</strong>: 基于 Frida 的抓包工具，通杀 Http/WebSocket/FTP/XMPP/Protobuf 等应用层协议及其 SSL 版本，兼容 HttpUrlConnection/OkHttp/Retrofit 等框架，无视整体壳/VMP 加固。还能定位收发包函数、导出客户端证书、保存 pcap 供 Wireshark 分析，已适配到安卓 16 和 Frida 17。</li>
+<li><strong>适用场景</strong>: 安卓逆向/接口分析时全网抓包，绕证书钉扎和加固，对标 Charles/mitmproxy 但无需装证书。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="zhizhuodemaojs-reverse-mcp-2615-typescript"><code>zhizhuodemao/js-reverse-mcp</code> · ⭐2615 · TypeScript<a class="headerlink" href="#zhizhuodemaojs-reverse-mcp-2615-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 面向 AI Agent 的 JS 逆向 MCP 服务器，有头 Chrome 调试+反检测。</li>
+<li><strong>做什么</strong>: 把断点、脚本源码、网络/WebSocket、浏览器状态和本地文件 I/O 重组成适合 AI 连续推理的工具，支持断点上下文求值、XHR 断点、Set-Cookie 识别、源码格式化导出。默认使用独立维护的 Patchright fork 做协议层 stealth，可选 CloakBrowser 强反爬模式。</li>
+<li><strong>适用场景</strong>: 让 Claude/Cursor 等 agent 做网页 JS 逆向、过云盾/Turnstile 之类风控、抓接口签名时用。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="saitamasahilapk-compare-tool-186-shell"><code>saitamasahil/APK-Compare-Tool</code> · ⭐186 · Shell<a class="headerlink" href="#saitamasahilapk-compare-tool-186-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 对比两个 APK 资源与 smali 代码差异的 shell 脚本。</li>
+<li><strong>做什么</strong>: 用 apktool 反编译两版 APK 后用 diff 对比，可自选对比资源、smali 或全部内容，输出彩色标注的文件/行号差异和增删内容，并保存日志供后续查看（可用 VSCode ANSI 扩展预览）。</li>
+<li><strong>适用场景</strong>: 逆向/二次开发时对比原版与修改版、新旧版本 APK 的改动，定位补丁或篡改时用。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="systemk1tlamda_android-4"><code>sYstemk1t/lamda_Android</code> · ⭐4 ·<a class="headerlink" href="#systemk1tlamda_android-4" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 安卓逆向与自动化辅助框架，号称「史上最强」抓包/逆向/Hook 及云手机框架。</li>
+<li><strong>做什么</strong>: 零依赖（仅需 root）的安卓服务端+Python 客户端，全网络化脱离 USB，内置 frida/IDA server、无线 WIFI ADB、http/socks5 代理、OpenVPN、中间人 mitmproxy 流量分析、UI 自动化、远程桌面、数据库在线浏览、crontab、SSH 等能力，支持真机/模拟器/云手机。</li>
+<li><strong>适用场景</strong>: 远程控制 root 安卓设备做抓包、逆向、Hook、云手机自动化批量操作，替代实体 USB 连接的低门槛方案。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>automation</code></li>
+</ul>
+<h3 id="lsposedlsposed-24516-java"><code>LSPosed/LSPosed</code> · ⭐24516 · Java<a class="headerlink" href="#lsposedlsposed-24516-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 基于 Zygisk/Riru 的 Xposed 框架继任者，ART Hook 神器。</li>
+<li><strong>做什么</strong>: 提供一个与原版 Xposed API 兼容的 ART Hook 框架，底层用 LSPlant，支持 Android 8.1~14。模块只在内存里改系统/应用行为，不动 APK，停用重启即还原，多个模块还能同时生效。</li>
+<li><strong>适用场景</strong>: 需要在已 root（Magisk）设备上跑 Xposed 模块、按系统框架 Hook 定制功能的场景，是 LSPosed 模块的宿主管家。</li>
+<li><strong>标签</strong>: <code>android-root</code> <code>android-reverse</code></li>
+</ul>
+<h3 id="mousewwanything-analyzer-3587-typescript"><code>Mouseww/anything-analyzer</code> · ⭐3587 · TypeScript<a class="headerlink" href="#mousewwanything-analyzer-3587-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 全场景抓包 + AI 自动逆向分析的协议分析工具。</li>
+<li><strong>做什么</strong>: 内嵌浏览器（CDP）+ MITM 代理（8888 端口）把网页、桌面应用、终端、脚本、手机 App 的流量统一汇到一个 Session，配合 JS Hook 注入和 AI 两阶段分析，自动产出 API 逆向、加密逆向、安全审计报告；还内置 MCP Server 供 Agent 调用。</li>
+<li><strong>适用场景</strong>: 逆向网站/App 协议、还原 JS 加密逻辑、做黑盒安全审计时，替代 Fiddler/Charles 并加上 AI 自动分析。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>security</code></li>
+</ul>
+<h3 id="perfarezygisk-il2cppdumper-3276-c"><code>Perfare/Zygisk-Il2CppDumper</code> · ⭐3276 · C<a class="headerlink" href="#perfarezygisk-il2cppdumper-3276-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 用 Zygisk 在运行时 dump Unity il2cpp 游戏数据的模块。</li>
+<li><strong>做什么</strong>: 一个 Magisk/Zygisk 模块，在运行时 dump il2cpp 的元数据和函数地址，运行时提取可绕过保护、加密和混淆。安装后启动目标游戏，会在其数据目录生成 dump.cs。</li>
+<li><strong>适用场景</strong>: 逆向 Unity（il2cpp）手游、提取符号函数名时用，需要在 Magisk 环境打模块。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="bytedanceandroid-inline-hook-2373-c"><code>bytedance/android-inline-hook</code> · ⭐2373 · C<a class="headerlink" href="#bytedanceandroid-inline-hook-2373-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 字节开源的 Android inline hook 库（shadowhook）。</li>
+<li><strong>做什么</strong>: 通用的 Android inline hook 库，支持 thumb/arm32/arm64，主打稳定性、兼容性和低开销，支持地址或"库名+函数名"定位 hook、自动 hook 新加载 ELF、防递归、记录操作等。</li>
+<li><strong>适用场景</strong>: 需要在生产 App 里做原生层 inline hook（性能监控、插桩、逆向后打桩）时用。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>security</code></li>
+</ul>
+<h3 id="zinja-coderapktool-mcp-server-640-python"><code>zinja-coder/apktool-mcp-server</code> · ⭐640 · Python<a class="headerlink" href="#zinja-coderapktool-mcp-server-640-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 把 apktool 包装成 MCP Server，让 LLM 实时逆向 APK。</li>
+<li><strong>做什么</strong>: 基于 apktool 的 MCP 服务器，提供 decode_apk、读写 smali、改资源、查 manifest、重新打包等工具，让 Claude 等 LLM 边解包边做漏洞挖掘和代码审查，实现"反编译→AI 审查→给建议"的闭环。</li>
+<li><strong>适用场景</strong>: 想用 AI 助手自动化安卓逆向、CTF 解题或 APK 安全审计时接入。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="moli13337arcaea-6150c-547-python"><code>Moli13337/Arcaea-6.15.0c</code> · ⭐547 · Python<a class="headerlink" href="#moli13337arcaea-6150c-547-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Arcaea 音游私服 + MOD 补丁工具。</li>
+<li><strong>做什么</strong>: 基于 Arcaea-server 改的私服（支持 6.15.0c），配合一键 Patcher 给客户端打补丁：SSL Pinning 绕过、域名重定向、曲包全解锁、残片归零、联机 Link Play、Web 后台，附 MoliLog 悬浮窗和 Dev 命令行工具。</li>
+<li><strong>适用场景</strong>: 学习研究 Arcaea 私服搭建、或想离线体验全曲包解锁时用（仅供学习）。</li>
+<li><strong>标签</strong>: <code>media-game</code> <code>android-reverse</code></li>
+</ul>
+<h3 id="thepiemonsterhidemocklocation-236-java"><code>ThePieMonster/HideMockLocation</code> · ⭐236 · Java<a class="headerlink" href="#thepiemonsterhidemocklocation-236-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 隐藏"允许模拟位置"开关状态的 Xposed 模块。</li>
+<li><strong>做什么</strong>: 一个 Xposed（现 LSPosed）模块，用来向应用隐藏系统里"允许模拟位置"设置的信息，让检测不到 mock location 状态。启用后勾选 System Framework 重启即可。</li>
+<li><strong>适用场景</strong>: 用模拟位置 App 跑测试/定位类应用、又不想被检测出 mock 开关时用。</li>
+<li><strong>标签</strong>: <code>android-root</code> <code>android-reverse</code></li>
+</ul>
+<h3 id="soybeanmilkxfunny-50"><code>SoyBeanMilkx/funny</code> · ⭐50 ·<a class="headerlink" href="#soybeanmilkxfunny-50" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 目标是成为"最好的 Android 注入器"。</li>
+<li><strong>做什么</strong>: 一个 Android 注入器项目，README 信息极少，仅声明目标是做成最好的 Android 注入器，暂无更多功能说明。</li>
+<li><strong>适用场景</strong>: 需要 Android 注入/Hook 类工具时留意，目前资料有限、谨慎评估后使用。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="fishiateearcmodwiki-21"><code>fishiatee/arcmodwiki</code> · ⭐21 ·<a class="headerlink" href="#fishiateearcmodwiki-21" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: Arcaea 模组/逆向相关的 Wiki（已归档）。</li>
+<li><strong>做什么</strong>: 一个用 MkDocs 搭建的 Arcaea modding 集中 Wiki，记录逆向原生二进制、改模组等方法和知识。因作者退坑，已于 2025 年 7 月归档停更，方法可能对新版本失效。</li>
+<li><strong>适用场景</strong>: 考古 Arcaea 早期逆向与 modding 思路时参考，新版本需自行研究。</li>
+<li><strong>标签</strong>: <code>media-game</code> <code>android-reverse</code></li>
+</ul>
+<h3 id="disawdcbabxxxxzip-fast-patcher-8-c"><code>DisaWdcba/BxxxxZip-Fast-Patcher</code> · ⭐8 · C<a class="headerlink" href="#disawdcbabxxxxzip-fast-patcher-8-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Bandizip 授权验证分析的尝试产物（快速补丁）。</li>
+<li><strong>做什么</strong>: 作者"突发奇想"分析 Bandizip 授权验证机制的产物，实现对应的快速补丁工具。README 信息极少，仅一句说明。</li>
+<li><strong>适用场景</strong>: 研究 Bandizip 授权/注册逻辑时参考（注意版权与合规风险，仅供学习）。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="wanghongenpinproxypin-13840-dart"><code>wanghongenpin/proxypin</code> · ⭐13840 · Dart<a class="headerlink" href="#wanghongenpinproxypin-13840-dart" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 开源免费的跨全平台 HTTP(S) 抓包工具，可拦截、查看、重写流量。</li>
+<li><strong>做什么</strong>: ProxyPin 基于 Flutter 开发，覆盖 Windows/Mac/Android/iOS/Linux。支持扫码连接无需手配代理、域名过滤、请求搜索、JS 脚本处理请求/响应、请求重写与映射、AES 自动解密、按 URL 拦截请求、历史记录与 HAR 导入导出。还能抓 Flutter 应用的流量。</li>
+<li><strong>适用场景</strong>: 移动端/桌面抓包调试、做接口分析时替代 Charles/Fiddler，尤其是手机扫码连接和 Flutter 应用抓包场景。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="hzzheyangstrongr-frida-android-1684"><code>hzzheyang/strongR-frida-android</code> · ⭐1684 ·<a class="headerlink" href="#hzzheyangstrongr-frida-android-1684" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 跟随 Frida 上游自动 patch 的反检测版 frida-server（Android）。</li>
+<li><strong>做什么</strong>: 自动跟随 FRIDA 上游修补并编译，产出针对 Android 的反检测 frida-server。通过一系列 patch（改掉 frida_server、agent、pipe、gum_js_loop、gmain 等特征字符串/协议）绕过常见的 Frida 检测。作者说明因工作忙长期未更新，建议关注 Ylarod/Florida。</li>
+<li><strong>适用场景</strong>: 逆向/动态插桩目标 App 自带 Frida 检测时，用这个反检测 server 规避检测。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="anestisbvdexextractor-1134-c"><code>anestisb/vdexExtractor</code> · ⭐1134 · C<a class="headerlink" href="#anestisbvdexextractor-1134-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 从 VDEX 文件反编译/提取 Android Dex 字节码的命令行工具。</li>
+<li><strong>做什么</strong>: 用于解出 ART 运行时在 dex2oat 优化时生成的 VDEX 文件里的 Dex 字节码（VDEX 自 Oreo/API-26 引入，与 oat 文件配对）。能把优化过的字节码 quicken 还原（unquicken），还带字节码反汇编和 Verified Dependencies 迭代器；这个 unquicken 功能也被上游合入 AOSP 的 oatdump。</li>
+<li><strong>适用场景</strong>: 逆向 Android 系统/ROM，需要从 vdex/oat 里脱出并还原 Dex 字节码做分析时。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="noone-hubjsreverser-mcp-987-typescript"><code>NoOne-hub/JSReverser-MCP</code> · ⭐987 · TypeScript<a class="headerlink" href="#noone-hubjsreverser-mcp-987-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 面向前端 JavaScript 逆向的 MCP 工具，把整套逆向流程标准化。</li>
+<li><strong>做什么</strong>: 连接已开启的 Chrome，在登录态页面里持续采样请求参数与返回数据，用于定位签名、加密、鉴权与关键业务逻辑。把脚本检索、断点调试、函数 Hook、网络请求追踪、调用链分析、混淆还原、风险评估整合成统一能力，可直接接入 Claude/Codex/Cursor 等 MCP 客户端。沉淀了某东 h5st、某手 falcon、某音 a-bogus 等参数链路蓝本。</li>
+<li><strong>适用场景</strong>: 前端接口逆向、找 sign/token 生成逻辑、做爬虫或安全研究、需要证据化沉淀的逆向工作。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="credittoneandroid-reverse-engineering-skill-430-javascript"><code>CreditTone/android-reverse-engineering-skill</code> · ⭐430 · JavaScript<a class="headerlink" href="#credittoneandroid-reverse-engineering-skill-430-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Codex/Claude 用的 Android 逆向分析 skill 全家桶。</li>
+<li><strong>做什么</strong>: 支持在会话中反编译 APK/XAPK/JAR/AAR，用 jadx + Fernflower/Vineflower 双引擎对比，梳理 Manifest、包结构、网络层和调用链。可提取 Retrofit 接口、URL、鉴权头、token、签名逻辑；附带 9 个开箱即用的 Frida 脚本（SSL 日志、DEX/SO dump、JNI 追踪、加密 hook、检测绕过、证书导出），并覆盖 JNI/SO 原生层分析与 XAPK/套壳自动解包，跨平台（Bash + PowerShell）。</li>
+<li><strong>适用场景</strong>: 在 Codex/Claude 里做 Android 接口分析、安全研究、授权测试，从静态到动态全链路。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="mjx0andkittyinjector-369-c"><code>MJx0/AndKittyInjector</code> · ⭐369 · C++<a class="headerlink" href="#mjx0andkittyinjector-369-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 基于 ptrace 的现代 Android 共享库注入器。</li>
+<li><strong>做什么</strong>: 在 KittyMemoryEx 之上构建，支持 Android 5.0~17、arm/arm64/x86/x86_64，能注入模拟的 arm64/arm32（经 libhoudini/libndk_translation），一次注入多库，绕过 linker namespace 限制，支持 memfd dlopen、监听/自动启动应用注入、在 dlopen 或指定符号断点注入、注入后卸载，还能从 /maps 和 linker solist 隐藏库、随机化 ELF 头。</li>
+<li><strong>适用场景</strong>: Android 逆向/逆向注入 so、做游戏辅助或动态分析时，需要一个稳健的 ptrace 注入器。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="libxzroplushidezoomwindow-67-java"><code>libxzr/OplusHideZoomWindow</code> · ⭐67 · Java<a class="headerlink" href="#libxzroplushidezoomwindow-67-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: Xposed 模块，让一加系统小窗在截图/录屏里隐身。</li>
+<li><strong>做什么</strong>: 通过 Xposed 钩子隐藏 ColorOS/OxygenOS 13 上的 zoom window（小窗）、边缘面板、输入法在截图和录屏中的显示，也能在录屏里隐藏截图预览。仅适配 OnePlus 8（OxygenOS 13）和 8T（ColorOS 13）指定版本，其他设备无保证，属 POC。</li>
+<li><strong>适用场景</strong>: 在一加 ColorOS/OxygenOS 13 设备上想让小窗等界面元素不被截图/录屏记录。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="reandroidapkeditor-2291-java"><code>REAndroid/APKEditor</code> · ⭐2291 · Java<a class="headerlink" href="#reandroidapkeditor-2291-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 不依赖 aapt/aapt2 的强力 APK 资源编辑器</li>
+<li><strong>做什么</strong>: 基于 ARSCLib，把 APK 里的二进制资源反编译成 json/xml/raw，再重新构建回 APK，还支持合并 split APK、重构/混淆资源名、保护资源文件。全能型 APK 资源处理工具。</li>
+<li><strong>适用场景</strong>: 逆向、汉化、改资源、合并 XAPK/APKS 分包，或给 APK 做资源混淆加固时用。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="googleandroid-arscblamer-950-java"><code>google/android-arscblamer</code> · ⭐950 · Java<a class="headerlink" href="#googleandroid-arscblamer-950-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 解析 APK 的 resources.arsc 并给出瘦身建议的命令行工具</li>
+<li><strong>做什么</strong>: 解析 resources.arsc，输出所有资源配置的类型/大小/null 条目数/密度/可变体，能列出无默认值的「baseless」资源，把结果导成 CSV。帮你找出哪些配置和资源占空间又没用，方便砍体积。</li>
+<li><strong>适用场景</strong>: 想给 APK 瘦身、清理冗余多语言/多密度资源时，做资源占用分析。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="zclwyapkparser-8-go"><code>zclwy/apkparser</code> · ⭐8 · Go<a class="headerlink" href="#zclwyapkparser-8-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 用 Go 解析 APK 提取应用信息的库</li>
+<li><strong>做什么</strong>: 从 apk 解析出 AppInfo：应用名、包名、版本号、图标、大小、证书信息、MD5、是否支持 32/64 位、权限列表、min/target SDK 版本等，证书部分整合了 avast/apkparser 的能力。</li>
+<li><strong>适用场景</strong>: 自己做 App 仓库、应用商店后台、或安全扫描时，需要批量读 APK 元信息。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="jmpewsdobby-4815-c"><code>jmpews/Dobby</code> · ⭐4815 · C++<a class="headerlink" href="#jmpewsdobby-4815-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 轻量多平台多架构的 Hook 框架</li>
+<li><strong>做什么</strong>: 一个模块化的 inline hook 框架，支持 Windows/macOS/iOS/Android/Linux 及 X86/ARM 架构，可用来拦截和替换函数实现，参考了 frida-gum、substrate 等实现。</li>
+<li><strong>适用场景</strong>: 做安卓/iOS 逆向、游戏修改或运行时注入时需要一个轻量 hook 库，对标 frida-gum。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="patrickfavuber-apk-signer-2721-java"><code>patrickfav/uber-apk-signer</code> · ⭐2721 · Java<a class="headerlink" href="#patrickfavuber-apk-signer-2721-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 一条命令完成 APK 签名/zipalign/校验的 CLI 工具</li>
+<li><strong>做什么</strong>: 用 debug 或自定义证书批量给 APK 签名并对齐、验证，支持 v1/v2/v3/v4 签名方案，内置 debug keystore 和 zipalign，签完自动校验。</li>
+<li><strong>适用场景</strong>: 重打包、改包后需要快速签名 APK 时用，替代手动 apksigner+zipalign 流程。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="eltavineduck-detector-refactoring-897-kotlin"><code>eltavine/Duck-Detector-Refactoring</code> · ⭐897 · Kotlin<a class="headerlink" href="#eltavineduck-detector-refactoring-897-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 安卓设备完整性与 Root/Hook 检测工具</li>
+<li><strong>做什么</strong>: 本机运行的安卓安全检测 App，用 C++/汇编底层探针检测 Bootloader、Root、SU、LSPosed、Magisk 隐藏、SELinux、虚拟化、TEE/KeyStore 认证等信号，以结构化卡片呈现结果，隐私优先默认不联网。</li>
+<li><strong>适用场景</strong>: 想自查设备是否被 Root/改机/虚拟化，或研究检测手段反制逆向时使用。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="albatrosshookalbatrossandroid-314-java"><code>AlbatrossHook/AlbatrossAndroid</code> · ⭐314 · Java<a class="headerlink" href="#albatrosshookalbatrossandroid-314-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 下一代高性能 Android Hook 与反射框架</li>
+<li><strong>做什么</strong>: 基于 YAHFA 增强的 hook 框架，用"镜像类"声明式描述要 Hook 的方法/字段，零反射开销、批量 Hook、自动挂新加载的 DEX，还支持 native Hook，兼容 Android 7.0-16。</li>
+<li><strong>适用场景</strong>: 需要高性能方法 Hook 或想替代反射访问隐藏 API 的安卓逆向/框架开发。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+<h3 id="araafroyalltelegram-speed-hook-158-java"><code>AraafRoyall/Telegram-Speed-Hook</code> · ⭐158 · Java<a class="headerlink" href="#araafroyalltelegram-speed-hook-158-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 提高 Telegram 下载速度的 Xposed 模块</li>
+<li><strong>做什么</strong>: 一个 LSPosed 模块，通过 Hook Telegram 解除下载限速，让免费账号也能跑到极限速度，作者声明仅供个人测试用途。</li>
+<li><strong>适用场景</strong>: 想突破 Telegram 非会员下载限速时使用。</li>
+<li><strong>标签</strong>: <code>android-reverse</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1301 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="qiansekai 的 GitHub star 中文速览知识库">
+      
+      
+      
+      
+        <link rel="prev" href="../06-security/">
+      
+      
+        <link rel="next" href="../08-media-game/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>自动化与脚本 - GitHub Star 知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="GitHub Star 知识库" class="md-header__button md-logo" aria-label="GitHub Star 知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GitHub Star 知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              自动化与脚本
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GitHub Star 知识库" class="md-nav__button md-logo" aria-label="GitHub Star 知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    GitHub Star 知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-android-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安卓内核与 Root
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-android-reverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安卓逆向与 Hook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-device-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    设备互联与刷机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-ai-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Agent 与 MCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-dev-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发工具与基础设施
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全与 CTF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自动化与脚本
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自动化与脚本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#borisbabicbrowser_cookie3-1070-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        borisbabic/browser_cookie3 · ⭐1070 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#here200cctalk-video-download-57-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        here200/CCTalk-Video-Download · ⭐57 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mikfgallery-dl-19336-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mikf/gallery-dl · ⭐19336 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mikumifabilitickerbuy-4196-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mikumifa/biliTickerBuy · ⭐4196 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openlistteamopenlist-apipages-474-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenListTeam/OpenList-APIPages · ⭐474 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zhufucdevmotionemulator-409-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zhufucdev/MotionEmulator · ⭐409 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifurystopen-browser-use-249-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iFurySt/open-browser-use · ⭐249 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xhcodingsshpass-win32-149-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xhcoding/sshpass-win32 · ⭐149 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lihengdao666qqgroupalbumdownload-96-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        lihengdao666/QQGroupAlbumDownload · ⭐96 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xcr1234tampermonkey-typescript-33-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xcr1234/tampermonkey-typescript · ⭐33 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vercel-labsagent-browser-41440-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vercel-labs/agent-browser · ⭐41440 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samueli924chaoxing-3291-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samueli924/chaoxing · ⭐3291 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cxorzchaoxing-signin-1724-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cxOrz/chaoxing-signin · ⭐1724 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do1emijia-api-755-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Do1e/mijia-api · ⭐755 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectascendedcdp-bug-mouseevent-screenx-screeny-patcher-558-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ObjectAscended/CDP-bug-MouseEvent-.screenX-.screenY-patcher · ⭐558 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemk1tlamda_android-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sYstemk1t/lamda_Android · ⭐4 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mhogomchungumedia-downloader-4939-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mhogomchungu/media-downloader · ⭐4939 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zc-zhangchenany-auto-register-3579-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zc-zhangchen/any-auto-register · ⭐3579 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shuakamiqq-chat-exporter-4862-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shuakami/qq-chat-exporter · ⭐4862 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#morisakikafuhuabu-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MorisakiKafu/huabu · ⭐1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openatxuiautomator2-8310-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openatx/uiautomator2 · ⭐8310 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arueliuswenshushu-124-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aruelius/wenshushu · ⭐124 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-media-game/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音游、媒体与图像
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    学习与考试
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#borisbabicbrowser_cookie3-1070-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        borisbabic/browser_cookie3 · ⭐1070 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#here200cctalk-video-download-57-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        here200/CCTalk-Video-Download · ⭐57 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mikfgallery-dl-19336-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mikf/gallery-dl · ⭐19336 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mikumifabilitickerbuy-4196-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mikumifa/biliTickerBuy · ⭐4196 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openlistteamopenlist-apipages-474-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenListTeam/OpenList-APIPages · ⭐474 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zhufucdevmotionemulator-409-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zhufucdev/MotionEmulator · ⭐409 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifurystopen-browser-use-249-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iFurySt/open-browser-use · ⭐249 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xhcodingsshpass-win32-149-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xhcoding/sshpass-win32 · ⭐149 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lihengdao666qqgroupalbumdownload-96-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        lihengdao666/QQGroupAlbumDownload · ⭐96 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xcr1234tampermonkey-typescript-33-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xcr1234/tampermonkey-typescript · ⭐33 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vercel-labsagent-browser-41440-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vercel-labs/agent-browser · ⭐41440 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samueli924chaoxing-3291-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samueli924/chaoxing · ⭐3291 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cxorzchaoxing-signin-1724-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cxOrz/chaoxing-signin · ⭐1724 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do1emijia-api-755-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Do1e/mijia-api · ⭐755 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectascendedcdp-bug-mouseevent-screenx-screeny-patcher-558-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ObjectAscended/CDP-bug-MouseEvent-.screenX-.screenY-patcher · ⭐558 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemk1tlamda_android-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sYstemk1t/lamda_Android · ⭐4 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mhogomchungumedia-downloader-4939-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mhogomchungu/media-downloader · ⭐4939 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zc-zhangchenany-auto-register-3579-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zc-zhangchen/any-auto-register · ⭐3579 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shuakamiqq-chat-exporter-4862-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shuakami/qq-chat-exporter · ⭐4862 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#morisakikafuhuabu-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MorisakiKafu/huabu · ⭐1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openatxuiautomator2-8310-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openatx/uiautomator2 · ⭐8310 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arueliuswenshushu-124-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aruelius/wenshushu · ⭐124 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">自动化与脚本<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>共 22 个仓库 · 来自 qiansekai 的 GitHub star · 生成时间 2026-08-28</p>
+</blockquote>
+<h3 id="borisbabicbrowser_cookie3-1070-python"><code>borisbabic/browser_cookie3</code> · ⭐1070 · Python<a class="headerlink" href="#borisbabicbrowser_cookie3-1070-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 把浏览器里的 Cookie 加载进 Python cookiejar 的库。</li>
+<li><strong>做什么</strong>: 从 Chrome/Firefox/Edge/Brave/Safari 等常见浏览器的 sqlite 或文本库读 Cookie，供 requests/urllib 免登录复用登录态，支持指定域名过滤和命令行用法。</li>
+<li><strong>适用场景</strong>: 写爬虫/脚本复用浏览器登录态抓取需登录内容时，免去手动登录。</li>
+<li><strong>标签</strong>: <code>automation</code></li>
+</ul>
+<h3 id="here200cctalk-video-download-57-python"><code>here200/CCTalk-Video-Download</code> · ⭐57 · Python<a class="headerlink" href="#here200cctalk-video-download-57-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: CCtalk 课程视频下载工具。</li>
+<li><strong>做什么</strong>: 通过抓包拿视频/课程 id，下载已在平台购买且非版权保护的 CCtalk 视频，支持单视频和整个课程序列的批量/选择性下载，需登录后手动取 cookie。</li>
+<li><strong>适用场景</strong>: 想把已购的 CCtalk 课程视频离线保存到本地观看时。</li>
+<li><strong>标签</strong>: <code>automation</code> <code>study</code></li>
+</ul>
+<h3 id="mikfgallery-dl-19336-python"><code>mikf/gallery-dl</code> · ⭐19336 · Python<a class="headerlink" href="#mikfgallery-dl-19336-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 命令行批量下载图片画廊/图集的跨平台利器。</li>
+<li><strong>做什么</strong>: 支持 danbooru、deviantart、pixiv、twitter、tumblr、mangadex、kemono 等大量图站，跨平台、配置选项丰富、文件名格式化能力强。可配合 yt-dlp 下视频、FFmpeg 转 ugoira 动图。</li>
+<li><strong>适用场景</strong>: 批量存档图站作品、备份画师合集时用；对标 wfdownloader/Imgbrd-grabber，纯命令行更脚本友好。</li>
+<li><strong>标签</strong>: <code>automation</code> <code>media-game</code></li>
+</ul>
+<h3 id="mikumifabilitickerbuy-4196-python"><code>mikumifa/biliTickerBuy</code> · ⭐4196 · Python<a class="headerlink" href="#mikumifabilitickerbuy-4196-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: B 站会员购抢票的辅助工具。</li>
+<li><strong>做什么</strong>: 开源免费的 B 站会员购（会员购演唱会/手办等演出票）购票辅助，简单易用，宣称遵循"非侵入式"原则，不对 B 站服务器造成干扰。另有 Skill 版和分布式版两个衍生项目。</li>
+<li><strong>适用场景</strong>: 抢 B 站会员购热门演出票、手办时使用；仅供个人学习研究，作者禁止商用代抢。</li>
+<li><strong>标签</strong>: <code>automation</code></li>
+</ul>
+<h3 id="openlistteamopenlist-apipages-474-typescript"><code>OpenListTeam/OpenList-APIPages</code> · ⭐474 · TypeScript<a class="headerlink" href="#openlistteamopenlist-apipages-474-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用于 OpenList 获取各网盘 API 的 Token 生成工具和页面。</li>
+<li><strong>做什么</strong>: 提供对接 OneDrive、阿里云盘、百度网盘、115、夸克等多网盘 API 的 token 获取接口与页面，支持 EdgeOne/Cloudflare Worker 和 Docker 容器部署，通过环境变量配置各网盘的 client id/secret。</li>
+<li><strong>适用场景</strong>: 需要对接多家网盘开放 API、自建 OpenList 类工具获取访问 token 时使用。</li>
+<li><strong>标签</strong>: <code>dev-tools</code> <code>automation</code></li>
+</ul>
+<h3 id="zhufucdevmotionemulator-409-kotlin"><code>zhufucdev/MotionEmulator</code> · ⭐409 · Kotlin<a class="headerlink" href="#zhufucdevmotionemulator-409-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 支持传感器模拟的 Xposed 定位/传感器伪造应用。</li>
+<li><strong>做什么</strong>: 一个应用平台，可用多种方式（含 Xposed、调试选项）mock 位置和传感器数据，用来骗过健身类 App 或游戏。依赖高德和 Google Maps SDK，需自行填 API key 构建。</li>
+<li><strong>适用场景</strong>: 模拟定位/步数/运动数据、研究传感器 hook 时参考；自用娱乐为主。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>automation</code></li>
+</ul>
+<h3 id="ifurystopen-browser-use-249-javascript"><code>iFurySt/open-browser-use</code> · ⭐249 · JavaScript<a class="headerlink" href="#ifurystopen-browser-use-249-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 平台中立的浏览器操作层，开源的 Codex Browser Use 替代品。</li>
+<li><strong>做什么</strong>: 用浏览器扩展 + CLI 搭档，通过 JS/Python/Go SDK 或 MCP 让 AI Agent 控制真实 Chrome（CDP/原生消息），不绑定特定 Agent 运行时。也提供 skill 包直接装给 Codex/Claude Code。</li>
+<li><strong>适用场景</strong>: 给自己的 Agent 加浏览器自动化能力、想摆脱 Codex 闭源 Browser Use 时用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>automation</code></li>
+</ul>
+<h3 id="xhcodingsshpass-win32-149-c"><code>xhcoding/sshpass-win32</code> · ⭐149 · C<a class="headerlink" href="#xhcodingsshpass-win32-149-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Windows 版的 sshpass，给 ssh 非交互传密码。</li>
+<li><strong>做什么</strong>: 移植 Linux 的 sshpass 到 Windows，支持从文件、fd、参数、环境变量 <code>SSHPASS</code> 等处取密码，自动确认 host key。可配合 ssh、rsync 等需要非交互密码认证的命令。</li>
+<li><strong>适用场景</strong>: Windows 上脚本化 ssh/rsync 连接、自动化部署需要非交互密码时使用（注意 <code>-p</code> 明文有安全风险）。</li>
+<li><strong>标签</strong>: <code>dev-tools</code> <code>automation</code></li>
+</ul>
+<h3 id="lihengdao666qqgroupalbumdownload-96-javascript"><code>lihengdao666/QQGroupAlbumDownload</code> · ⭐96 · JavaScript<a class="headerlink" href="#lihengdao666qqgroupalbumdownload-96-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 批量下载 QQ 群相册照片与视频的桌面工具。</li>
+<li><strong>做什么</strong>: 输入群号拉取可访问相册列表，勾选相册后按相册建文件夹批量下载图片和视频，优先原图/高清，支持任务队列、暂停继续、重复文件跳过；基于 Electron + Vue3 构建，Windows/macOS 可用。</li>
+<li><strong>适用场景</strong>: 需要备份 QQ 群相册、迁移群资料或个人回忆归档时使用。</li>
+<li><strong>标签</strong>: <code>automation</code></li>
+</ul>
+<h3 id="xcr1234tampermonkey-typescript-33-javascript"><code>xcr1234/tampermonkey-typescript</code> · ⭐33 · JavaScript<a class="headerlink" href="#xcr1234tampermonkey-typescript-33-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 支持 TypeScript 与热更新的油猴脚本脚手架。</li>
+<li><strong>做什么</strong>: 用 Vite 编译油猴脚本，头部开发在 header/index.ts 获得 IDE 类型提示，GM_* 函数有完整声明；配合 tamperdav 服务实现 build:sync 自动同步到油猴，免手动复制粘贴。</li>
+<li><strong>适用场景</strong>: 想用 TypeScript 写油猴脚本、并享受热更新开发体验时使用。</li>
+<li><strong>标签</strong>: <code>dev-tools</code> <code>automation</code></li>
+</ul>
+<h3 id="vercel-labsagent-browser-41440-rust"><code>vercel-labs/agent-browser</code> · ⭐41440 · Rust<a class="headerlink" href="#vercel-labsagent-browser-41440-rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 给 AI Agent 用的浏览器自动化 CLI，原生 Rust 实现、启动飞快。</li>
+<li><strong>做什么</strong>: 提供 open/snapshot/click/fill/read/screenshot 等命令，通过无障碍树引用让 AI 稳定操作页面，支持传统 CSS 选择器和按角色查找元素。内置安装 Chrome for Testing，自动检测现成的 Chrome/Brave/Playwright 环境，也可作为依赖集成进项目。</li>
+<li><strong>适用场景</strong>: 让 Claude/Codex 这类 agent 直接操作浏览器做网页任务，对标 Playwright 的浏览器 MCP，胜在轻量和原生命令行体验。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>automation</code></li>
+</ul>
+<h3 id="samueli924chaoxing-3291-python"><code>Samueli924/chaoxing</code> · ⭐3291 · Python<a class="headerlink" href="#samueli924chaoxing-3291-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 学习通/尔雅/泛雅全自动无人值守刷任务点，命令行工具。</li>
+<li><strong>做什么</strong>: 自动完成课程任务点，支持接题库答题（可配置 tiku provider 和提交模式）、处理已关闭任务点、刷章节学习次数，还能用外部通知服务推送结果。支持源码/Python、打包 exe、Docker 多种运行方式。</li>
+<li><strong>适用场景</strong>: 大学生批量刷网课任务点、自动答题，替代付费刷课平台，自托管省钱。</li>
+<li><strong>标签</strong>: <code>study</code> <code>automation</code></li>
+</ul>
+<h3 id="cxorzchaoxing-signin-1724-typescript"><code>cxOrz/chaoxing-signin</code> · ⭐1724 · TypeScript<a class="headerlink" href="#cxorzchaoxing-signin-1724-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 学习通自动签到工具，支持普通/拍照/手势/位置/二维码签到。</li>
+<li><strong>做什么</strong>: 基于 Node.js 的命令行签到，扩展成 React+Koa 的 Web 项目，支持多用户凭据、监听模式自动签到（QQ 机器人/邮件/pushplus 推送）、二维码签到用腾讯云 OCR 识别。位置签到可自定义经纬度和地址。</li>
+<li><strong>适用场景</strong>: 上课签到不想手动点时挂监听模式自动签，适合多账号代签场景。</li>
+<li><strong>标签</strong>: <code>study</code> <code>automation</code></li>
+</ul>
+<h3 id="do1emijia-api-755-python"><code>Do1e/mijia-api</code> · ⭐755 · Python<a class="headerlink" href="#do1emijia-api-755-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用代码、CLI、MCP 直接控制米家设备，支持 Agent Skill。</li>
+<li><strong>做什么</strong>: 封装米家 API，扫码登录后可通过 Python API、CLI 或 MCP 控制设备（开关、亮度、属性/动作），v4.0 起支持 MCP、v4.1 起支持 Agent Skill。按设备名即可定位控制，认证文件本地保存。</li>
+<li><strong>适用场景</strong>: 把米家智能家居接入自己的脚本、Home Assistant 或让 AI Agent 语音/对话控制家电，替代手动 App 操作。</li>
+<li><strong>标签</strong>: <code>automation</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="objectascendedcdp-bug-mouseevent-screenx-screeny-patcher-558-python"><code>ObjectAscended/CDP-bug-MouseEvent-.screenX-.screenY-patcher</code> · ⭐558 · Python<a class="headerlink" href="#objectascendedcdp-bug-mouseevent-screenx-screeny-patcher-558-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 修复 Chrome CDP 鼠标事件 screenX/screenY 伪造 bug 的补丁，专打 Cloudflare Turnstile。</li>
+<li><strong>做什么</strong>: Chrome 的 <code>Input.dispatchMouseEvent</code> 会让 MouseEvent 的 screenX/screenY 等于 x/y，被 Cloudflare Turnstile 识破判为机器人。这个扩展给这两个属性填假值绕过检测，让自动化浏览器能通过 Turnstile 验证。</li>
+<li><strong>适用场景</strong>: 有头/无头浏览器自动化爬虫遇到 Cloudflare Turnstile 拦截、判定为 bot 时用，俗称过盾。</li>
+<li><strong>标签</strong>: <code>automation</code> <code>crawler</code></li>
+</ul>
+<h3 id="systemk1tlamda_android-4"><code>sYstemk1t/lamda_Android</code> · ⭐4 ·<a class="headerlink" href="#systemk1tlamda_android-4" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 安卓逆向与自动化辅助框架，号称「史上最强」抓包/逆向/Hook 及云手机框架。</li>
+<li><strong>做什么</strong>: 零依赖（仅需 root）的安卓服务端+Python 客户端，全网络化脱离 USB，内置 frida/IDA server、无线 WIFI ADB、http/socks5 代理、OpenVPN、中间人 mitmproxy 流量分析、UI 自动化、远程桌面、数据库在线浏览、crontab、SSH 等能力，支持真机/模拟器/云手机。</li>
+<li><strong>适用场景</strong>: 远程控制 root 安卓设备做抓包、逆向、Hook、云手机自动化批量操作，替代实体 USB 连接的低门槛方案。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>automation</code></li>
+</ul>
+<h3 id="mhogomchungumedia-downloader-4939-c"><code>mhogomchungu/media-downloader</code> · ⭐4939 · C++<a class="headerlink" href="#mhogomchungumedia-downloader-4939-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: yt-dlp 等命令行下载器的 Qt 图形前端。</li>
+<li><strong>做什么</strong>: 给 yt-dlp、gallery-dl、you-get、aria2c 等 CLI 下载工具套个 GUI，支持多站点媒体/批量/播放列表下载、并发任务、订阅管理，多语言界面。默认用 yt-dlp，其他工具以扩展形式安装。</li>
+<li><strong>适用场景</strong>: 不想记 yt-dlp 命令又需要批量下视频/图集时用，相当于 yt-dlp 的图形壳。</li>
+<li><strong>标签</strong>: <code>automation</code></li>
+</ul>
+<h3 id="zc-zhangchenany-auto-register-3579-python"><code>zc-zhangchen/any-auto-register</code> · ⭐3579 · Python<a class="headerlink" href="#zc-zhangchenany-auto-register-3579-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 多平台账号自动注册与管理工具，插件化、可批量、带 Web UI。</li>
+<li><strong>做什么</strong>: 支持多平台账号注册管理，当前默认有 ChatGPT 和 iCloud 隐私邮箱（Hide My Email）。功能包括统一账号列表/导入导出、多执行器（纯协议/无头/有头浏览器）、多邮箱服务接入、验证码（YesCaptcha/本地 Turnstile Solver）、手机接码、代理池、批量并发注册、实时日志、插件化扩展。ChatGPT 走纯协议实现，无需浏览器。</li>
+<li><strong>适用场景</strong>: 需要批量注册如 ChatGPT 等账号、或管理 iCloud 隐私邮箱与多账号状态同步的自动化场景。</li>
+<li><strong>标签</strong>: <code>automation</code></li>
+</ul>
+<h3 id="shuakamiqq-chat-exporter-4862-typescript"><code>shuakami/qq-chat-exporter</code> · ⭐4862 · TypeScript<a class="headerlink" href="#shuakamiqq-chat-exporter-4862-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 把 QQ 聊天记录和表情包导出到本地的工具</li>
+<li><strong>做什么</strong>: 读取并保存好友/群聊记录，导出 HTML/JSON/TXT/Excel 多种格式，连图片、视频、表情包一起下到本地。基于 NapCatQQ，支持 NT QQ，扫码登录，全部解析都在本机完成，不上传任何数据，还支持 Docker 部署。</li>
+<li><strong>适用场景</strong>: 想备份 QQ 聊天记录、归档群聊、或把聊天数据拿来分析/迁移时用。</li>
+<li><strong>标签</strong>: <code>dev-tools</code> <code>automation</code></li>
+</ul>
+<h3 id="morisakikafuhuabu-1"><code>MorisakiKafu/huabu</code> · ⭐1<a class="headerlink" href="#morisakikafuhuabu-1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 日语视频/歌曲一键生成双语字幕并封装成片的工具（NYFC）</li>
+<li><strong>做什么</strong>: YouTube/本地文件 → faster-whisper 日语识别（含热词、响度归一化、幻觉抑制）→ 本地 Ollama+Qwen3 双语翻译 → Aegisub 风格样式编辑 → 输出 SRT/ASS → 无损封装 MKV/MP4。一键安装脚本自动装 Python/依赖/模型，代码带防篡改保护。</li>
+<li><strong>适用场景</strong>: 给日语影视/歌曲做字幕、翻译、封装一步到位，适合个人做字幕作品。</li>
+<li><strong>标签</strong>: <code>media-game</code> <code>automation</code></li>
+</ul>
+<h3 id="openatxuiautomator2-8310-python"><code>openatx/uiautomator2</code> · ⭐8310 · Python<a class="headerlink" href="#openatxuiautomator2-8310-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Android UI 自动化的 Python 封装库</li>
+<li><strong>做什么</strong>: 设备端跑一个基于 UiAutomator 的 HTTP 服务，Python 客户端通过 HTTP 调用实现启动 App、点击、XPath 定位、获取文本等自动化操作，写法简洁直观。</li>
+<li><strong>适用场景</strong>: 用 Python 写安卓自动化测试、App 批量操作或爬虫脚本，对标 Appium 但更轻量。</li>
+<li><strong>标签</strong>: <code>automation</code></li>
+</ul>
+<h3 id="arueliuswenshushu-124-python"><code>Aruelius/wenshushu</code> · ⭐124 · Python<a class="headerlink" href="#arueliuswenshushu-124-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 文叔叔网盘的文件上传/下载脚本</li>
+<li><strong>做什么</strong>: Python 写的文叔叔（wenshushu.cn）文件上传下载脚本，支持多线程、秒传，上传后返回管理链接和公共下载链接，管理链接可用于销毁/分享/续期文件。</li>
+<li><strong>适用场景</strong>: 想用命令行批量上传/下载文叔叔网盘文件时使用。</li>
+<li><strong>标签</strong>: <code>automation</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

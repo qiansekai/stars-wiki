@@ -1,0 +1,2591 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="qiansekai 的 GitHub star 中文速览知识库">
+      
+      
+      
+      
+        <link rel="prev" href="../03-device-tools/">
+      
+      
+        <link rel="next" href="../05-dev-tools/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>AI Agent 与 MCP - GitHub Star 知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-agent-mcp" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="GitHub Star 知识库" class="md-header__button md-logo" aria-label="GitHub Star 知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GitHub Star 知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AI Agent 与 MCP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GitHub Star 知识库" class="md-nav__button md-logo" aria-label="GitHub Star 知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    GitHub Star 知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-android-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安卓内核与 Root
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-android-reverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安卓逆向与 Hook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-device-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    设备互联与刷机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Agent 与 MCP
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Agent 与 MCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#openclawopenclaw-387830-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openclaw/openclaw · ⭐387830 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claude-code-bestclaude-code-22247-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        claude-code-best/claude-code · ⭐22247 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoftplaywright-cli-12892-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        microsoft/playwright-cli · ⭐12892 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chatlabchatlab-7253-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChatLab/ChatLab · ⭐7253 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haleclipseccometixline-3452-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Haleclipse/CCometixLine · ⭐3452 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zinja-coderjadx-ai-mcp-2718-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zinja-coder/jadx-ai-mcp · ⭐2718 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feather-2burner-x-1750-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feather-2/Burner-X · ⭐1750 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jaycrlmobilevc-209-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JayCRL/MobileVC · ⭐209 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chun1617kir-manager-153-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chun1617/Kir-Manager · ⭐153 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsingshuiida-agent-bridge-108-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TsingShui/ida-agent-bridge · ⭐108 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chaomixiandsh2shell-47-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChaoMixian/dsh2shell · ⭐47 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redmig110jellyfish-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redmig110/Jellyfish · ⭐1 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deepseek-aideepseek-harness-200098-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        deepseek-ai/deepseek-harness · ⭐200098 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lintsinghuadeepaudit-6911-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        lintsinghua/DeepAudit · ⭐6911 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xkodawiremcp-576-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xKoda/WireMCP · ⭐576 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifurystopen-browser-use-249-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iFurySt/open-browser-use · ⭐249 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zhizhuodemaoandroid_proxy_mcp-222-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zhizhuodemao/android_proxy_mcp · ⭐222 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokenrollaiminicc-199-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TokenRollAI/minicc · ⭐199 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zacharyzcrvmware-mcp-46-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZacharyZcR/vmware-mcp · ⭐46 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wael-rdgns3-mcp-server-25-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wael-Rd/gns3-mcp-server · ⭐25 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msmchaudeepseek-ensp-2-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MSmchau/Deepseek-Ensp · ⭐2 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#earendil-workspi-98283-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        earendil-works/pi · ⭐98283 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chromedevtoolschrome-devtools-mcp-49824-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChromeDevTools/chrome-devtools-mcp · ⭐49824 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zai-orgopen-autoglm-26110-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zai-org/Open-AutoGLM · ⭐26110 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beehiveinnovationspal-mcp-server-11724-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BeehiveInnovations/pal-mcp-server · ⭐11724 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yjh051108dsh-routing-suite-6900-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        yjh051108/dsh-routing-suite · ⭐6900 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gudastudioskills-2026-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GuDaStudio/skills · ⭐2026 · PowerShell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a9gentmindfs-1728-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a9gent/mindfs · ⭐1728 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asdfgh1445ctf-super-hub-781-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        asdfgh1445/ctf-super-hub · ⭐781 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xinian-dadafuck_my_shit_mountain-460-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XiNian-dada/Fuck_My_Shit_Mountain · ⭐460 · HTML
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcpcapmcpcap-51-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mcpcap/mcpcap · ⭐51 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paddlepaddlepaddleocr-88355-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PaddlePaddle/PaddleOCR · ⭐88355 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vercel-labsagent-browser-41440-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vercel-labs/agent-browser · ⭐41440 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#huansherevideolingo-18272-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Huanshere/VideoLingo · ⭐18272 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mrexodiaida-pro-mcp-11638-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mrexodia/ida-pro-mcp · ⭐11638 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vinvcnmattpocock-skills-zh-cn-3703-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vinvcn/mattpocock-skills-zh-CN · ⭐3703 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zhizhuodemaojs-reverse-mcp-2615-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zhizhuodemao/js-reverse-mcp · ⭐2615 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shinnpuruvoicetransl-1242-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shinnpuru/VoiceTransl · ⭐1242 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thu-bpmmarkllm-1054-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        THU-BPM/MarkLLM · ⭐1054 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do1emijia-api-755-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Do1e/mijia-api · ⭐755 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chartyrsts2-agent-297-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CharTyr/STS2-Agent · ⭐297 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aiguicaicursor-toolbox-219-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        aiguicai/Cursor-Toolbox · ⭐219 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redmig110ensp-ai-15-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redmig110/eNSP-AI · ⭐15 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gsd-buildget-shit-done-64631-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gsd-build/get-shit-done · ⭐64631 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#astrbotdevsastrbot-39697-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AstrBotDevs/AstrBot · ⭐39697 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yzflyawesome-mcp-zh-7608" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        yzfly/Awesome-MCP-ZH · ⭐7608 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omnimind-aiomnibot-1929-dart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        omnimind-ai/OmniBot · ⭐1929 · Dart
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zinja-coderapktool-mcp-server-640-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zinja-coder/apktool-mcp-server · ⭐640 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#masriyanclaude-code-cybersecurity-skill-371-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Masriyan/Claude-Code-CyberSecurity-Skill · ⭐371 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neko3000deepseek-whalechan-44-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neko3000/deepseek-whalechan · ⭐44 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warpdotdevwarp-64568-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        warpdotdev/warp · ⭐64568 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tiannhapi-4890-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tiann/hapi · ⭐4890 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hank9999kirors-1893-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hank9999/kiro.rs · ⭐1893 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upstashcontext7-61306-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        upstash/context7 · ⭐61306 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#githubgithub-mcp-server-32564-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        github/github-mcp-server · ⭐32564 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deepseek-aideepseek-ocr-23855-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        deepseek-ai/DeepSeek-OCR · ⭐23855 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-nextmobile-mcp-6041-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mobile-next/mobile-mcp · ⭐6041 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mitsuhikoagent-stuff-2943-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mitsuhiko/agent-stuff · ⭐2943 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zenstory-aivideo-recap-skills-481-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zenstory-ai/video-recap-skills · ⭐481 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neteaseskills-233-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NetEase/skills · ⭐233 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsuchijomatlab-mcp-39-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tsuchijo/matlab-mcp · ⭐39 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chistokhinsvgns3-mcp-12-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChistokhinSV/gns3-mcp · ⭐12 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seemseamclaude_codex_bridge-3456-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SeemSeam/claude_codex_bridge · ⭐3456 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chen0416ccc-cpucodex-windows-fast-patch-skill-1121-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chen0416ccc-cpu/codex-windows-fast-patch-skill · ⭐1121 · PowerShell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voidcraft-devmemory-forge-rs-476-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        voidcraft-dev/memory-forge-rs · ⭐476 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-dev-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发工具与基础设施
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全与 CTF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自动化与脚本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-media-game/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音游、媒体与图像
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    学习与考试
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#openclawopenclaw-387830-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openclaw/openclaw · ⭐387830 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claude-code-bestclaude-code-22247-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        claude-code-best/claude-code · ⭐22247 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoftplaywright-cli-12892-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        microsoft/playwright-cli · ⭐12892 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chatlabchatlab-7253-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChatLab/ChatLab · ⭐7253 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haleclipseccometixline-3452-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Haleclipse/CCometixLine · ⭐3452 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zinja-coderjadx-ai-mcp-2718-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zinja-coder/jadx-ai-mcp · ⭐2718 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feather-2burner-x-1750-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feather-2/Burner-X · ⭐1750 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jaycrlmobilevc-209-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JayCRL/MobileVC · ⭐209 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chun1617kir-manager-153-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chun1617/Kir-Manager · ⭐153 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsingshuiida-agent-bridge-108-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TsingShui/ida-agent-bridge · ⭐108 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chaomixiandsh2shell-47-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChaoMixian/dsh2shell · ⭐47 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redmig110jellyfish-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redmig110/Jellyfish · ⭐1 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deepseek-aideepseek-harness-200098-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        deepseek-ai/deepseek-harness · ⭐200098 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lintsinghuadeepaudit-6911-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        lintsinghua/DeepAudit · ⭐6911 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0xkodawiremcp-576-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0xKoda/WireMCP · ⭐576 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifurystopen-browser-use-249-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iFurySt/open-browser-use · ⭐249 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zhizhuodemaoandroid_proxy_mcp-222-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zhizhuodemao/android_proxy_mcp · ⭐222 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokenrollaiminicc-199-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TokenRollAI/minicc · ⭐199 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zacharyzcrvmware-mcp-46-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZacharyZcR/vmware-mcp · ⭐46 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wael-rdgns3-mcp-server-25-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wael-Rd/gns3-mcp-server · ⭐25 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msmchaudeepseek-ensp-2-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MSmchau/Deepseek-Ensp · ⭐2 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#earendil-workspi-98283-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        earendil-works/pi · ⭐98283 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chromedevtoolschrome-devtools-mcp-49824-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChromeDevTools/chrome-devtools-mcp · ⭐49824 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zai-orgopen-autoglm-26110-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zai-org/Open-AutoGLM · ⭐26110 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beehiveinnovationspal-mcp-server-11724-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BeehiveInnovations/pal-mcp-server · ⭐11724 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yjh051108dsh-routing-suite-6900-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        yjh051108/dsh-routing-suite · ⭐6900 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gudastudioskills-2026-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GuDaStudio/skills · ⭐2026 · PowerShell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a9gentmindfs-1728-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a9gent/mindfs · ⭐1728 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asdfgh1445ctf-super-hub-781-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        asdfgh1445/ctf-super-hub · ⭐781 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xinian-dadafuck_my_shit_mountain-460-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XiNian-dada/Fuck_My_Shit_Mountain · ⭐460 · HTML
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcpcapmcpcap-51-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mcpcap/mcpcap · ⭐51 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paddlepaddlepaddleocr-88355-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PaddlePaddle/PaddleOCR · ⭐88355 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vercel-labsagent-browser-41440-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vercel-labs/agent-browser · ⭐41440 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#huansherevideolingo-18272-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Huanshere/VideoLingo · ⭐18272 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mrexodiaida-pro-mcp-11638-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mrexodia/ida-pro-mcp · ⭐11638 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vinvcnmattpocock-skills-zh-cn-3703-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vinvcn/mattpocock-skills-zh-CN · ⭐3703 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zhizhuodemaojs-reverse-mcp-2615-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zhizhuodemao/js-reverse-mcp · ⭐2615 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shinnpuruvoicetransl-1242-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shinnpuru/VoiceTransl · ⭐1242 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thu-bpmmarkllm-1054-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        THU-BPM/MarkLLM · ⭐1054 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do1emijia-api-755-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Do1e/mijia-api · ⭐755 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chartyrsts2-agent-297-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CharTyr/STS2-Agent · ⭐297 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aiguicaicursor-toolbox-219-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        aiguicai/Cursor-Toolbox · ⭐219 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redmig110ensp-ai-15-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redmig110/eNSP-AI · ⭐15 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gsd-buildget-shit-done-64631-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gsd-build/get-shit-done · ⭐64631 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#astrbotdevsastrbot-39697-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AstrBotDevs/AstrBot · ⭐39697 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yzflyawesome-mcp-zh-7608" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        yzfly/Awesome-MCP-ZH · ⭐7608 ·
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omnimind-aiomnibot-1929-dart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        omnimind-ai/OmniBot · ⭐1929 · Dart
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zinja-coderapktool-mcp-server-640-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zinja-coder/apktool-mcp-server · ⭐640 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#masriyanclaude-code-cybersecurity-skill-371-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Masriyan/Claude-Code-CyberSecurity-Skill · ⭐371 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neko3000deepseek-whalechan-44-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neko3000/deepseek-whalechan · ⭐44 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warpdotdevwarp-64568-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        warpdotdev/warp · ⭐64568 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tiannhapi-4890-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tiann/hapi · ⭐4890 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hank9999kirors-1893-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hank9999/kiro.rs · ⭐1893 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upstashcontext7-61306-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        upstash/context7 · ⭐61306 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#githubgithub-mcp-server-32564-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        github/github-mcp-server · ⭐32564 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deepseek-aideepseek-ocr-23855-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        deepseek-ai/DeepSeek-OCR · ⭐23855 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-nextmobile-mcp-6041-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mobile-next/mobile-mcp · ⭐6041 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mitsuhikoagent-stuff-2943-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mitsuhiko/agent-stuff · ⭐2943 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zenstory-aivideo-recap-skills-481-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zenstory-ai/video-recap-skills · ⭐481 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neteaseskills-233-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NetEase/skills · ⭐233 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsuchijomatlab-mcp-39-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tsuchijo/matlab-mcp · ⭐39 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chistokhinsvgns3-mcp-12-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChistokhinSV/gns3-mcp · ⭐12 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seemseamclaude_codex_bridge-3456-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SeemSeam/claude_codex_bridge · ⭐3456 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chen0416ccc-cpucodex-windows-fast-patch-skill-1121-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chen0416ccc-cpu/codex-windows-fast-patch-skill · ⭐1121 · PowerShell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voidcraft-devmemory-forge-rs-476-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        voidcraft-dev/memory-forge-rs · ⭐476 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ai-agent-mcp">AI Agent 与 MCP<a class="headerlink" href="#ai-agent-mcp" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>共 65 个仓库 · 来自 qiansekai 的 GitHub star · 生成时间 2026-08-28</p>
+</blockquote>
+<h3 id="openclawopenclaw-387830-typescript"><code>openclaw/openclaw</code> · ⭐387830 · TypeScript<a class="headerlink" href="#openclawopenclaw-387830-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 运行在自己设备上的个人 AI 助手，通过 Gateway 接入你日常用的聊天渠道。</li>
+<li><strong>做什么</strong>: 单操作者的本地 AI 助手，把模型、工具、消息渠道和配套 App 通过一个 Gateway 串起来，支持 macOS/Linux/Windows，可接 WhatsApp、Telegram、Slack、Discord、iMessage 等。提供 Control UI、CLI、TUI，配套 App 还能加语音、Canvas、摄像头和屏幕能力。</li>
+<li><strong>适用场景</strong>: 想自己掌控数据、在熟悉的聊天软件里随时使唤个人助理；对标各类云托管 AI 助手但数据留在本机。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="claude-code-bestclaude-code-22247-typescript"><code>claude-code-best/claude-code</code> · ⭐22247 · TypeScript<a class="headerlink" href="#claude-code-bestclaude-code-22247-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 复刻并工程化增强的 Claude Code，可运行、可构建、可调试。</li>
+<li><strong>做什么</strong>: 还原 Anthropic 官方 Claude Code 并补齐企业版/登录才有的特性，兼容原配置，扩展 Goal 持续驱动、Artifacts、多 Agent 编排、管道 IPC 多实例协作、ACP 协议、远程控制自托管等功能，关闭外部封控点。</li>
+<li><strong>适用场景</strong>: 想要 Claude Code 的开源可自建版、或国内环境友好的替代，并需要更强的编排与自托管能力。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="microsoftplaywright-cli-12892-javascript"><code>microsoft/playwright-cli</code> · ⭐12892 · JavaScript<a class="headerlink" href="#microsoftplaywright-cli-12892-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 微软官方 Playwright 的 CLI 接口，配 SKILLS，专为 coding agent 打造。</li>
+<li><strong>做什么</strong>: 把常见浏览器自动化动作做成命令行（录制生成代码、检查选择器、截图），默认 headless，支持 session/screenshot 等，可安装成 SKILLs 供 Claude Code/Copilot 调用，比 MCP 更省 token。</li>
+<li><strong>适用场景</strong>: 让 coding agent 以低 token 开销做浏览器测试与页面自动化，替代在模型上下文里塞 accessibility tree 的 MCP 方式。</li>
+<li><strong>标签</strong>: <code>dev-tools</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="chatlabchatlab-7253-typescript"><code>ChatLab/ChatLab</code> · ⭐7253 · TypeScript<a class="headerlink" href="#chatlabchatlab-7253-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 本地优先的 AI 聊天记录分析工具，你的聊天历史归你自己。</li>
+<li><strong>做什么</strong>: 桌面 App（Electron+Vue），用 SQL 引擎加 AI Agent 帮你从聊天数据里找规律、问问题、抽洞见，支持 WhatsApp/LINE/QQ/Discord/Telegram/iMessage 等，流式解析支撑百万级消息，数据默认留在本机并有 24+ 工具的工作流。</li>
+<li><strong>适用场景</strong>: 想分析自己的社交聊天记录、导出后做趋势/互动/排行洞察，且注重隐私不想传云端。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="haleclipseccometixline-3452-rust"><code>Haleclipse/CCometixLine</code> · ⭐3452 · Rust<a class="headerlink" href="#haleclipseccometixline-3452-rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: Rust 写的高性能 Claude Code 状态栏工具。</li>
+<li><strong>做什么</strong>: 在 Claude Code 状态栏显示模型、目录、Git 分支状态、上下文窗口信息与用量追踪，带交互式 TUI 配置、主题预设、分段自定义，还能关掉"Context low"告警、开启 verbose、做能扛版本更新的补丁并自动备份。</li>
+<li><strong>适用场景</strong>: 重度 Claude Code 用户想让终端状态栏更直观可定制、并精简告警时。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="zinja-coderjadx-ai-mcp-2718-java"><code>zinja-coder/jadx-ai-mcp</code> · ⭐2718 · Java<a class="headerlink" href="#zinja-coderjadx-ai-mcp-2718-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 给 JADX 加 MCP server，让 LLM 直接分析 Android APK。</li>
+<li><strong>做什么</strong>: JADX 插件 + MCP server 一体，把反编译的 APK 暴露给 Claude 等 LLM 做漏洞挖掘、APK 分析和逆向，让模型通过 MCP 直接读代码、找问题，属于逆向 + LLM 结合的自动化方案。</li>
+<li><strong>适用场景</strong>: 逆向/安全分析时让 AI 助手直接上手 APK 代码，做 SAST/渗透辅助。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="feather-2burner-x-1750-javascript"><code>Feather-2/Burner-X</code> · ⭐1750 · JavaScript<a class="headerlink" href="#feather-2burner-x-1750-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 浏览器即开即用的 AI 文献识别、翻译、阅读与智能分析工具（BYOK）。</li>
+<li><strong>做什么</strong>: 处理 PDF/DOCX/PPTX/EPUB 的 AI 工作站，支持 OCR、并发高质量翻译（保留公式图表格式）、术语库，前端实现 Agentic RAG 让 AI 带工具自主任意搜取长文本分析，数据全在浏览器本地，可接自定义模型端点。</li>
+<li><strong>适用场景</strong>: 研究生/研究者批量读论文、跨语言长文本做精细阅读与结构化提取时。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>study</code></li>
+</ul>
+<h3 id="jaycrlmobilevc-209-go"><code>JayCRL/MobileVC</code> · ⭐209 · Go<a class="headerlink" href="#jaycrlmobilevc-209-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用手机接管电脑上 Claude/Codex CLI 会话的控制台。</li>
+<li><strong>做什么</strong>: 不是远程桌面或终端镜像，而是把 AI 编程助手的高频等待态做成手机结构化操作：接权限请求、推进 Plan Mode、按组审核/回滚 diff、恢复历史会话、浏览文件日志、管理 Skill/Memory/Context，还支持语音预沟通、公网 Relay 和扫码连接。</li>
+<li><strong>适用场景</strong>: 人不在电脑前，仍想用手机审批、催促、审查 Claude/Codex 任务的进展时。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>device-tools</code></li>
+</ul>
+<h3 id="chun1617kir-manager-153-go"><code>chun1617/Kir-Manager</code> · ⭐153 · Go<a class="headerlink" href="#chun1617kir-manager-153-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 跨平台 Kiro IDE 管理工具，账号备份、Machine ID 管理、一键新机。</li>
+<li><strong>做什么</strong>: Wails+Vue3 桌面应用，备份/恢复 Kiro 认证 Token 与 Machine ID、多账号切换、一键生成新 Machine ID（patch extension.js 拦截读取）、用量查询与低余额告警、Token 自动刷新、余额不足自动切快照，繁体/简体双语。</li>
+<li><strong>适用场景</strong>: 多 Kiro 账号切换、额度管理或需要"换机器"绕过设备绑定的场景。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="tsingshuiida-agent-bridge-108-python"><code>TsingShui/ida-agent-bridge</code> · ⭐108 · Python<a class="headerlink" href="#tsingshuiida-agent-bridge-108-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 无头 CLI 优先的 IDA Pro 桥，让 AI 像读源码一样读二进制。</li>
+<li><strong>做什么</strong>: 把 IDA 的反编译、交叉引用、类型、字节操作暴露成纯文本短连接协议，反编译结果实时同步到本地文件系统，重命名/注释/patch 瞬间落盘，Agent 靠 cat、grep、nc 就能管道化分析，含增量导出和文件系统即 API 设计。</li>
+<li><strong>适用场景</strong>: 让 Claude Code 等 agent 以 Unix 方式流水线式逆向二进制、找签名/加密逻辑时。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="chaomixiandsh2shell-47-python"><code>ChaoMixian/dsh2shell</code> · ⭐47 · Python<a class="headerlink" href="#chaomixiandsh2shell-47-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 针对暴露的 DeepSeek Harness (dsh) 实例的未授权 RCE PoC。</li>
+<li><strong>做什么</strong>: 通过伪造 Host 头解锁 dsh 特权 RPC，注册临时 LLM Provider 指向自带假模型服务器，用确定性 tool call 驱动 bash 工具执行命令，标准库实现，支持执行命令、凭证收割、交互式反连 shell、FOFA 资产探测与残留修复。</li>
+<li><strong>适用场景</strong>: 授权安全测试中探测/验证暴露在外网的 dsh 实例是否存在未授权 RCE。</li>
+<li><strong>标签</strong>: <code>security</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="redmig110jellyfish-1"><code>Redmig110/Jellyfish</code> · ⭐1 ·<a class="headerlink" href="#redmig110jellyfish-1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 一站式 AI 生成竖屏短剧/微短剧的生产工具。</li>
+<li><strong>做什么</strong>: 把剧本输入→智能分镜→角色/场景/道具一致性管理→AI 图片/视频生成→后期剪辑→一键导出成片的流程串成工作台，含剧本理解与镜头拆解、资产一致性体系、异步任务中心、多 Provider/多模型与提示词模板管理。</li>
+<li><strong>适用场景</strong>: 短剧创作者或 AI 影视工作室批量生产竖屏短剧、低成本试水微短剧时。</li>
+<li><strong>标签</strong>: <code>media-game</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="deepseek-aideepseek-harness-200098-typescript"><code>deepseek-ai/deepseek-harness</code> · ⭐200098 · TypeScript<a class="headerlink" href="#deepseek-aideepseek-harness-200098-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: DeepSeek 开源的"万物皆插件"AI Agent 编排框架，你现在跑的就是它。</li>
+<li><strong>做什么</strong>: 一个基于 Cordis 的 Agent harness（dsh），用插件化的架构组织 Agent 能力，每个能力都是一个插件行。Web UI 默认跑在 127.0.0.1:3080，支持 <code>npx @deepseek-ai/dsh web</code> 一键启动，也能从源码构建。</li>
+<li><strong>适用场景</strong>: 想自建或扩展 Agent 开发环境、写 dsh-plugin 插件时用；对标 Claude Code / Codex 这类 Agent 工具链。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="lintsinghuadeepaudit-6911-python"><code>lintsinghua/DeepAudit</code> · ⭐6911 · Python<a class="headerlink" href="#lintsinghuadeepaudit-6911-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 开源的 AI 代码漏洞挖掘多智能体系统，号称"人人拥有的黑客战队"。</li>
+<li><strong>做什么</strong>: 多 Agent 自主协作做代码审计，配套自动化沙箱做 PoC 验证，支持 Ollama 私有部署、一键生成 PDF/Markdown/JSON 报告。支持 GitHub/GitLab/Gitea 导入项目，也有粘贴代码即时分析。</li>
+<li><strong>适用场景</strong>: 想用 LLM 批量扫自己的代码库找漏洞、辅助安全审计时用；对标 Semgrep/CodeQL 但偏 AI 驱动。</li>
+<li><strong>标签</strong>: <code>security</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="0xkodawiremcp-576-javascript"><code>0xKoda/WireMCP</code> · ⭐576 · JavaScript<a class="headerlink" href="#0xkodawiremcp-576-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 给 LLM 接上 Wireshark(t)shark 的 MCP，让 AI 做实时网络分析。</li>
+<li><strong>做什么</strong>: 基于 tshark 封装成 MCP Server，提供抓包、协议统计、会话 flow、威胁情报查黑（URLhaus）、PCAP 分析和凭据提取等工具，把原始网络包转成 LLM 能理解的 JSON。</li>
+<li><strong>适用场景</strong>: 让 AI 辅助做威胁狩猎、网络诊断、抓包分析时用；适合接入 Cursor/Claude 等 MCP 客户端。</li>
+<li><strong>标签</strong>: <code>security</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="ifurystopen-browser-use-249-javascript"><code>iFurySt/open-browser-use</code> · ⭐249 · JavaScript<a class="headerlink" href="#ifurystopen-browser-use-249-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 平台中立的浏览器操作层，开源的 Codex Browser Use 替代品。</li>
+<li><strong>做什么</strong>: 用浏览器扩展 + CLI 搭档，通过 JS/Python/Go SDK 或 MCP 让 AI Agent 控制真实 Chrome（CDP/原生消息），不绑定特定 Agent 运行时。也提供 skill 包直接装给 Codex/Claude Code。</li>
+<li><strong>适用场景</strong>: 给自己的 Agent 加浏览器自动化能力、想摆脱 Codex 闭源 Browser Use 时用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>automation</code></li>
+</ul>
+<h3 id="zhizhuodemaoandroid_proxy_mcp-222-python"><code>zhizhuodemao/android_proxy_mcp</code> · ⭐222 · Python<a class="headerlink" href="#zhizhuodemaoandroid_proxy_mcp-222-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 基于 MCP 的 Android 抓包服务，让 AI 用自然语言分析网络请求。</li>
+<li><strong>做什么</strong>: 用 mitmdump 做代理抓 HTTP/HTTPS 流量，数据落 SQLite，再由 MCP 服务暴露给 Claude，支持按域名/状态码/类型筛选、内容搜索、大响应分片读取。含证书安装、Magisk 移系统证书等指引。</li>
+<li><strong>适用场景</strong>: 想用自然语言让 AI 辅助抓包分析安卓 App 流量时用；离线本地运行，保护隐私。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="tokenrollaiminicc-199-python"><code>TokenRollAI/minicc</code> · ⭐199 · Python<a class="headerlink" href="#tokenrollaiminicc-199-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 极简教学版 AI 编程助手，用最少代码讲清 Claude Code 的机制。</li>
+<li><strong>做什么</strong>: 一个参考 Claude Code 交互形态的 TUI 编程助手，实现了文件读写编辑、glob/grep 检索、shell 前台/后台任务、todo、子代理和 MCP 预加载。用 Textual 写 TUI，重点是学机制而非生产用。</li>
+<li><strong>适用场景</strong>: 想学习 Agent 编程助手（工具调用/事件驱动 UI/子代理/MCP）内部实现时钻研用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="zacharyzcrvmware-mcp-46-python"><code>ZacharyZcR/vmware-mcp</code> · ⭐46 · Python<a class="headerlink" href="#zacharyzcrvmware-mcp-46-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 控制 VMware Workstation Pro 虚拟机的 MCP Server。</li>
+<li><strong>做什么</strong>: 通过 REST API、vmrun 和 vmcli 三种来源提供 117 个工具，覆盖虚拟机电源管理、快照、克隆、网卡/磁盘/端口转发、客户机文件与进程操作、截图按键等全自动能力。</li>
+<li><strong>适用场景</strong>: 想让 AI Agent 自动管理本地 VMware 虚拟机（开关机、快照、跑脚本）时用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="wael-rdgns3-mcp-server-25-python"><code>Wael-Rd/gns3-mcp-server</code> · ⭐25 · Python<a class="headerlink" href="#wael-rdgns3-mcp-server-25-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 让 AI 用自然语言搭建和配置 GNS3 网络拓扑的 MCP Server。</li>
+<li><strong>做什么</strong>: 封装 GNS3 完整 API 为 40+ MCP 工具，覆盖拓扑创建、设备配置（15+ 预置 OSPF/BGP/VLAN/NAT 模板）、快照管理、抓包分析、批量操作和拓扑校验，主打"描述网络，AI 来搭"。</li>
+<li><strong>适用场景</strong>: 网络学习/实验时用 AI 辅助建拓扑、配设备、排障；接 Gemini CLI 或任意 MCP 客户端。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="msmchaudeepseek-ensp-2-python"><code>MSmchau/Deepseek-Ensp</code> · ⭐2 · Python<a class="headerlink" href="#msmchaudeepseek-ensp-2-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用 DeepSeek 把自然语言转成华为网络设备配置并操作 eNSP。</li>
+<li><strong>做什么</strong>: 通过 DeepSeek API 将自然语言转为华为设备 CLI 配置命令，再 SSH 连到 eNSP 模拟环境里的交换机/路由器执行配置、故障排查，并对设备做完整 CRUD 操作，支持批量。</li>
+<li><strong>适用场景</strong>: 网络学习时用自然语言让 AI 帮忙配置/排查 eNSP 里的华为设备时使用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="earendil-workspi-98283-typescript"><code>earendil-works/pi</code> · ⭐98283 · TypeScript<a class="headerlink" href="#earendil-workspi-98283-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 一个自扩展的 AI agent 全家桶，统一了 LLM API、agent 运行时和编码 CLI。</li>
+<li><strong>做什么</strong>: 提供多 provider 统一的 LLM 调用接口（OpenAI/Anthropic/Google 等），一个带工具调用与状态管理的 agent 运行时，以及交互式编码 agent 和终端 UI 库。整体可打包成独立二进制，也支持容器化隔离。</li>
+<li><strong>适用场景</strong>: 想自建或定制 AI agent、用多种模型后端做编码助手，或需要一个可编程的 agent 框架时对标 Claude Code/Codex 这类工具。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="chromedevtoolschrome-devtools-mcp-49824-typescript"><code>ChromeDevTools/chrome-devtools-mcp</code> · ⭐49824 · TypeScript<a class="headerlink" href="#chromedevtoolschrome-devtools-mcp-49824-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 让 AI coding agent 通过 MCP 协议操控和检查实时 Chrome 浏览器的官方工具。</li>
+<li><strong>做什么</strong>: 以 MCP server 形式把 Chrome DevTools 能力暴露给 Claude、Cursor、Copilot 等 agent，能做性能 trace 分析、网络请求/控制台调试、截图，并用 puppeteer 做可靠自动化操作。也提供脱离 MCP 的独立 CLI。</li>
+<li><strong>适用场景</strong>: 需要 AI 帮你调试前端、跑自动化、或对网页做性能与网络排查时接入，对标各类 browser MCP，官方且能力最全。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="zai-orgopen-autoglm-26110-python"><code>zai-org/Open-AutoGLM</code> · ⭐26110 · Python<a class="headerlink" href="#zai-orgopen-autoglm-26110-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 智谱开源的手机端 Agent 框架，用自然语言让 AI 自动操控手机屏幕完成任务。</li>
+<li><strong>做什么</strong>: 通过 ADB/HDC 连接 Android 或鸿蒙设备，多模态视觉语言模型（AutoGLM-Phone-9B）理解屏幕内容并规划执行操作，支持敏感操作确认、验证码人工接管，以及远程 ADB 调试。也提供模型下载与 Midscene.js 集成。</li>
+<li><strong>适用场景</strong>: 想做"手机自动操作"——比如自动刷小红书搜索美食、批量执行 App 流程，或研究 phone-use agent，对标各种手机 Agent 方案。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>android-reverse</code></li>
+</ul>
+<h3 id="beehiveinnovationspal-mcp-server-11724-python"><code>BeehiveInnovations/pal-mcp-server</code> · ⭐11724 · Python<a class="headerlink" href="#beehiveinnovationspal-mcp-server-11724-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 一个 MCP "供应商抽象层"，让你在单个 CLI 里同时编排多个 AI 模型协作。</li>
+<li><strong>做什么</strong>: 把 Gemini/OpenAI/Anthropic/Grok/Azure/Ollama/OpenRouter 等模型接入你喜欢的 CLI（Claude Code、Gemini CLI、Codex 等），支持对话线程延续、多模型辩论、<code>clink</code> 工具互 spawn 子 CLI 隔离上下文，实现多模型协作开发。</li>
+<li><strong>适用场景</strong>: 想在 Claude Code 里让多个模型互相审阅/规划/实现，或在不同 CLI 间桥接协作时用，突破单一模型局限。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="yjh051108dsh-routing-suite-6900-javascript"><code>yjh051108/dsh-routing-suite</code> · ⭐6900 · JavaScript<a class="headerlink" href="#yjh051108dsh-routing-suite-6900-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: DSH 运行时注入器 + 任务感知思维模式路由预设的整合套装。</li>
+<li><strong>做什么</strong>: 先装注入器获得 dev_* 工具全家桶（注入/热重载/路由自愈），再用 router-standard 预设按任务分类路由到 spec/react/mixed 等 persona，实现近距离引导、单任务三锚、plan-mode 保留等能力（P1-P23 实测）。</li>
+<li><strong>适用场景</strong>: 深度定制 DeepSeek Harness、想让 agent 按任务类型自动切换推理模式并提升完成率时使用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="gudastudioskills-2026-powershell"><code>GuDaStudio/skills</code> · ⭐2026 · PowerShell<a class="headerlink" href="#gudastudioskills-2026-powershell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: GudaStudio 开发的 Agent Skills 集合，让 Claude 与 Codex/Gemini 等多模型工具协作。</li>
+<li><strong>做什么</strong>: 收录 collaborating-with-codex、collaborating-with-gemini 等 skill，把编码任务委托给其他 CLI 做原型开发、调试和代码审查；提供 Linux/macOS/Windows 一键安装脚本，支持用户级/项目级/自定义路径安装。</li>
+<li><strong>适用场景</strong>: 想让 Claude Code 调用 Codex 或 Gemini CLI 分工协作时使用，属于 Anthropic Agent Skills 机制的应用合集。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="a9gentmindfs-1728-typescript"><code>a9gent/mindfs</code> · ⭐1728 · TypeScript<a class="headerlink" href="#a9gentmindfs-1728-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 通过 MindFS 随时随地访问你的个人 AI agent 和工作站数据的远程网关。</li>
+<li><strong>做什么</strong>: 自动检测并接入 Claude Code/Codex/Gemini/Cursor 等几十种 agent CLI，浏览器/手机端实时流式查看会话、切换 agent/模型、搜索会话、导入同步历史，还支持多任务并发、文件浏览、定时任务等，<code>/</code>、<code>@</code> 快捷指令。</li>
+<li><strong>适用场景</strong>: 想在手机或远程随时查看/接管自己电脑上的 AI coding 会话、统一管理多 agent 时使用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="asdfgh1445ctf-super-hub-781-javascript"><code>asdfgh1445/ctf-super-hub</code> · ⭐781 · JavaScript<a class="headerlink" href="#asdfgh1445ctf-super-hub-781-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 面向小白的 CTF/逆向 Skills 整合包，自动分流题型并引导做题。</li>
+<li><strong>做什么</strong>: 把一组 CTF 相关 skill 按"先做题"重组，提供自动分流、最小化头脑风暴、教学模式/比赛模式/只提示模式三种输出，可路由到 ctf-<em>/strix-</em> 专项 skill 并衔接到 writeup 产出，解决新手不知第一步做什么的问题。</li>
+<li><strong>适用场景</strong>: 刚接触 CTF 或拿题不知如何下手、想让 AI 带一步步解题时使用。</li>
+<li><strong>标签</strong>: <code>security</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="xinian-dadafuck_my_shit_mountain-460-html"><code>XiNian-dada/Fuck_My_Shit_Mountain</code> · ⭐460 · HTML<a class="headerlink" href="#xinian-dadafuck_my_shit_mountain-460-html" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 给 AI coding agent 用的证据化代码库审计 skill。</li>
+<li><strong>做什么</strong>: 让 AI 先摸清项目画像，再按 full/security/stability/performance 等 25 个审计维度输出带严重程度、置信度、证据、修复建议和回归测试的报告，可生成 Markdown 或带评分条的 HTML 报告，区分已确认问题与待确认风险。</li>
+<li><strong>适用场景</strong>: 想让 AI 系统性地审计代码库、挖风险排序时使用，覆盖安全/发布/AI 安全/成本等多个维度。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>security</code></li>
+</ul>
+<h3 id="mcpcapmcpcap-51-python"><code>mcpcap/mcpcap</code> · ⭐51 · Python<a class="headerlink" href="#mcpcapmcpcap-51-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 面向 AI 时代的 PCAP 抓包分析 MCP server。</li>
+<li><strong>做什么</strong>: 模块化 Python MCP 服务，把 DNS/DHCP/ICMP/TCP/SIP/CapInfos 等协议分析拆成无状态工具，接受本地路径或远程 URL 的 pcap，基于 scapy 解析并以 JSON 输出，可配安全/网络/取证分析 prompt，支持 stdio 和 HTTP 传输。</li>
+<li><strong>适用场景</strong>: 想在 Claude Desktop 等 agent 里让 AI 帮你分析抓包文件、做网络取证时使用。</li>
+<li><strong>标签</strong>: <code>security</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="paddlepaddlepaddleocr-88355-python"><code>PaddlePaddle/PaddleOCR</code> · ⭐88355 · Python<a class="headerlink" href="#paddlepaddlepaddleocr-88355-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 百度的全能 OCR 与文档 AI 引擎，把图片/PDF 变成 LLM 能直接用的结构化数据。</li>
+<li><strong>做什么</strong>: 把 PDF 和图片识别成 JSON/Markdown 等结构化文本，支持 100+ 语言，覆盖文字识别、版面分析、表格解析、关键词提取等文档解析任务。内置 PaddleOCR-VL 等模型，可跑在 CPU/GPU/XPU/NPU 上，也常用于 PDF2Markdown 和 RAG 前处理。</li>
+<li><strong>适用场景</strong>: 给 AI 应用做文档/票据/扫描件的信息抽取，或搭 RAG 检索管道时把 PDF 转成可检索的 Markdown，对标 Tesseract、商用 OCR 方案。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="vercel-labsagent-browser-41440-rust"><code>vercel-labs/agent-browser</code> · ⭐41440 · Rust<a class="headerlink" href="#vercel-labsagent-browser-41440-rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 给 AI Agent 用的浏览器自动化 CLI，原生 Rust 实现、启动飞快。</li>
+<li><strong>做什么</strong>: 提供 open/snapshot/click/fill/read/screenshot 等命令，通过无障碍树引用让 AI 稳定操作页面，支持传统 CSS 选择器和按角色查找元素。内置安装 Chrome for Testing，自动检测现成的 Chrome/Brave/Playwright 环境，也可作为依赖集成进项目。</li>
+<li><strong>适用场景</strong>: 让 Claude/Codex 这类 agent 直接操作浏览器做网页任务，对标 Playwright 的浏览器 MCP，胜在轻量和原生命令行体验。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>automation</code></li>
+</ul>
+<h3 id="huansherevideolingo-18272-python"><code>Huanshere/VideoLingo</code> · ⭐18272 · Python<a class="headerlink" href="#huansherevideolingo-18272-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 一键式 AI 视频翻译配音工具，追求 Netflix 级字幕质量。</li>
+<li><strong>做什么</strong>: 用 yt-dlp 下视频、WhisperX 做逐词级识别打轴，再经 AI 做分词、术语库和「翻译-反思-适配」三步翻译，产出单行字幕，并支持 GPT-SoVITS/Azure 等语音克隆配音。Streamlit 界面一键启动，支持多语言和断点续跑。</li>
+<li><strong>适用场景</strong>: 视频搬运、课程/纪录片多语言本地化、字幕翻译+配音，对标人工字幕组或「视频 AI 翻译」类工具。</li>
+<li><strong>标签</strong>: <code>media-game</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="mrexodiaida-pro-mcp-11638-python"><code>mrexodia/ida-pro-mcp</code> · ⭐11638 · Python<a class="headerlink" href="#mrexodiaida-pro-mcp-11638-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 把 IDA Pro 桥接到大语言模型，实现「vibe reversing」的 MCP 服务器。</li>
+<li><strong>做什么</strong>: 通过 idalib 把 IDA 的数据库、反汇编、函数等信息暴露成 MCP 工具，让 Claude/Cursor/Codex 等客户端直接在 IDA 里做二进制分析。支持大量 MCP 客户端接入，还附带提示词工程建议降低模型幻觉。</li>
+<li><strong>适用场景</strong>: 逆向工程师想用 AI 辅助分析二进制、写 IDA 脚本时用，需要正版 IDA Pro 8.3+。</li>
+<li><strong>标签</strong>: <code>security</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="vinvcnmattpocock-skills-zh-cn-3703-shell"><code>vinvcn/mattpocock-skills-zh-CN</code> · ⭐3703 · Shell<a class="headerlink" href="#vinvcnmattpocock-skills-zh-cn-3703-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Matt Pocock 的 Agent Skills 三语本地化版本，方便中文开发者接入 coding agent。</li>
+<li><strong>做什么</strong>: 把 mattpocock/skills 这套面向真实工程工作（GSD/BMAD/Spec-Kit 风格但可控、可组合）的 agent skills 翻译成简体中文，保留目录名、命令、代码块不变以免破坏安装运行。支持 skills.sh 或 Claude Code plugin 两种安装方式。</li>
+<li><strong>适用场景</strong>: 中文母语开发者给 Claude Code/Codex 装工程化 skills、做需求澄清（/grill-me）等工作流时用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="zhizhuodemaojs-reverse-mcp-2615-typescript"><code>zhizhuodemao/js-reverse-mcp</code> · ⭐2615 · TypeScript<a class="headerlink" href="#zhizhuodemaojs-reverse-mcp-2615-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 面向 AI Agent 的 JS 逆向 MCP 服务器，有头 Chrome 调试+反检测。</li>
+<li><strong>做什么</strong>: 把断点、脚本源码、网络/WebSocket、浏览器状态和本地文件 I/O 重组成适合 AI 连续推理的工具，支持断点上下文求值、XHR 断点、Set-Cookie 识别、源码格式化导出。默认使用独立维护的 Patchright fork 做协议层 stealth，可选 CloakBrowser 强反爬模式。</li>
+<li><strong>适用场景</strong>: 让 Claude/Cursor 等 agent 做网页 JS 逆向、过云盾/Turnstile 之类风控、抓接口签名时用。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="shinnpuruvoicetransl-1242-python"><code>shinnpuru/VoiceTransl</code> · ⭐1242 · Python<a class="headerlink" href="#shinnpuruvoicetransl-1242-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 一站式离线 AI 视频字幕生成翻译软件，Mac/Windows 可用。</li>
+<li><strong>做什么</strong>: 覆盖视频下载、音频提取、听写打轴（Qwen3-ASR+强制对齐）、字幕翻译、视频合成、总结全流程，支持在线/本地翻译模型（Sakura、Ollama 等）、GPU 加速、人声分离、VAD 语音段识别、YouTube/B 站下载。基于 Galtransl。</li>
+<li><strong>适用场景</strong>: 做视频/音频字幕翻译、打轴、配音素材准备，尤其适合离线、隐私敏感的本地处理。</li>
+<li><strong>标签</strong>: <code>media-game</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="thu-bpmmarkllm-1054-python"><code>THU-BPM/MarkLLM</code> · ⭐1054 · Python<a class="headerlink" href="#thu-bpmmarkllm-1054-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 清华开源的大模型水印工具包，给 LLM 文本打可检测的水印。</li>
+<li><strong>做什么</strong>: 提供 LLM 水印算法的统一框架，整合多种文本水印算法，方便研究者和开发者给 LLM 生成内容打水印、检测来源、做可信 AI 研究（EMNLP 2024 Demo）。配套有不同算法的模型和论文。</li>
+<li><strong>适用场景</strong>: 学术研究/可信 AI 场景下，为 AI 生成文本添加或检测水印、防滥用溯源时用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>security</code></li>
+</ul>
+<h3 id="do1emijia-api-755-python"><code>Do1e/mijia-api</code> · ⭐755 · Python<a class="headerlink" href="#do1emijia-api-755-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用代码、CLI、MCP 直接控制米家设备，支持 Agent Skill。</li>
+<li><strong>做什么</strong>: 封装米家 API，扫码登录后可通过 Python API、CLI 或 MCP 控制设备（开关、亮度、属性/动作），v4.0 起支持 MCP、v4.1 起支持 Agent Skill。按设备名即可定位控制，认证文件本地保存。</li>
+<li><strong>适用场景</strong>: 把米家智能家居接入自己的脚本、Home Assistant 或让 AI Agent 语音/对话控制家电，替代手动 App 操作。</li>
+<li><strong>标签</strong>: <code>automation</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="chartyrsts2-agent-297-c"><code>CharTyr/STS2-Agent</code> · ⭐297 · C<a class="headerlink" href="#chartyrsts2-agent-297-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 杀戮尖塔 2 的 MOD，把游戏状态和操作暴露成 HTTP API 和 MCP，让 AI 玩/陪玩。</li>
+<li><strong>做什么</strong>: 游戏内嵌 AI 浮层，可配置模型端点、聊天、设思考强度、让模型自动打牌或单步操作，可选视觉截图；同时提供本地 HTTP API 和 MCP server 供 Cursor/Claude/Codex 调用。支持双实例联动让 AI 做队友。</li>
+<li><strong>适用场景</strong>: 想让 AI 玩杀戮尖塔 2、辅助决策或做游戏 AI/Agent 研究，把游戏接入 MCP 生态时用。</li>
+<li><strong>标签</strong>: <code>media-game</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="aiguicaicursor-toolbox-219-javascript"><code>aiguicai/Cursor-Toolbox</code> · ⭐219 · JavaScript<a class="headerlink" href="#aiguicaicursor-toolbox-219-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 增强 cursor.com 网页端的浏览器扩展，桥接 MCP 工具和 SKILLS。</li>
+<li><strong>做什么</strong>: 基于 Manifest V3 的扩展，在 cursor.com 帮助页注入辅助 UI 面板，提供 MCP 工具的发现/启用/调用桥接，让普通用户在聊天框里就能用工具和 skills，无需开 Claude Code 等终端。配置存于 chrome.storage.local。</li>
+<li><strong>适用场景</strong>: 想让 AI 小白/日常用户在 Cursor 网页聊天里直接用 MCP 工具和 skills，降低 agent 使用门槛时用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="redmig110ensp-ai-15-python"><code>Redmig110/eNSP-AI</code> · ⭐15 · Python<a class="headerlink" href="#redmig110ensp-ai-15-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 让 AI 通过 MCP 管理华为 eNSP 模拟网络设备，带拓扑可视化。</li>
+<li><strong>做什么</strong>: 提供 MCP Server 用自然语言操作 eNSP 设备（CLI 执行、配置下发、网络诊断、拓扑发现、健康检查），自动发现/注册设备；Topo Viewer 可拖入 .topo 文件渲染交互式网络拓扑图并同步数据给 AI。</li>
+<li><strong>适用场景</strong>: 备考华为网络认证、搭模拟环境时用自然语言让 AI 自动配路由器/交换机、查路由表、做健康检查时用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>study</code></li>
+</ul>
+<h3 id="gsd-buildget-shit-done-64631-javascript"><code>gsd-build/get-shit-done</code> · ⭐64631 · JavaScript<a class="headerlink" href="#gsd-buildget-shit-done-64631-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 给 Claude Code 用的 spec 驱动开发系统（已迁移）。</li>
+<li><strong>做什么</strong>: 一套元提示、上下文工程与 spec 驱动的开发框架，帮 Claude Code 更规范地干活。原仓库已归档，项目改名为 GSD Core 迁移到 open-gsd/gsd-core 继续维护。</li>
+<li><strong>适用场景</strong>: 想给 Claude Code 上结构化、按规格文档推进的开发流程时用它（现在要去找新仓库）。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="astrbotdevsastrbot-39697-python"><code>AstrBotDevs/AstrBot</code> · ⭐39697 · Python<a class="headerlink" href="#astrbotdevsastrbot-39697-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 整合多 IM 平台与 LLM 的一体化 Agent 聊天机器人框架。</li>
+<li><strong>做什么</strong>: 一个开源 Agent 机器人平台，能对接 QQ、Telegram、Discord 等主流 IM，也支持各种 LLM、MCP 和插件市场，号称是 openclaw 的开源替代。Docker 一键部署，插件生态成熟。</li>
+<li><strong>适用场景</strong>: 想做自己的多平台 AI 机器人（群聊助手、客服、个人 agent），不想从零写 IM 接入时用它。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="yzflyawesome-mcp-zh-7608"><code>yzfly/Awesome-MCP-ZH</code> · ⭐7608 ·<a class="headerlink" href="#yzflyawesome-mcp-zh-7608" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 面向中文用户的 MCP 资源精选合集与入门指南。</li>
+<li><strong>做什么</strong>: 汇总 MCP 的基础概念、客户端、服务器精选列表（浏览器、数据库、文件、搜索、电商、安全等分类）和社区资源，并持续追踪 MCP 规范 2025~2026 的新进展（无状态协议、MRTR、MCP Apps 等）。</li>
+<li><strong>适用场景</strong>: 想快速搞清楚 MCP 是什么、找现成 MCP Server/Client 时当导航手册翻。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="omnimind-aiomnibot-1929-dart"><code>omnimind-ai/OmniBot</code> · ⭐1929 · Dart<a class="headerlink" href="#omnimind-aiomnibot-1929-dart" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 跑在手机上的端侧 AI Agent，能操作终端和 Android 系统。</li>
+<li><strong>做什么</strong>: 用 Kotlin + Flutter 写的端侧 AI 助手，围绕"理解→决策→执行→反思"闭环，集成 Skills、Alpine 终端环境、浏览器、MCP 和 Android 系统级能力，支持定时任务、日历、记忆系统和文件读写。</li>
+<li><strong>适用场景</strong>: 想把 AI Agent 直接跑在自己 Android 手机上、让它操作系统和终端干活时用，对标 openclaw/claw。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>device-tools</code></li>
+</ul>
+<h3 id="zinja-coderapktool-mcp-server-640-python"><code>zinja-coder/apktool-mcp-server</code> · ⭐640 · Python<a class="headerlink" href="#zinja-coderapktool-mcp-server-640-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 把 apktool 包装成 MCP Server，让 LLM 实时逆向 APK。</li>
+<li><strong>做什么</strong>: 基于 apktool 的 MCP 服务器，提供 decode_apk、读写 smali、改资源、查 manifest、重新打包等工具，让 Claude 等 LLM 边解包边做漏洞挖掘和代码审查，实现"反编译→AI 审查→给建议"的闭环。</li>
+<li><strong>适用场景</strong>: 想用 AI 助手自动化安卓逆向、CTF 解题或 APK 安全审计时接入。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="masriyanclaude-code-cybersecurity-skill-371-python"><code>Masriyan/Claude-Code-CyberSecurity-Skill</code> · ⭐371 · Python<a class="headerlink" href="#masriyanclaude-code-cybersecurity-skill-371-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 面向安全从业者的 19 个 Claude Code Skills 合集。</li>
+<li><strong>做什么</strong>: 提供 19 个结构化的 SKILL.md（含方法论、命令、输出模板、授权门控），覆盖打点/OSINT、漏洞扫描、逆向、威胁狩猎、CSOC 自动化、AI/LLM 安全、移动、OT/ICS、GRC 等领域，把 Claude Code 变成安全副驾驶。</li>
+<li><strong>适用场景</strong>: 想让 Claude Code 按专业流程做渗透、逆向、检测规则生成时，装进 ~/.claude/skills 用。</li>
+<li><strong>标签</strong>: <code>security</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="neko3000deepseek-whalechan-44-python"><code>Neko3000/deepseek-whalechan</code> · ⭐44 · Python<a class="headerlink" href="#neko3000deepseek-whalechan-44-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: DeepSeek 鲸鱼娘二创角色的一致生成规范与智能体套件。</li>
+<li><strong>做什么</strong>: 为鲸鱼娘二创提供高一致性角色设定：统一视觉资产（发色、鲸鳍耳、呆毛、鲸尾、女仆装）、五大头身比量化规范、角色心智机制，附带 Skills 与本地脚本，让 AI 稳定生成插画和四格漫画。</li>
+<li><strong>适用场景</strong>: 想稳定生成/创作 DeepSeek 鲸鱼娘同人立绘、插画、多格漫画时用。</li>
+<li><strong>标签</strong>: <code>media-game</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="warpdotdevwarp-64568-rust"><code>warpdotdev/warp</code> · ⭐64568 · Rust<a class="headerlink" href="#warpdotdevwarp-64568-rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 从终端诞生的 AI 智能体开发环境，把编码 Agent 直接塞进命令行。</li>
+<li><strong>做什么</strong>: Warp 是新一代终端开发环境，内置编码 Agent，也能接入 Claude Code、Codex、Gemini CLI 等外部 CLI 智能体。除了终端本身，还提供 Agent 管理、Drive 等能力，客户端代码现已开源（UI 框架 MIT、其余 AGPL）。README 里还配套了 Oz 智能体来 triage issue、写 PR。</li>
+<li><strong>适用场景</strong>: 想要一个带 AI 助手、开箱即用的现代终端，替代传统 iTerm/Alacritty；或想管理多个 CLI 编码 Agent 的同一入口。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="tiannhapi-4890-typescript"><code>tiann/hapi</code> · ⭐4890 · TypeScript<a class="headerlink" href="#tiannhapi-4890-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 通过 Web/PWA/Telegram 远程控制各种 CLI 编码 Agent 的工具。</li>
+<li><strong>做什么</strong>: HAPI 能运行官方 Claude Code/Codex/Cursor Agent/Grok Build/OpenCode/Kimi/Copilot/Pi/DeepSeek Harness 等会话，并通过 Web、PWA、Telegram 小程序远程控制。主打本地优先（Happy 的替代品）、无缝切换本地/远程、离座时手机一键批准 AI 请求、语音控制。Hub 使用 WireGuard + TLS 做端到端加密中继，也支持自建 Cloudflare Tunnel/Tailscale。</li>
+<li><strong>适用场景</strong>: 离开电脑时想随时审批/查看手机上的 AI 编码任务，或多终端统一管理各 Agent 会话。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="hank9999kirors-1893-rust"><code>hank9999/kiro.rs</code> · ⭐1893 · Rust<a class="headerlink" href="#hank9999kirors-1893-rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用 Rust 写的代理服务，把 Anthropic Claude API 请求转成 Kiro(AWS) API。</li>
+<li><strong>做什么</strong>: 完整的 Anthropic Claude API 兼容代理，支持 SSE 流式响应、Token 自动刷新、多凭据故障转移与负载均衡、智能重试、凭据回写、extended thinking、function calling、WebSearch 转换、多模型（Sonnet/Opus/Haiku）、可选的 Admin Web 管理界面、多级 Region 配置和凭据级代理。</li>
+<li><strong>适用场景</strong>: 想把 Claude Code / Claude API 客户端接到 Kiro 渠道上，或统一管理多凭据并自动切换。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="upstashcontext7-61306-typescript"><code>upstash/context7</code> · ⭐61306 · TypeScript<a class="headerlink" href="#upstashcontext7-61306-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 给 LLM 编程工具实时喂最新代码文档的 MCP 服务</li>
+<li><strong>做什么</strong>: 从源头拉取「带版本号」的最新文档和代码示例，直接塞进 prompt 里，解决模型瞎编 API、用过时老版本知识的问题。支持 CLI + Skills 和 MCP 两种接入方式，一条 <code>npx ctx7 setup</code> 就能装好。</li>
+<li><strong>适用场景</strong>: 用 Cursor / Claude / Codex 写代码时，需要查真实的最新库文档，替代自己去翻官方站点、也避免模型幻觉。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="githubgithub-mcp-server-32564-go"><code>github/github-mcp-server</code> · ⭐32564 · Go<a class="headerlink" href="#githubgithub-mcp-server-32564-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: GitHub 官方出的 MCP Server，让 AI 直接操作 GitHub</li>
+<li><strong>做什么</strong>: 用自然语言就能让 AI 读仓库代码、查文件、分析提交，还能自动化管理 Issue/PR、监控 Actions 构建、看 Dependabot 告警。支持远程托管版和本地版两种部署方式。</li>
+<li><strong>适用场景</strong>: 想让 Claude/Cursor 这类工具读写你的 GitHub 仓库、自动处理 PR 和 issue、分析代码安全告警时用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="deepseek-aideepseek-ocr-23855-python"><code>deepseek-ai/DeepSeek-OCR</code> · ⭐23855 · Python<a class="headerlink" href="#deepseek-aideepseek-ocr-23855-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: DeepSeek 出的视觉-文本压缩 OCR 模型</li>
+<li><strong>做什么</strong>: 从 LLM 视角研究视觉编码器，把图片/PDF 里的文字高效转成 token，官方支持 vLLM 和 Transformers 推理，处理 PDF 能跑到约 2500 tokens/s。</li>
+<li><strong>适用场景</strong>: 大批量文档 OCR、给 LLM 做多模态输入压缩，替代传统 OCR 方案（已有续作 DeepSeek-OCR2）。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>media-game</code></li>
+</ul>
+<h3 id="mobile-nextmobile-mcp-6041-typescript"><code>mobile-next/mobile-mcp</code> · ⭐6041 · TypeScript<a class="headerlink" href="#mobile-nextmobile-mcp-6041-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 让 AI Agent 跨平台操控手机/模拟器的 MCP 服务器</li>
+<li><strong>做什么</strong>: 提供一个平台无关的接口，Agent 通过无障碍树（比截图省 token）或坐标点击来操控 iOS/Android 的真机、模拟器。不用会 XCUITest/Espresso，支持点按/滑动/装应用/录屏/深链等全设备控制，一套 API 通吃两端。</li>
+<li><strong>适用场景</strong>: 让 Claude Code/Codex 帮你自动化测试 App、填表单、跑多步骤用户旅程或从手机 App 提取数据。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>device-tools</code></li>
+</ul>
+<h3 id="mitsuhikoagent-stuff-2943-typescript"><code>mitsuhiko/agent-stuff</code> · ⭐2943 · TypeScript<a class="headerlink" href="#mitsuhikoagent-stuff-2943-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Armin（作者）个人用的 Coding Agent 技能与扩展包</li>
+<li><strong>做什么</strong>: 打包发布为 npm 包 <code>mitsupi</code>，内含一批可直接复用的 skills（查奥地利公交、读 Apple Mail、Ghidra 分析、tmux 遥控、web 浏览器自动化等）、prompt 命令和编辑器扩展，多数对其本人工作流做了定制。</li>
+<li><strong>适用场景</strong>: 拿来做参考范式，或直接挑其中几个 skill 放进自己的 Coding Agent 环境（路径/凭证要自己改）。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="zenstory-aivideo-recap-skills-481-python"><code>zenstory-ai/video-recap-skills</code> · ⭐481 · Python<a class="headerlink" href="#zenstory-aivideo-recap-skills-481-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用一句自然语言把视频剪成中文解说成片的 Claude Code 技能</li>
+<li><strong>做什么</strong>: 视频 → ASR/VLM 理解 → Agent 写稿剪辑 → MiMo/Fish Audio 配音 → 混音加字幕组装成 recap。一个 key 跑全程、本地只需 Python+ffmpeg 不用 GPU，还能导出多轨剪映草稿手动精修，支持多视频选段和本地素材库复用。</li>
+<li><strong>适用场景</strong>: 做影视/游戏解说切片、短视频二创，或在 Claude Code/Codex 里自动化剪片流程。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>media-game</code></li>
+</ul>
+<h3 id="neteaseskills-233-python"><code>NetEase/skills</code> · ⭐233 · Python<a class="headerlink" href="#neteaseskills-233-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 网易云音乐官方 AI Agent 技能包</li>
+<li><strong>做什么</strong>: 基于 ncm-cli 的三个技能：ncm-cli-setup 装配置、netease-music-cli 做搜索/歌单管理/每日推荐、netease-music-assistant 用模型分析红心歌单做个性化推荐。需先在开放平台入驻申请 API Key。</li>
+<li><strong>适用场景</strong>: 想让 Agent 帮你搜歌、建歌单、分析音乐偏好时，接进 Claude Code/Codex 等环境。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>media-game</code></li>
+</ul>
+<h3 id="tsuchijomatlab-mcp-39-python"><code>Tsuchijo/matlab-mcp</code> · ⭐39 · Python<a class="headerlink" href="#tsuchijomatlab-mcp-39-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 让 LLM 写并执行 MATLAB 脚本的 MCP 服务器</li>
+<li><strong>做什么</strong>: 通过 MATLAB Engine 让 Claude 等其他 MCP 客户端创建、执行 MATLAB 脚本和函数，并返回输出文本、生成的图和 workspace 变量。需 Python 3.11 + MATLAB R2024a，用 uv 管理。</li>
+<li><strong>适用场景</strong>: 做 MATLAB 计算/仿真时想让 AI 直接帮写并跑 .m 脚本、自动绘图。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="chistokhinsvgns3-mcp-12-python"><code>ChistokhinSV/gns3-mcp</code> · ⭐12 · Python<a class="headerlink" href="#chistokhinsvgns3-mcp-12-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 驱动 GNS3 网络仿真做 AI 辅助实验的 MCP 服务器</li>
+<li><strong>做什么</strong>: 提供 15 个工具 + 25 个只读资源，让 Claude 等代理增删改查 GNS3 工程和节点、控制设备 console（Telnet）、用 Netmiko 做 200+ 设备的 SSH 自动化、管拓扑和 Docker 容器。支持 API Key 认证和 HTTPS。</li>
+<li><strong>适用场景</strong>: 让 AI 帮你搭网络拓扑、自动配置路由交换设备、跑网络实验（当前仅 Windows）。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="seemseamclaude_codex_bridge-3456-python"><code>SeemSeam/claude_codex_bridge</code> · ⭐3456 · Python<a class="headerlink" href="#seemseamclaude_codex_bridge-3456-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 多 AI 编码 Agent 协作的 TUI 工作区</li>
+<li><strong>做什么</strong>: 一个多代理终端界面（CCB），能在可见、可控的布局里同时协调 Codex、Claude、Gemini、Qwen、Cursor、Copilot 等 17 个 CLI 代理，支持 Agent 间通信、后台守护进程、Rich 模式，还有手机远程控制。</li>
+<li><strong>适用场景</strong>: 想在一个终端里同时跑多个 AI 编码助手、编排复杂协作图时使用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="chen0416ccc-cpucodex-windows-fast-patch-skill-1121-powershell"><code>chen0416ccc-cpu/codex-windows-fast-patch-skill</code> · ⭐1121 · PowerShell<a class="headerlink" href="#chen0416ccc-cpucodex-windows-fast-patch-skill-1121-powershell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 修复 Windows Codex Desktop 升级后功能失效的 skill</li>
+<li><strong>做什么</strong>: 一个 agent skill，用脚本修补 Codex Desktop 的 MSIX/ASAR 包，恢复 Fast Mode、特定模型、插件、内置浏览器、Computer Use、手机远控等升级后失效的功能，也能备份配置、自更新。</li>
+<li><strong>适用场景</strong>: 你的 Windows Codex Desktop 更新后某功能变灰/消失时，让 agent 用它恢复补丁和开关。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+<h3 id="voidcraft-devmemory-forge-rs-476-rust"><code>voidcraft-dev/memory-forge-rs</code> · ⭐476 · Rust<a class="headerlink" href="#voidcraft-devmemory-forge-rs-476-rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 可视化改写 AI 编码助手记忆/会话的本地桌面工具</li>
+<li><strong>做什么</strong>: Tauri + Rust 做的离线桌面应用，能浏览、编辑、管理 Claude Code / Codex / OpenCode / Gemini CLI 等 AI 助手的会话历史，直接改某条错误消息让 AI 从修正后的上下文继续，带编辑审计日志、Prompt 库。</li>
+<li><strong>适用场景</strong>: AI 聊偏了/假设错了又不想重开丢掉上下文时，直接改记忆续用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2261 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="qiansekai 的 GitHub star 中文速览知识库">
+      
+      
+      
+      
+        <link rel="prev" href="../04-ai-agent/">
+      
+      
+        <link rel="next" href="../06-security/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>开发工具与基础设施 - GitHub Star 知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="GitHub Star 知识库" class="md-header__button md-logo" aria-label="GitHub Star 知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GitHub Star 知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              开发工具与基础设施
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GitHub Star 知识库" class="md-nav__button md-logo" aria-label="GitHub Star 知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    GitHub Star 知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-android-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安卓内核与 Root
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-android-reverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安卓逆向与 Hook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-device-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    设备互联与刷机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-ai-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Agent 与 MCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发工具与基础设施
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发工具与基础设施
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#powershellpowershell-55145-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PowerShell/PowerShell · ⭐55145 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoftplaywright-cli-12892-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        microsoft/playwright-cli · ⭐12892 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chatlabchatlab-7253-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChatLab/ChatLab · ⭐7253 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boxproxybox-1533-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        boxproxy/box · ⭐1533 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chun1617kir-manager-153-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chun1617/Kir-Manager · ⭐153 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avbazb123files-7-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        avbazb/123files · ⭐7 · HTML
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#velocidexgo-ext4-3-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Velocidex/go-ext4 · ⭐3 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deepseek-aideepseek-harness-200098-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        deepseek-ai/deepseek-harness · ⭐200098 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#psmuxpsmux-3364-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        psmux/psmux · ⭐3364 · PowerShell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#immortalwrthomeproxy-1069-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        immortalwrt/homeproxy · ⭐1069 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openlistteamopenlist-apipages-474-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenListTeam/OpenList-APIPages · ⭐474 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idalib-rsidalib-313-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        idalib-rs/idalib · ⭐313 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokenrollaiminicc-199-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TokenRollAI/minicc · ⭐199 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xhcodingsshpass-win32-149-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xhcoding/sshpass-win32 · ⭐149 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tomxi1997termux-packages-71-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tomxi1997/termux-packages · ⭐71 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zacharyzcrvmware-mcp-46-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZacharyZcR/vmware-mcp · ⭐46 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wael-rdgns3-mcp-server-25-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wael-Rd/gns3-mcp-server · ⭐25 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msmchaudeepseek-ensp-2-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MSmchau/Deepseek-Ensp · ⭐2 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chromedevtoolschrome-devtools-mcp-49824-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChromeDevTools/chrome-devtools-mcp · ⭐49824 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nmeumandroid-tools-302-cmake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nmeum/android-tools · ⭐302 · CMake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bodgitsevenzip-249-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bodgit/sevenzip · ⭐249 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xcr1234tampermonkey-typescript-33-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xcr1234/tampermonkey-typescript · ⭐33 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paddlepaddlepaddleocr-88355-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PaddlePaddle/PaddleOCR · ⭐88355 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radareorgradare2-24661-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        radareorg/radare2 · ⭐24661 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tianongosu-5002-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tianon/gosu · ⭐5002 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cocool97adb_client-387-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cocool97/adb_client · ⭐387 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aiguicaicursor-toolbox-219-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        aiguicai/Cursor-Toolbox · ⭐219 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apoint123inflink-rs-141-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        apoint123/inflink-rs · ⭐141 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#littlesoundnai-50-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LittleSound/nai · ⭐50 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msvc-wingetmsvcwin-31-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        msvc-win/get.msvc.win · ⭐31 · HTML
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#j67678zdesk-21-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        j67678/ZDesk · ⭐21 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#svoboda18android_tools-9-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        svoboda18/android_tools · ⭐9 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lostindarkdriverstoreexplorer-11505-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        lostindark/DriverStoreExplorer · ⭐11505 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shinchirompv-winbuild-cmake-1722-cmake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shinchiro/mpv-winbuild-cmake · ⭐1722 · CMake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compose-miuix-uimiuix-1146-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        compose-miuix-ui/miuix · ⭐1146 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#axcheronptexplorer-68-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        axcheron/ptexplorer · ⭐68 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feightwywxarcfutil-30-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        feightwywx/arcfutil · ⭐30 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zellij-orgzellij-35148-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zellij-org/zellij · ⭐35148 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openlistteamopenlist-24343-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenListTeam/OpenList · ⭐24343 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudwegohertz-7350-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cloudwego/hertz · ⭐7350 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chzyerreadline-2309-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chzyer/readline · ⭐2309 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#githubgithub-mcp-server-32564-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        github/github-mcp-server · ⭐32564 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#done-0fuck-u-code-7279-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Done-0/fuck-u-code · ⭐7279 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shuakamiqq-chat-exporter-4862-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shuakami/qq-chat-exporter · ⭐4862 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tanakalunipset_lkm-210-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TanakaLun/IPSET_LKM · ⭐210 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsuchijomatlab-mcp-39-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tsuchijo/matlab-mcp · ⭐39 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chistokhinsvgns3-mcp-12-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChistokhinSV/gns3-mcp · ⭐12 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bigtannssm-rs-4-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bigtan/nssm-rs · ⭐4 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#golang-standardsproject-layout-56501-makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        golang-standards/project-layout · ⭐56501 · Makefile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matsuridayonekoboxforandroid-22475-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MatsuriDayo/NekoBoxForAndroid · ⭐22475 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easytiereasytier-13339-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EasyTier/EasyTier · ⭐13339 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twghxcgui-613-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        twgh/xcgui · ⭐613 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xiangyuecnandroid-usespermission-47-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xiangyuecn/Android-UsesPermission · ⭐47 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vibe-coding-labskiro-cleaner-36-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vibe-coding-labs/kiro-cleaner · ⭐36 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全与 CTF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自动化与脚本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-media-game/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音游、媒体与图像
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    学习与考试
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#powershellpowershell-55145-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PowerShell/PowerShell · ⭐55145 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoftplaywright-cli-12892-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        microsoft/playwright-cli · ⭐12892 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chatlabchatlab-7253-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChatLab/ChatLab · ⭐7253 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boxproxybox-1533-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        boxproxy/box · ⭐1533 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chun1617kir-manager-153-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chun1617/Kir-Manager · ⭐153 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avbazb123files-7-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        avbazb/123files · ⭐7 · HTML
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#velocidexgo-ext4-3-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Velocidex/go-ext4 · ⭐3 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deepseek-aideepseek-harness-200098-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        deepseek-ai/deepseek-harness · ⭐200098 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#psmuxpsmux-3364-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        psmux/psmux · ⭐3364 · PowerShell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#immortalwrthomeproxy-1069-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        immortalwrt/homeproxy · ⭐1069 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openlistteamopenlist-apipages-474-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenListTeam/OpenList-APIPages · ⭐474 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idalib-rsidalib-313-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        idalib-rs/idalib · ⭐313 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokenrollaiminicc-199-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TokenRollAI/minicc · ⭐199 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xhcodingsshpass-win32-149-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xhcoding/sshpass-win32 · ⭐149 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tomxi1997termux-packages-71-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tomxi1997/termux-packages · ⭐71 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zacharyzcrvmware-mcp-46-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZacharyZcR/vmware-mcp · ⭐46 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wael-rdgns3-mcp-server-25-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wael-Rd/gns3-mcp-server · ⭐25 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msmchaudeepseek-ensp-2-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MSmchau/Deepseek-Ensp · ⭐2 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chromedevtoolschrome-devtools-mcp-49824-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChromeDevTools/chrome-devtools-mcp · ⭐49824 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nmeumandroid-tools-302-cmake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nmeum/android-tools · ⭐302 · CMake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bodgitsevenzip-249-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bodgit/sevenzip · ⭐249 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xcr1234tampermonkey-typescript-33-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xcr1234/tampermonkey-typescript · ⭐33 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paddlepaddlepaddleocr-88355-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PaddlePaddle/PaddleOCR · ⭐88355 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radareorgradare2-24661-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        radareorg/radare2 · ⭐24661 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tianongosu-5002-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tianon/gosu · ⭐5002 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cocool97adb_client-387-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cocool97/adb_client · ⭐387 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aiguicaicursor-toolbox-219-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        aiguicai/Cursor-Toolbox · ⭐219 · JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apoint123inflink-rs-141-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        apoint123/inflink-rs · ⭐141 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#littlesoundnai-50-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LittleSound/nai · ⭐50 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msvc-wingetmsvcwin-31-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        msvc-win/get.msvc.win · ⭐31 · HTML
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#j67678zdesk-21-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        j67678/ZDesk · ⭐21 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#svoboda18android_tools-9-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        svoboda18/android_tools · ⭐9 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lostindarkdriverstoreexplorer-11505-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        lostindark/DriverStoreExplorer · ⭐11505 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shinchirompv-winbuild-cmake-1722-cmake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shinchiro/mpv-winbuild-cmake · ⭐1722 · CMake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compose-miuix-uimiuix-1146-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        compose-miuix-ui/miuix · ⭐1146 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#axcheronptexplorer-68-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        axcheron/ptexplorer · ⭐68 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feightwywxarcfutil-30-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        feightwywx/arcfutil · ⭐30 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zellij-orgzellij-35148-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zellij-org/zellij · ⭐35148 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openlistteamopenlist-24343-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenListTeam/OpenList · ⭐24343 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudwegohertz-7350-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cloudwego/hertz · ⭐7350 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chzyerreadline-2309-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chzyer/readline · ⭐2309 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#githubgithub-mcp-server-32564-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        github/github-mcp-server · ⭐32564 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#done-0fuck-u-code-7279-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Done-0/fuck-u-code · ⭐7279 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shuakamiqq-chat-exporter-4862-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shuakami/qq-chat-exporter · ⭐4862 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tanakalunipset_lkm-210-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TanakaLun/IPSET_LKM · ⭐210 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsuchijomatlab-mcp-39-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tsuchijo/matlab-mcp · ⭐39 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chistokhinsvgns3-mcp-12-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChistokhinSV/gns3-mcp · ⭐12 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bigtannssm-rs-4-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bigtan/nssm-rs · ⭐4 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#golang-standardsproject-layout-56501-makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        golang-standards/project-layout · ⭐56501 · Makefile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matsuridayonekoboxforandroid-22475-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MatsuriDayo/NekoBoxForAndroid · ⭐22475 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easytiereasytier-13339-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EasyTier/EasyTier · ⭐13339 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twghxcgui-613-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        twgh/xcgui · ⭐613 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xiangyuecnandroid-usespermission-47-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xiangyuecn/Android-UsesPermission · ⭐47 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vibe-coding-labskiro-cleaner-36-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vibe-coding-labs/kiro-cleaner · ⭐36 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">开发工具与基础设施<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>共 54 个仓库 · 来自 qiansekai 的 GitHub star · 生成时间 2026-08-28</p>
+</blockquote>
+<h3 id="powershellpowershell-55145-c"><code>PowerShell/PowerShell</code> · ⭐55145 · C<a class="headerlink" href="#powershellpowershell-55145-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 微软官方的跨平台自动化 shell 与配置框架，Windows/Linux/macOS 通用。</li>
+<li><strong>做什么</strong>: 面向对象、擅长处理结构化数据（JSON/CSV/XML）、REST API 的命令行 shell + 脚本语言 + cmdlet 框架。仓库只管 PowerShell 7.x 及以上，处理对象模型而非纯文本输出。</li>
+<li><strong>适用场景</strong>: 系统管理、自动化运维、CI 脚本；替代 bash 做跨平台任务编排，尤其适合 Windows 生态。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="microsoftplaywright-cli-12892-javascript"><code>microsoft/playwright-cli</code> · ⭐12892 · JavaScript<a class="headerlink" href="#microsoftplaywright-cli-12892-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 微软官方 Playwright 的 CLI 接口，配 SKILLS，专为 coding agent 打造。</li>
+<li><strong>做什么</strong>: 把常见浏览器自动化动作做成命令行（录制生成代码、检查选择器、截图），默认 headless，支持 session/screenshot 等，可安装成 SKILLs 供 Claude Code/Copilot 调用，比 MCP 更省 token。</li>
+<li><strong>适用场景</strong>: 让 coding agent 以低 token 开销做浏览器测试与页面自动化，替代在模型上下文里塞 accessibility tree 的 MCP 方式。</li>
+<li><strong>标签</strong>: <code>dev-tools</code> <code>ai-agent</code></li>
+</ul>
+<h3 id="chatlabchatlab-7253-typescript"><code>ChatLab/ChatLab</code> · ⭐7253 · TypeScript<a class="headerlink" href="#chatlabchatlab-7253-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 本地优先的 AI 聊天记录分析工具，你的聊天历史归你自己。</li>
+<li><strong>做什么</strong>: 桌面 App（Electron+Vue），用 SQL 引擎加 AI Agent 帮你从聊天数据里找规律、问问题、抽洞见，支持 WhatsApp/LINE/QQ/Discord/Telegram/iMessage 等，流式解析支撑百万级消息，数据默认留在本机并有 24+ 工具的工作流。</li>
+<li><strong>适用场景</strong>: 想分析自己的社交聊天记录、导出后做趋势/互动/排行洞察，且注重隐私不想传云端。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="boxproxybox-1533-shell"><code>boxproxy/box</code> · ⭐1533 · Shell<a class="headerlink" href="#boxproxybox-1533-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Android Root 环境的透明代理工具箱模块。</li>
+<li><strong>做什么</strong>: 面向 Magisk/KernelSU/APatch 的统一代理模块，集中管理 mihomo/sing-box/xray/v2fly/hysteria 等代理核心，编排 TProxy/Redirect/Tun 等透明代理规则，维护订阅、Geo 资源、核心二进制与 WebUI，工作目录在 /data/adb/box/。</li>
+<li><strong>适用场景</strong>: Root 手机上想灵活切换代理内核、做透明代理规则编排时。</li>
+<li><strong>标签</strong>: <code>android-root</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="chun1617kir-manager-153-go"><code>chun1617/Kir-Manager</code> · ⭐153 · Go<a class="headerlink" href="#chun1617kir-manager-153-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 跨平台 Kiro IDE 管理工具，账号备份、Machine ID 管理、一键新机。</li>
+<li><strong>做什么</strong>: Wails+Vue3 桌面应用，备份/恢复 Kiro 认证 Token 与 Machine ID、多账号切换、一键生成新 Machine ID（patch extension.js 拦截读取）、用量查询与低余额告警、Token 自动刷新、余额不足自动切快照，繁体/简体双语。</li>
+<li><strong>适用场景</strong>: 多 Kiro 账号切换、额度管理或需要"换机器"绕过设备绑定的场景。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="avbazb123files-7-html"><code>avbazb/123files</code> · ⭐7 · HTML<a class="headerlink" href="#avbazb123files-7-html" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 基于 123 云盘 API 的免后端文件收集系统。</li>
+<li><strong>做什么</strong>: 纯静态站点，用 123 云盘开放 API 当存储，无数据库也无后端，支持创建加密文件夹、大文件分片上传、断点续传、秒传、MD5（Web Worker）、分享链接和文件管理，需开发者账号拿 CLIENT_ID/SECRET。</li>
+<li><strong>适用场景</strong>: 想低成本搭一个收文件/交作业的收集页面，不想维护服务器时。</li>
+<li><strong>标签</strong>: <code>dev-tools</code> <code>misc</code></li>
+</ul>
+<h3 id="velocidexgo-ext4-3-go"><code>Velocidex/go-ext4</code> · ⭐3 · Go<a class="headerlink" href="#velocidexgo-ext4-3-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用 Go 写的 Ext4 文件系统解析库。</li>
+<li><strong>做什么</strong>: 解析 Ext4 文件系统的 Go 库，README 极简，仅声明支持 Ext4 文件系统解析。</li>
+<li><strong>适用场景</strong>: 需要在 Go 程序里读取/解析 Ext4 磁盘镜像或分区内容的场景。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="deepseek-aideepseek-harness-200098-typescript"><code>deepseek-ai/deepseek-harness</code> · ⭐200098 · TypeScript<a class="headerlink" href="#deepseek-aideepseek-harness-200098-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: DeepSeek 开源的"万物皆插件"AI Agent 编排框架，你现在跑的就是它。</li>
+<li><strong>做什么</strong>: 一个基于 Cordis 的 Agent harness（dsh），用插件化的架构组织 Agent 能力，每个能力都是一个插件行。Web UI 默认跑在 127.0.0.1:3080，支持 <code>npx @deepseek-ai/dsh web</code> 一键启动，也能从源码构建。</li>
+<li><strong>适用场景</strong>: 想自建或扩展 Agent 开发环境、写 dsh-plugin 插件时用；对标 Claude Code / Codex 这类 Agent 工具链。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="psmuxpsmux-3364-powershell"><code>psmux/psmux</code> · ⭐3364 · PowerShell<a class="headerlink" href="#psmuxpsmux-3364-powershell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Windows 原生的 tmux，用 Rust 写的终端多路复用器。</li>
+<li><strong>做什么</strong>: 不是移植也不是包装，直接用 Windows ConPTY 实现，讲 tmux 命令语言、读 <code>.tmux.conf</code>、支持 tmux 主题，无需 WSL/Cygwin/MSYS2。带 <code>tmux</code> 和 <code>pmux</code> 别名，支持分窗、会话持久化、鼠标、90+ 命令。</li>
+<li><strong>适用场景</strong>: 在 Windows Terminal/PowerShell 下想要 tmux 那样的分屏和会话管理时用；对标 tmux，专为 Windows 场景设计。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="immortalwrthomeproxy-1069-javascript"><code>immortalwrt/homeproxy</code> · ⭐1069 · JavaScript<a class="headerlink" href="#immortalwrthomeproxy-1069-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: ImmortalWrt 上基于 sing-box 的现代代理平台。</li>
+<li><strong>做什么</strong>: 为 ARM64/AMD64 的 ImmortalWrt 提供基于 sing-box 的代理实现，管理订阅节点、ACL 规则等。当前 README 主要是 TODO 列表，功能文档较少。</li>
+<li><strong>适用场景</strong>: 在 ImmortalWrt 软路由上部署/管理代理订阅和分流规则时使用；对标 OpenClash/PassWall。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="openlistteamopenlist-apipages-474-typescript"><code>OpenListTeam/OpenList-APIPages</code> · ⭐474 · TypeScript<a class="headerlink" href="#openlistteamopenlist-apipages-474-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用于 OpenList 获取各网盘 API 的 Token 生成工具和页面。</li>
+<li><strong>做什么</strong>: 提供对接 OneDrive、阿里云盘、百度网盘、115、夸克等多网盘 API 的 token 获取接口与页面，支持 EdgeOne/Cloudflare Worker 和 Docker 容器部署，通过环境变量配置各网盘的 client id/secret。</li>
+<li><strong>适用场景</strong>: 需要对接多家网盘开放 API、自建 OpenList 类工具获取访问 token 时使用。</li>
+<li><strong>标签</strong>: <code>dev-tools</code> <code>automation</code></li>
+</ul>
+<h3 id="idalib-rsidalib-313-rust"><code>idalib-rs/idalib</code> · ⭐313 · Rust<a class="headerlink" href="#idalib-rsidalib-313-rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: IDA SDK 的 Rust 绑定，让你写独立的二进制分析工具。</li>
+<li><strong>做什么</strong>: 把 IDA Pro v9.x 的 idalib 包装成符合 Rust 习惯的 API，能脱离 IDA GUI 独立开发分析工具，跨 Windows/Linux/macOS。社区已有 parascope、rhabdomancer、haruspex 等基于它的项目。</li>
+<li><strong>适用场景</strong>: 想用 Rust 批量做逆向分析、写自动化脱壳/提取伪代码工具时用；需要正版 IDA + SDK。</li>
+<li><strong>标签</strong>: <code>security</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="tokenrollaiminicc-199-python"><code>TokenRollAI/minicc</code> · ⭐199 · Python<a class="headerlink" href="#tokenrollaiminicc-199-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 极简教学版 AI 编程助手，用最少代码讲清 Claude Code 的机制。</li>
+<li><strong>做什么</strong>: 一个参考 Claude Code 交互形态的 TUI 编程助手，实现了文件读写编辑、glob/grep 检索、shell 前台/后台任务、todo、子代理和 MCP 预加载。用 Textual 写 TUI，重点是学机制而非生产用。</li>
+<li><strong>适用场景</strong>: 想学习 Agent 编程助手（工具调用/事件驱动 UI/子代理/MCP）内部实现时钻研用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="xhcodingsshpass-win32-149-c"><code>xhcoding/sshpass-win32</code> · ⭐149 · C<a class="headerlink" href="#xhcodingsshpass-win32-149-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Windows 版的 sshpass，给 ssh 非交互传密码。</li>
+<li><strong>做什么</strong>: 移植 Linux 的 sshpass 到 Windows，支持从文件、fd、参数、环境变量 <code>SSHPASS</code> 等处取密码，自动确认 host key。可配合 ssh、rsync 等需要非交互密码认证的命令。</li>
+<li><strong>适用场景</strong>: Windows 上脚本化 ssh/rsync 连接、自动化部署需要非交互密码时使用（注意 <code>-p</code> 明文有安全风险）。</li>
+<li><strong>标签</strong>: <code>dev-tools</code> <code>automation</code></li>
+</ul>
+<h3 id="tomxi1997termux-packages-71-shell"><code>tomxi1997/termux-packages</code> · ⭐71 · Shell<a class="headerlink" href="#tomxi1997termux-packages-71-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: Termux 的软件包构建系统（个人 fork）。</li>
+<li><strong>做什么</strong>: 包含为 Termux Android 应用构建软件包的脚本和补丁，是 termux-packages 的镜像/fork，描述仍指向上游的构建系统。</li>
+<li><strong>适用场景</strong>: 需要研究或定制 Termux 包构建流程、自建 Termux 软件仓库时参考。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="zacharyzcrvmware-mcp-46-python"><code>ZacharyZcR/vmware-mcp</code> · ⭐46 · Python<a class="headerlink" href="#zacharyzcrvmware-mcp-46-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 控制 VMware Workstation Pro 虚拟机的 MCP Server。</li>
+<li><strong>做什么</strong>: 通过 REST API、vmrun 和 vmcli 三种来源提供 117 个工具，覆盖虚拟机电源管理、快照、克隆、网卡/磁盘/端口转发、客户机文件与进程操作、截图按键等全自动能力。</li>
+<li><strong>适用场景</strong>: 想让 AI Agent 自动管理本地 VMware 虚拟机（开关机、快照、跑脚本）时用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="wael-rdgns3-mcp-server-25-python"><code>Wael-Rd/gns3-mcp-server</code> · ⭐25 · Python<a class="headerlink" href="#wael-rdgns3-mcp-server-25-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 让 AI 用自然语言搭建和配置 GNS3 网络拓扑的 MCP Server。</li>
+<li><strong>做什么</strong>: 封装 GNS3 完整 API 为 40+ MCP 工具，覆盖拓扑创建、设备配置（15+ 预置 OSPF/BGP/VLAN/NAT 模板）、快照管理、抓包分析、批量操作和拓扑校验，主打"描述网络，AI 来搭"。</li>
+<li><strong>适用场景</strong>: 网络学习/实验时用 AI 辅助建拓扑、配设备、排障；接 Gemini CLI 或任意 MCP 客户端。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="msmchaudeepseek-ensp-2-python"><code>MSmchau/Deepseek-Ensp</code> · ⭐2 · Python<a class="headerlink" href="#msmchaudeepseek-ensp-2-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用 DeepSeek 把自然语言转成华为网络设备配置并操作 eNSP。</li>
+<li><strong>做什么</strong>: 通过 DeepSeek API 将自然语言转为华为设备 CLI 配置命令，再 SSH 连到 eNSP 模拟环境里的交换机/路由器执行配置、故障排查，并对设备做完整 CRUD 操作，支持批量。</li>
+<li><strong>适用场景</strong>: 网络学习时用自然语言让 AI 帮忙配置/排查 eNSP 里的华为设备时使用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="chromedevtoolschrome-devtools-mcp-49824-typescript"><code>ChromeDevTools/chrome-devtools-mcp</code> · ⭐49824 · TypeScript<a class="headerlink" href="#chromedevtoolschrome-devtools-mcp-49824-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 让 AI coding agent 通过 MCP 协议操控和检查实时 Chrome 浏览器的官方工具。</li>
+<li><strong>做什么</strong>: 以 MCP server 形式把 Chrome DevTools 能力暴露给 Claude、Cursor、Copilot 等 agent，能做性能 trace 分析、网络请求/控制台调试、截图，并用 puppeteer 做可靠自动化操作。也提供脱离 MCP 的独立 CLI。</li>
+<li><strong>适用场景</strong>: 需要 AI 帮你调试前端、跑自动化、或对网页做性能与网络排查时接入，对标各类 browser MCP，官方且能力最全。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="nmeumandroid-tools-302-cmake"><code>nmeum/android-tools</code> · ⭐302 · CMake<a class="headerlink" href="#nmeumandroid-tools-302-cmake" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 给 adb/fastboot 等 Android 命令行工具提供 CMake 构建系统的非官方方案。</li>
+<li><strong>做什么</strong>: 用简单 CMake 构建系统打包 adb、fastboot、mke2fs.android、simg2img、lpdump、mkbootimg、avbtool 等命令工具，附带开箱即用 tarball，免去手动 clone 一堆依赖仓库，已用于 Alpine Linux 的 android-tools 包。</li>
+<li><strong>适用场景</strong>: Linux 发行版打包 Android 命令行工具、或想从源码快速编译 adb/fastboot 时使用。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="bodgitsevenzip-249-go"><code>bodgit/sevenzip</code> · ⭐249 · Go<a class="headerlink" href="#bodgitsevenzip-249-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 纯 Go 实现的 7-zip 压缩包读取库。</li>
+<li><strong>做什么</strong>: 无需外部库即可读取 7z 压缩包，支持加密头/密码保护、分卷、自解压、CRC 校验，覆盖 LZMA/LZMA2/Zstd/Brotli/LZ4 等算法，实现 fs.FS 接口可当文件系统用，还优化了顺序解压的性能。</li>
+<li><strong>适用场景</strong>: Go 程序需要解析或解压 7z 归档时使用，对标 archive/zip 但面向 7z 格式。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="xcr1234tampermonkey-typescript-33-javascript"><code>xcr1234/tampermonkey-typescript</code> · ⭐33 · JavaScript<a class="headerlink" href="#xcr1234tampermonkey-typescript-33-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 支持 TypeScript 与热更新的油猴脚本脚手架。</li>
+<li><strong>做什么</strong>: 用 Vite 编译油猴脚本，头部开发在 header/index.ts 获得 IDE 类型提示，GM_* 函数有完整声明；配合 tamperdav 服务实现 build:sync 自动同步到油猴，免手动复制粘贴。</li>
+<li><strong>适用场景</strong>: 想用 TypeScript 写油猴脚本、并享受热更新开发体验时使用。</li>
+<li><strong>标签</strong>: <code>dev-tools</code> <code>automation</code></li>
+</ul>
+<h3 id="paddlepaddlepaddleocr-88355-python"><code>PaddlePaddle/PaddleOCR</code> · ⭐88355 · Python<a class="headerlink" href="#paddlepaddlepaddleocr-88355-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 百度的全能 OCR 与文档 AI 引擎，把图片/PDF 变成 LLM 能直接用的结构化数据。</li>
+<li><strong>做什么</strong>: 把 PDF 和图片识别成 JSON/Markdown 等结构化文本，支持 100+ 语言，覆盖文字识别、版面分析、表格解析、关键词提取等文档解析任务。内置 PaddleOCR-VL 等模型，可跑在 CPU/GPU/XPU/NPU 上，也常用于 PDF2Markdown 和 RAG 前处理。</li>
+<li><strong>适用场景</strong>: 给 AI 应用做文档/票据/扫描件的信息抽取，或搭 RAG 检索管道时把 PDF 转成可检索的 Markdown，对标 Tesseract、商用 OCR 方案。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="radareorgradare2-24661-c"><code>radareorg/radare2</code> · ⭐24661 · C<a class="headerlink" href="#radareorgradare2-24661-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Unix 风格的开源逆向工程框架，命令行全家桶。</li>
+<li><strong>做什么</strong>: 一套可反汇编、调试、分析、模拟、修改任意二进制的工具集，自带反汇编、十六进制编辑、脚本（r2pipe/嵌入 JS）和本地/远程 gdb-windbg 调试能力，插件生态丰富（iaito 图形界面、r2dec 反编译器、r2frida 等）。</li>
+<li><strong>适用场景</strong>: 做逆向、恶意软件分析、CTF、固件/二进制取证时用，对标 IDA、Ghidra，突出脚本化和轻量。</li>
+<li><strong>标签</strong>: <code>security</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="tianongosu-5002-shell"><code>tianon/gosu</code> · ⭐5002 · Shell<a class="headerlink" href="#tianongosu-5002-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 容器里从 root 降到普通用户跑命令的轻量工具，替代烦人的 su/sudo。</li>
+<li><strong>做什么</strong>: 用 Go 实现 setuid+setgid+setgroups 后 exec 指定进程，处理完用户/组就直接替换进程本身，不残留、不参与信号传递，行为与 Docker 的 --user 参数 1:1 一致。专为容器 ENTRYPOINT 里降到非特权用户设计。</li>
+<li><strong>适用场景</strong>: 写 Dockerfile 时在容器启动阶段以非 root 用户运行服务，替代 su/sudo 的 TTY 和信号转发怪癖。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="cocool97adb_client-387-rust"><code>cocool97/adb_client</code> · ⭐387 · Rust<a class="headerlink" href="#cocool97adb_client-387-rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 纯 Rust 实现的 ADB 客户端库，附带 Python 封装和改版 CLI。</li>
+<li><strong>做什么</strong>: 不依赖 <code>adb</code> shell 命令，直接实现 ADB 服务端和终端设备两套协议，支持经 adb-server 代理或直连设备（USB/TCP/IP），实现 framebuffer 等隐藏功能，并提供 pyadb_client 给 Python 调用。</li>
+<li><strong>适用场景</strong>: 在 Rust/Python 项目里以编程方式控制安卓设备、写自动化或调试工具时用，替代 shelling out 调 adb。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="aiguicaicursor-toolbox-219-javascript"><code>aiguicai/Cursor-Toolbox</code> · ⭐219 · JavaScript<a class="headerlink" href="#aiguicaicursor-toolbox-219-javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 增强 cursor.com 网页端的浏览器扩展，桥接 MCP 工具和 SKILLS。</li>
+<li><strong>做什么</strong>: 基于 Manifest V3 的扩展，在 cursor.com 帮助页注入辅助 UI 面板，提供 MCP 工具的发现/启用/调用桥接，让普通用户在聊天框里就能用工具和 skills，无需开 Claude Code 等终端。配置存于 chrome.storage.local。</li>
+<li><strong>适用场景</strong>: 想让 AI 小白/日常用户在 Cursor 网页聊天里直接用 MCP 工具和 skills，降低 agent 使用门槛时用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="apoint123inflink-rs-141-typescript"><code>apoint123/inflink-rs</code> · ⭐141 · TypeScript<a class="headerlink" href="#apoint123inflink-rs-141-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 给网易云音乐加 SMTC 和 Discord RPC 的 BetterNCM 插件。</li>
+<li><strong>做什么</strong>: 通过 Betterncm 安装后，把播放状态、曲目信息、封面、进度、随机/循环模式上传到 Windows SMTC（系统媒体控件）和 Discord 状态，支持上一首/下一首/播放暂停/跳转等控制，并向其他插件暴露 window.InfLinkApi。</li>
+<li><strong>适用场景</strong>: 想用系统媒体键控网易云、在 Discord 显示「正在听」或让其他插件联动播放器状态时用。</li>
+<li><strong>标签</strong>: <code>media-game</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="littlesoundnai-50-typescript"><code>LittleSound/nai</code> · ⭐50 · TypeScript<a class="headerlink" href="#littlesoundnai-50-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 交互式依赖安装与脚本运行 CLI（nai/nar），支持 catalog 和自动识别包管理器。</li>
+<li><strong>做什么</strong>: <code>nai</code> 以交互引导方式装依赖，自动检测 npm/pnpm/yarn/bun/vlt 等包管理器、解析版本、选 catalog、选 monorepo 子包、选依赖类型后统一改配置并安装；<code>nar</code> 交互式模糊搜索运行脚本，支持 monorepo。减少记命令和手改配置的负担。</li>
+<li><strong>适用场景</strong>: 在 monorepo 或多种包管理器混用项目里快速、不出错的装依赖和跑脚本时用。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="msvc-wingetmsvcwin-31-html"><code>msvc-win/get.msvc.win</code> · ⭐31 · HTML<a class="headerlink" href="#msvc-wingetmsvcwin-31-html" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 一键安装 Visual C++ 运行库的 PowerShell 脚本仓库。</li>
+<li><strong>做什么</strong>: 托管 MSVC.win 项目的安装脚本，一条命令装齐 Visual CPP Redistributable，可针对 XP/Win7/Win10 分别生成离线安装器（Linux 下用 aria2/nsis 自建），鼓励镜像自托管。</li>
+<li><strong>适用场景</strong>: 系统缺 VC++ 运行库导致游戏/软件打不开时一键补齐，或做离线装机包分发时用。</li>
+<li><strong>标签</strong>: <code>dev-tools</code> <code>misc</code></li>
+</ul>
+<h3 id="j67678zdesk-21-c"><code>j67678/ZDesk</code> · ⭐21 · C++<a class="headerlink" href="#j67678zdesk-21-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 低延迟高画质的开源远程桌面软件，内置 P2P 组网。</li>
+<li><strong>做什么</strong>: 用 DirectX(DXGI/D3D11) 硬件加速捕捉和编码、WASAPI+FFmpeg 处理低延迟音频，鼠标键盘走独立 UDP 通道，支持密码保护。内置 EasyTier 做 P2P 穿透组网、虚拟局域网、魔法 DNS、NAT 穿透，无需公网 IP 即可直连。</li>
+<li><strong>适用场景</strong>: 需要流畅远程控制另一台电脑、跨网络组虚拟局域网自主组网时用，对标自建 TeamViewer/Parsec。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="svoboda18android_tools-9-c"><code>svoboda18/android_tools</code> · ⭐9 · C<a class="headerlink" href="#svoboda18android_tools-9-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 从 Linux 移植到 Windows(MINGW) 的安卓工具集。</li>
+<li><strong>做什么</strong>: 提供 e2fsdroid、mke2fs、make_ext4fs、simg2img、img2simg、magiskboot 等安卓系统镜像/文件系统工具，以及 libsparse、libext2fs 等迷你移植库。修复了原版多处未定义行为，支持生成合法稀疏镜像。</li>
+<li><strong>适用场景</strong>: 在 Windows 下处理 ext4 镜像、做 ROM/刷机包制作或 unpack/repack 稀疏镜像时用，替代需 Linux 环境的同名工具。</li>
+<li><strong>标签</strong>: <code>android-root</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="lostindarkdriverstoreexplorer-11505-c"><code>lostindark/DriverStoreExplorer</code> · ⭐11505 · C<a class="headerlink" href="#lostindarkdriverstoreexplorer-11505-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 查看、清理 Windows 驱动仓库（DriverStore）的图形工具。</li>
+<li><strong>做什么</strong>: 图形化浏览、安装、删除、备份系统里的第三方驱动包，支持智能识别旧版/无用驱动批量清理、导出备份、离线镜像操作，多后端（DISM/PnPUtil）自动检测，20+ 语言。</li>
+<li><strong>适用场景</strong>: Windows 驱动越积越多、想清理旧驱动释放空间或备份驱动时用，面向管理员和高级用户。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="shinchirompv-winbuild-cmake-1722-cmake"><code>shinchiro/mpv-winbuild-cmake</code> · ⭐1722 · CMake<a class="headerlink" href="#shinchirompv-winbuild-cmake-1722-cmake" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 基于 CMake 的 MinGW-w64 交叉编译链，主要用来构建 Windows 版 mpv。</li>
+<li><strong>做什么</strong>: 一套用 CMake + ExternalProject 组织的 MinGW-w64 跨平台工具链，能自动拉取依赖并在 Linux/MSYS2/Cygwin 上交叉编译出 Windows 的 mpv 二进制（含 32/64 位、GCC 指令集优化）。</li>
+<li><strong>适用场景</strong>: 想在 Linux/WSL 上自己编译 Windows 版 mpv 或折腾其依赖时用；只想用现成的去下官方 build。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="compose-miuix-uimiuix-1146-kotlin"><code>compose-miuix-ui/miuix</code> · ⭐1146 · Kotlin<a class="headerlink" href="#compose-miuix-uimiuix-1146-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 面向 Compose Multiplatform 的小米 HyperOS 风格 UI 库。</li>
+<li><strong>做什么</strong>: 提供 miuix-ui 核心组件库，外加 preference、icons、blur、squircle、nav、shader 等模块，让 Compose 应用（Android/iOS/Desktop/Web）做出小米 Miuix 观感的界面，支持 Monet 动态取色。</li>
+<li><strong>适用场景</strong>: 用 Compose Multiplatform 写应用、想套小米 HyperOS/MIUI 视觉风格时直接引入。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="axcheronptexplorer-68-python"><code>axcheron/ptexplorer</code> · ⭐68 · Python<a class="headerlink" href="#axcheronptexplorer-68-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: Packet Tracer 文件（.pkt/.pka）与 XML 互转工具。</li>
+<li><strong>做什么</strong>: 逆向出 Cisco Packet Tracer 文件格式（zlib 压缩 + 按文件大小 XOR 加密），提供脚本把二进制 .pkt/.pka 转成可读 XML，也能转回，便于程序化分析网络拓扑。</li>
+<li><strong>适用场景</strong>: 想批量解析/生成 Packet Tracer 拓扑文件做教学自动化或分析时用。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="feightwywxarcfutil-30-python"><code>feightwywx/arcfutil</code> · ⭐30 · Python<a class="headerlink" href="#feightwywxarcfutil-30-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 处理 Arcaea 谱面等文件的 Python 模块。</li>
+<li><strong>做什么</strong>: 解析/编码 Arcaea 的 .aff 谱面文件为 Python 对象（支持切片、timinggroup、缓动、帧动画及复制/镜像/偏移等操作），并提供 arcadeclean、sortassets、songlist 等命令行工具整理游戏数据。</li>
+<li><strong>适用场景</strong>: 写脚本批量生成、编辑 Arcaea 谱面或整理游戏资源时用，是制谱工具链的一环。</li>
+<li><strong>标签</strong>: <code>media-game</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="zellij-orgzellij-35148-rust"><code>zellij-org/zellij</code> · ⭐35148 · Rust<a class="headerlink" href="#zellij-orgzellij-35148-rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 开箱即用的终端工作区（终端复用器），不牺牲简单性换取强大。</li>
+<li><strong>做什么</strong>: Zellij 是面向开发者/运维的终端复用器，对标 tmux 但更友好。特色是浮动/堆叠面板、自定义 layout 自动化、真正的多人协作、以及可用任意编译成 WebAssembly 的语言写插件，还内置 web 客户端甚至可以不依赖终端直接跑。</li>
+<li><strong>适用场景</strong>: 需要多窗口/分屏/会话保持的工作流，替代或对标 tmux；团队协作或想用插件扩展终端时。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="openlistteamopenlist-24343-go"><code>OpenListTeam/OpenList</code> · ⭐24343 · Go<a class="headerlink" href="#openlistteamopenlist-24343-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: AList 的社区驱动分支，主打抵抗"信任危机"、长期治理。</li>
+<li><strong>做什么</strong>: OpenList 是 AList 的 fork，用 Go 写，功能上就是聚合多种网盘的统一列表/挂载服务——支持本地存储、阿里云盘、OneDrive/SharePoint、天翼云、GoogleDrive、123 网盘、FTP/SFTP、PikPak 等众多后端。定位强调完全开源、AGPL-3.0、社区主导，否认与第三方同名项目有关。</li>
+<li><strong>适用场景</strong>: 想把多个网盘统一到一个入口做文件管理与分享，或想用 AList 但更在意开源治理透明度的场景。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="cloudwegohertz-7350-go"><code>cloudwego/hertz</code> · ⭐7350 · Go<a class="headerlink" href="#cloudwegohertz-7350-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 字节跳动开源的 Go 高性能微服务 HTTP 框架。</li>
+<li><strong>做什么</strong>: Hertz 是字节内部广泛使用的 Go 微服务框架，最初 fork 自 fasthttp、受 gin/echo 启发。特点是高易用、高性能（默认用自研 Netpoll 网络库，QPS/延迟有优势）、强扩展性（分层设计）、原生支持 HTTP/1.1 和 ALPN 协议，还能在 Netpoll 与 Go Net 之间切换、以插件形式扩展网络库。</li>
+<li><strong>适用场景</strong>: 需要高并发、低延迟的 Go 微服务/HTTP 服务时，对标 gin/echo/fasthttp，尤其适合对性能有要求的团队。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="chzyerreadline-2309-go"><code>chzyer/readline</code> · ⭐2309 · Go<a class="headerlink" href="#chzyerreadline-2309-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 纯 Go 实现的 GNU Readline 风格行编辑库。</li>
+<li><strong>做什么</strong>: 这是 Go 生态里最流行、跨平台的 readline 库，提供强大的行编辑能力，包括常见快捷键的行编辑、可自定义持久化的历史记录、补全支持、自定义提示符等。API 见 pkg.go.dev，附 demo 和快捷键文档。</li>
+<li><strong>适用场景</strong>: 写 Go 交互式 CLI / REPL / shell 时，需要命令行编辑、历史、补全功能，替代依赖系统 readline。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="githubgithub-mcp-server-32564-go"><code>github/github-mcp-server</code> · ⭐32564 · Go<a class="headerlink" href="#githubgithub-mcp-server-32564-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: GitHub 官方出的 MCP Server，让 AI 直接操作 GitHub</li>
+<li><strong>做什么</strong>: 用自然语言就能让 AI 读仓库代码、查文件、分析提交，还能自动化管理 Issue/PR、监控 Actions 构建、看 Dependabot 告警。支持远程托管版和本地版两种部署方式。</li>
+<li><strong>适用场景</strong>: 想让 Claude/Cursor 这类工具读写你的 GitHub 仓库、自动处理 PR 和 issue、分析代码安全告警时用。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="done-0fuck-u-code-7279-typescript"><code>Done-0/fuck-u-code</code> · ⭐7279 · TypeScript<a class="headerlink" href="#done-0fuck-u-code-7279-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用毒舌评分报告暴露你的代码有多烂</li>
+<li><strong>做什么</strong>: 用 tree-sitter 做 AST 解析，支持 14 种语言，给代码打 0~100 总评分，每文件算「Shit-Gas 指数」，检查复杂度/注释/错误处理/命名/重复/结构七项。代码分析完全离线，还可接各家 LLM 做 AI 补充评审，输出彩色终端/Markdown/JSON/HTML。</li>
+<li><strong>适用场景</strong>: 接手一坨遗留代码想快速摸清哪里最烂、或 code review 前置自查时用。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="shuakamiqq-chat-exporter-4862-typescript"><code>shuakami/qq-chat-exporter</code> · ⭐4862 · TypeScript<a class="headerlink" href="#shuakamiqq-chat-exporter-4862-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 把 QQ 聊天记录和表情包导出到本地的工具</li>
+<li><strong>做什么</strong>: 读取并保存好友/群聊记录，导出 HTML/JSON/TXT/Excel 多种格式，连图片、视频、表情包一起下到本地。基于 NapCatQQ，支持 NT QQ，扫码登录，全部解析都在本机完成，不上传任何数据，还支持 Docker 部署。</li>
+<li><strong>适用场景</strong>: 想备份 QQ 聊天记录、归档群聊、或把聊天数据拿来分析/迁移时用。</li>
+<li><strong>标签</strong>: <code>dev-tools</code> <code>automation</code></li>
+</ul>
+<h3 id="tanakalunipset_lkm-210-shell"><code>TanakaLun/IPSET_LKM</code> · ⭐210 · Shell<a class="headerlink" href="#tanakalunipset_lkm-210-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 不改内核镜像就能使用 IPSET 的内核模块</li>
+<li><strong>做什么</strong>: 一个可加载内核模块（LKM），让你在不重新刷内核/改镜像的前提下用上 IPSET 功能，用于 iptables/nftables 的大规模 IP 集合匹配。作者注了免责声明：加载模块有崩溃风险，自担风险。</li>
+<li><strong>适用场景</strong>: 路由器/服务器上需要 IPSET 做 IP 黑名单、分流等网络策略，但核心里没编译这功能时。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="tsuchijomatlab-mcp-39-python"><code>Tsuchijo/matlab-mcp</code> · ⭐39 · Python<a class="headerlink" href="#tsuchijomatlab-mcp-39-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 让 LLM 写并执行 MATLAB 脚本的 MCP 服务器</li>
+<li><strong>做什么</strong>: 通过 MATLAB Engine 让 Claude 等其他 MCP 客户端创建、执行 MATLAB 脚本和函数，并返回输出文本、生成的图和 workspace 变量。需 Python 3.11 + MATLAB R2024a，用 uv 管理。</li>
+<li><strong>适用场景</strong>: 做 MATLAB 计算/仿真时想让 AI 直接帮写并跑 .m 脚本、自动绘图。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="chistokhinsvgns3-mcp-12-python"><code>ChistokhinSV/gns3-mcp</code> · ⭐12 · Python<a class="headerlink" href="#chistokhinsvgns3-mcp-12-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 驱动 GNS3 网络仿真做 AI 辅助实验的 MCP 服务器</li>
+<li><strong>做什么</strong>: 提供 15 个工具 + 25 个只读资源，让 Claude 等代理增删改查 GNS3 工程和节点、控制设备 console（Telnet）、用 Netmiko 做 200+ 设备的 SSH 自动化、管拓扑和 Docker 容器。支持 API Key 认证和 HTTPS。</li>
+<li><strong>适用场景</strong>: 让 AI 帮你搭网络拓扑、自动配置路由交换设备、跑网络实验（当前仅 Windows）。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="bigtannssm-rs-4-rust"><code>bigtan/nssm-rs</code> · ⭐4 · Rust<a class="headerlink" href="#bigtannssm-rs-4-rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用 Rust 重写的 NSSM（把任意程序包成 Windows 服务）</li>
+<li><strong>做什么</strong>: 和原版 NSSM 功能对齐：装/删/启动/停止/重启服务、stdout/stderr 重定向到文件、优雅关机、重启节流、参数存注册表、多级日志，CLI 兼容原版。用 <code>nssm-rs install MyService "C:\App.exe"</code> 即可装服务。</li>
+<li><strong>适用场景</strong>: 想在 Windows 上把普通 exe/脚本注册成后台服务、做进程守护和自动重启时，替代 NSSM。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="golang-standardsproject-layout-56501-makefile"><code>golang-standards/project-layout</code> · ⭐56501 · Makefile<a class="headerlink" href="#golang-standardsproject-layout-56501-makefile" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Go 项目目录结构的社区标准参考布局</li>
+<li><strong>做什么</strong>: 提供一套 Go 应用项目的通用目录布局模板（cmd、internal、pkg 等），标注了每个目录的用途和历史惯用法。它明确强调自己不是 Go 官方标准，只是社区约定俗成的常见结构，大项目才用得上。</li>
+<li><strong>适用场景</strong>: 开新 Go 项目或需要多人协作、代码要被外部 import 时，照它搭骨架；个人小项目用 main.go 就够。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="matsuridayonekoboxforandroid-22475-kotlin"><code>MatsuriDayo/NekoBoxForAndroid</code> · ⭐22475 · Kotlin<a class="headerlink" href="#matsuridayonekoboxforandroid-22475-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 基于 sing-box 的 Android 通用代理客户端</li>
+<li><strong>做什么</strong>: 一款 Android 代理工具，支持 Shadowsocks、VMess、Trojan、VLESS、Hysteria、WireGuard 等大量协议和插件扩展，能解析常见订阅格式导入节点。注意 Google Play 上的版本已被第三方控制，要从 GitHub Releases 下载开源版。</li>
+<li><strong>适用场景</strong>: 需要科学上网/多协议代理时在 Android 上的客户端选择，对标 v2rayNG、Clash 系客户端。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="easytiereasytier-13339-rust"><code>EasyTier/EasyTier</code> · ⭐13339 · Rust<a class="headerlink" href="#easytiereasytier-13339-rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Rust 写的去中心化组网 VPN</li>
+<li><strong>做什么</strong>: 无需中心服务器的 mesh VPN，节点平等互联，支持 NAT 穿透、子网代理、智能路由，加密可选用 WireGuard 或 AES-GCM。跨 Win/macOS/Linux/Android 等多平台，有 Web 管理界面，主打简单易用。</li>
+<li><strong>适用场景</strong>: 把分散各地的设备组进同一个虚拟局域网，对标 Tailscale、ZeroTier。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="twghxcgui-613-go"><code>twgh/xcgui</code> · ⭐613 · Go<a class="headerlink" href="#twghxcgui-613-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 炫彩界面库的 Go 语言绑定（Windows GUI）</li>
+<li><strong>做什么</strong>: 封装 C/C++ 的炫彩界面库给 Go 用，近 2000 个 API，DirectUI 设计思想、无子窗口 HWND，支持 Direct2D 硬件加速、WebView2、一键换肤，还带免费可视化 UI 设计器。</li>
+<li><strong>适用场景</strong>: 想用 Go 写 Windows 桌面 GUI 程序时使用。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="xiangyuecnandroid-usespermission-47-java"><code>xiangyuecn/Android-UsesPermission</code> · ⭐47 · Java<a class="headerlink" href="#xiangyuecnandroid-usespermission-47-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 安卓运行时权限申请封装框架</li>
+<li><strong>做什么</strong>: 把权限申请逻辑封装成几个 Java 文件，一个函数即可处理申请、被拒重复询问、永久拒绝跳系统设置，支持 Activity 存在则弹请求、不存在则仅检测的共用逻辑，返回明确的成功/失败回调。</li>
+<li><strong>适用场景</strong>: 安卓开发中不想重复写权限申请样板代码时，复制进项目即可用。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+<h3 id="vibe-coding-labskiro-cleaner-36-go"><code>vibe-coding-labs/kiro-cleaner</code> · ⭐36 · Go<a class="headerlink" href="#vibe-coding-labskiro-cleaner-36-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 一键清理 Kiro IDE 存储的 CLI 工具</li>
+<li><strong>做什么</strong>: Go 写的命令行工具，扫描并删除 Kiro IDE 的冗余会话记录、缓存、日志和临时文件，保持 IDE 快速响应，支持扫描和清理两种模式。</li>
+<li><strong>适用场景</strong>: Kiro IDE 用久了变卡、占用变大时清理空间提速。</li>
+<li><strong>标签</strong>: <code>dev-tools</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

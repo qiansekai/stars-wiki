@@ -1,0 +1,1991 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="qiansekai 的 GitHub star 中文速览知识库">
+      
+      
+      
+      
+        <link rel="prev" href="../02-android-reverse/">
+      
+      
+        <link rel="next" href="../04-ai-agent/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>设备互联与刷机 - GitHub Star 知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="GitHub Star 知识库" class="md-header__button md-logo" aria-label="GitHub Star 知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GitHub Star 知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              设备互联与刷机
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GitHub Star 知识库" class="md-nav__button md-logo" aria-label="GitHub Star 知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    GitHub Star 知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-android-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安卓内核与 Root
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-android-reverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安卓逆向与 Hook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    设备互联与刷机
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    设备互联与刷机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#firerpalamda-8249-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        firerpa/lamda · ⭐8249 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kunkundicrossdesk-4259-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        kunkundi/crossdesk · ⭐4259 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5ec1cffpayload-dumper-847-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5ec1cff/payload-dumper · ⭐847 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jaycrlmobilevc-209-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JayCRL/MobileVC · ⭐209 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hegekenmrdata-28-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HegeKen/MRData · ⭐28 · CSS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liriliriaya-5406-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        liriliri/aya · ⭐5406 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weixiansen574hybridfilexfer-2671-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        weixiansen574/HybridFileXfer · ⭐2671 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zwc456babyscrcpyforandroid-840-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zwc456baby/ScrcpyForAndroid · ⭐840 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rhythmcachepayload-dumper-rust-100-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rhythmcache/payload-dumper-rust · ⭐100 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agg23adbd_wifi-5-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        agg23/adbd_wifi · ⭐5 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zh-xijunaction-adbd-builder-1-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZH-XiJun/action-adbd-builder · ⭐1 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lanrhymemicyou-3325-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LanRhyme/MicYou · ⭐3325 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miuzartescrcpyforandroid-569-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Miuzarte/ScrcpyForAndroid · ⭐569 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nmeumandroid-tools-302-cmake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nmeum/android-tools · ⭐302 · CMake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unix3dgforcelpunpack-219-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        unix3dgforce/lpunpack · ⭐219 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#svoboda18e2fstool-10-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        svoboda18/e2fstool · ⭐10 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ptx64android_xiaomi_edl-1-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PTX64/android_xiaomi_edl · ⭐1 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mygodvpnhotspot-6359-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mygod/VPNHotspot · ⭐6359 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#senzhkadbkeyboard-1943-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        senzhk/ADBKeyBoard · ⭐1943 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cocool97adb_client-387-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cocool97/adb_client · ⭐387 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#j67678zdesk-21-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        j67678/ZDesk · ⭐21 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wxxsfxyzminstallerx-revived-6347-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        wxxsfxyzm/InstallerX-Revived · ⭐6347 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omnimind-aiomnibot-1929-dart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        omnimind-ai/OmniBot · ⭐1929 · Dart
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stevenmxzwinlator-ludashi-1045-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StevenMXZ/Winlator-Ludashi · ⭐1045 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tiannadb_root-281-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tiann/adb_root · ⭐281 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#althafvlyamlogickitchen-214-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        althafvly/AmlogicKitchen · ⭐214 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sekaiacgerofs-tools-179-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sekaiacg/erofs-tools · ⭐179 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nlitsmeextfstools-140-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nlitsme/extfstools · ⭐140 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uotan-devfh-loader-4-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uotan-Dev/Fh-loader · ⭐4 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suyuan87imgextractor-1-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        suyuan87/imgextractor · ⭐1 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classicoldsongapollo-10687-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ClassicOldSong/Apollo · ⭐10687 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openbfdevsdbd-29-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openbfdev/sdbd · ⭐29 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bigfootacaadbd-20-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BigfootACA/adbd · ⭐20 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtualdriversvirtual-display-driver-9959-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VirtualDrivers/Virtual-Display-Driver · ⭐9959 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-nextmobile-mcp-6041-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mobile-next/mobile-mcp · ⭐6041 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssutpayload-dumper-go-3485-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ssut/payload-dumper-go · ⭐3485 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ktzeabysseasy-virtual-display-1682-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KtzeAbyss/Easy-Virtual-Display · ⭐1682 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topjohnwusamloader-rs-260-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        topjohnwu/samloader-rs · ⭐260 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcboyadb-insecure-patcher-75-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pcboy/adb-insecure-patcher · ⭐75 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-woa-raphaelwoa-raphael-58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        new-WoA-Raphael/woa-raphael · ⭐58
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#woa-raphaelwoa-raphael-48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        woa-raphael/woa-raphael · ⭐48
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xishang0128payload-dumper-go-28-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xishang0128/payload-dumper-go · ⭐28 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debaucheebarrier-30837-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        debauchee/barrier · ⭐30837 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mhmdeveoplus_ota_finder-28-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mhmdeve/oplus_ota_finder · ⭐28 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suyuan87sdat2img-1-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        suyuan87/sdat2img · ⭐1 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-ai-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Agent 与 MCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-dev-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发工具与基础设施
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全与 CTF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自动化与脚本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-media-game/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音游、媒体与图像
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    学习与考试
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#firerpalamda-8249-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        firerpa/lamda · ⭐8249 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kunkundicrossdesk-4259-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        kunkundi/crossdesk · ⭐4259 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5ec1cffpayload-dumper-847-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5ec1cff/payload-dumper · ⭐847 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jaycrlmobilevc-209-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JayCRL/MobileVC · ⭐209 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hegekenmrdata-28-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HegeKen/MRData · ⭐28 · CSS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liriliriaya-5406-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        liriliri/aya · ⭐5406 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weixiansen574hybridfilexfer-2671-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        weixiansen574/HybridFileXfer · ⭐2671 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zwc456babyscrcpyforandroid-840-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zwc456baby/ScrcpyForAndroid · ⭐840 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rhythmcachepayload-dumper-rust-100-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rhythmcache/payload-dumper-rust · ⭐100 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agg23adbd_wifi-5-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        agg23/adbd_wifi · ⭐5 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zh-xijunaction-adbd-builder-1-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZH-XiJun/action-adbd-builder · ⭐1 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lanrhymemicyou-3325-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LanRhyme/MicYou · ⭐3325 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miuzartescrcpyforandroid-569-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Miuzarte/ScrcpyForAndroid · ⭐569 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nmeumandroid-tools-302-cmake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nmeum/android-tools · ⭐302 · CMake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unix3dgforcelpunpack-219-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        unix3dgforce/lpunpack · ⭐219 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#svoboda18e2fstool-10-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        svoboda18/e2fstool · ⭐10 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ptx64android_xiaomi_edl-1-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PTX64/android_xiaomi_edl · ⭐1 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mygodvpnhotspot-6359-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mygod/VPNHotspot · ⭐6359 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#senzhkadbkeyboard-1943-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        senzhk/ADBKeyBoard · ⭐1943 · Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cocool97adb_client-387-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cocool97/adb_client · ⭐387 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#j67678zdesk-21-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        j67678/ZDesk · ⭐21 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wxxsfxyzminstallerx-revived-6347-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        wxxsfxyzm/InstallerX-Revived · ⭐6347 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omnimind-aiomnibot-1929-dart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        omnimind-ai/OmniBot · ⭐1929 · Dart
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stevenmxzwinlator-ludashi-1045-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StevenMXZ/Winlator-Ludashi · ⭐1045 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tiannadb_root-281-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tiann/adb_root · ⭐281 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#althafvlyamlogickitchen-214-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        althafvly/AmlogicKitchen · ⭐214 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sekaiacgerofs-tools-179-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sekaiacg/erofs-tools · ⭐179 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nlitsmeextfstools-140-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nlitsme/extfstools · ⭐140 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uotan-devfh-loader-4-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uotan-Dev/Fh-loader · ⭐4 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suyuan87imgextractor-1-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        suyuan87/imgextractor · ⭐1 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classicoldsongapollo-10687-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ClassicOldSong/Apollo · ⭐10687 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openbfdevsdbd-29-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openbfdev/sdbd · ⭐29 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bigfootacaadbd-20-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BigfootACA/adbd · ⭐20 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtualdriversvirtual-display-driver-9959-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VirtualDrivers/Virtual-Display-Driver · ⭐9959 · C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-nextmobile-mcp-6041-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mobile-next/mobile-mcp · ⭐6041 · TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssutpayload-dumper-go-3485-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ssut/payload-dumper-go · ⭐3485 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ktzeabysseasy-virtual-display-1682-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KtzeAbyss/Easy-Virtual-Display · ⭐1682 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topjohnwusamloader-rs-260-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        topjohnwu/samloader-rs · ⭐260 · Rust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcboyadb-insecure-patcher-75-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pcboy/adb-insecure-patcher · ⭐75 · Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-woa-raphaelwoa-raphael-58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        new-WoA-Raphael/woa-raphael · ⭐58
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#woa-raphaelwoa-raphael-48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        woa-raphael/woa-raphael · ⭐48
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xishang0128payload-dumper-go-28-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xishang0128/payload-dumper-go · ⭐28 · Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debaucheebarrier-30837-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        debauchee/barrier · ⭐30837 · C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mhmdeveoplus_ota_finder-28-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mhmdeve/oplus_ota_finder · ⭐28 · Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suyuan87sdat2img-1-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        suyuan87/sdat2img · ⭐1 · Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">设备互联与刷机<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>共 45 个仓库 · 来自 qiansekai 的 GitHub star · 生成时间 2026-08-28</p>
+</blockquote>
+<h3 id="firerpalamda-8249-python"><code>firerpa/lamda</code> · ⭐8249 · Python<a class="headerlink" href="#firerpalamda-8249-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Android 全栈设备控制平台，一站式远程桌面/自动化/抓包/Hook。</li>
+<li><strong>做什么</strong>: 服务端直接跑在设备上（有无 root 皆可），通过统一 Python 客户端编排 UI 自动化、WebRTC/H.264 远程桌面、一键 MITM、内置 Frida、代理/VPN/frp/P2P 组网、MCP/Agent 和 160+ API，面向多设备集群和工程化长期运行。</li>
+<li><strong>适用场景</strong>: 替代 Appium+mitmproxy+frida+adb+uiautomator2 的拼装，做移动端批量自动化、动态分析与远程控制。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>android-reverse</code></li>
+</ul>
+<h3 id="kunkundicrossdesk-4259-c"><code>kunkundi/crossdesk</code> · ⭐4259 · C++<a class="headerlink" href="#kunkundicrossdesk-4259-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 轻量级跨平台远程桌面软件，支持 Web 客户端访问。</li>
+<li><strong>做什么</strong>: 基于自研 MiniRTC 实时音视频库的远程桌面，跑在 Windows/Linux/macOS，用对端 ID + 密码连接，支持 H264/AV1、Opus、SRTP 加密与 NAT 穿透，浏览器开 Web Client 即可控制远机，Windows 还带服务以控制锁屏/登录界面。</li>
+<li><strong>适用场景</strong>: 需要轻量、自托管、且浏览器直接远程控制电脑的场景，对标 TeamViewer/AnyDesk 的开源替代。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="5ec1cffpayload-dumper-847-python"><code>5ec1cff/payload-dumper</code> · ⭐847 · Python<a class="headerlink" href="#5ec1cffpayload-dumper-847-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 从 Android 的 payload.bin 里解出分区的 Python 工具。</li>
+<li><strong>做什么</strong>: 从 OTA 包或 URL 的 payload.bin 直接抽取指定分区，支持不下载完整文件（网络流式）、不解压 zip、多线程下载与提取，快速拿下 boot/init_boot/vbmeta 等小分区，也能对旧镜像打 OTA diff。</li>
+<li><strong>适用场景</strong>: 刷机/逆向时只想要某个分区镜像，省时省空间地解 OTA 包。</li>
+<li><strong>标签</strong>: <code>android-reverse</code> <code>device-tools</code></li>
+</ul>
+<h3 id="jaycrlmobilevc-209-go"><code>JayCRL/MobileVC</code> · ⭐209 · Go<a class="headerlink" href="#jaycrlmobilevc-209-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用手机接管电脑上 Claude/Codex CLI 会话的控制台。</li>
+<li><strong>做什么</strong>: 不是远程桌面或终端镜像，而是把 AI 编程助手的高频等待态做成手机结构化操作：接权限请求、推进 Plan Mode、按组审核/回滚 diff、恢复历史会话、浏览文件日志、管理 Skill/Memory/Context，还支持语音预沟通、公网 Relay 和扫码连接。</li>
+<li><strong>适用场景</strong>: 人不在电脑前，仍想用手机审批、催促、审查 Claude/Codex 任务的进展时。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>device-tools</code></li>
+</ul>
+<h3 id="hegekenmrdata-28-css"><code>HegeKen/MRData</code> · ⭐28 · CSS<a class="headerlink" href="#hegekenmrdata-28-css" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: MIUI 官方 ROM 仓库站点的数据与组件仓库。</li>
+<li><strong>做什么</strong>: 为新版 MIUI ROM 仓库（roms.miuier.com / NuxtMR）提供数据源、MDUI 组件与前端 JS 库，数据用 JSON 保存，含抓取卡刷包/线刷包的爬虫脚本。</li>
+<li><strong>适用场景</strong>: 需要小米/红米官方 ROM 下载数据或想复用其组件/爬虫时。</li>
+<li><strong>标签</strong>: <code>misc</code> <code>device-tools</code></li>
+</ul>
+<h3 id="liriliriaya-5406-typescript"><code>liriliri/aya</code> · ⭐5406 · TypeScript<a class="headerlink" href="#liriliriaya-5406-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 一个好看的 ADB 图形化桌面客户端（Electron）。</li>
+<li><strong>做什么</strong>: 相当于给 ADB 套了层 GUI，提供屏幕镜像、文件浏览器、应用管理、进程监控、布局检查器、CPU/内存/FPS 监控、Logcat 查看和交互式 shell 等功能，跨 Windows/macOS/Linux。</li>
+<li><strong>适用场景</strong>: 不想手敲 adb 命令、想要图形界面管理安卓设备时用；对标 scrcpy GUI / 各种手机助手，但开源且聚焦开发者。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="weixiansen574hybridfilexfer-2671-java"><code>weixiansen574/HybridFileXfer</code> · ⭐2671 · Java<a class="headerlink" href="#weixiansen574hybridfilexfer-2671-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 同时用 USB 和 WiFi 等多条通道传输文件，榨干手机 IO。</li>
+<li><strong>做什么</strong>: 手机端（配合 Shizuku 选正常/ROOT/ADB 模式）和电脑客户端配合，把 USB_ADB、多张 WiFi 网卡等所有可用通道并行传输，速度可叠加到 150~200+MB/s。支持双 WLAN 加速、热点直连等玩法。</li>
+<li><strong>适用场景</strong>: 需要大批量、高速把手机文件传电脑时用；对标传统 MTP/单通道传输，靠多轨并行提速。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="zwc456babyscrcpyforandroid-840-java"><code>zwc456baby/ScrcpyForAndroid</code> · ⭐840 · Java<a class="headerlink" href="#zwc456babyscrcpyforandroid-840-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 把 scrcpy 投屏能力搬到安卓设备上。</li>
+<li><strong>做什么</strong>: 桌面端 scrcpy 的 Android 移植版，通过 ADB-Connect 接口把远端安卓设备的屏幕镜像和触控投到另一台安卓设备上。两台设备同一局域网、目标开启 ADB 无线即可，支持调分辨率和码率。</li>
+<li><strong>适用场景</strong>: 用一台安卓手机/平板远程控制另一台安卓设备（比如远控家里的盒子）时用。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="rhythmcachepayload-dumper-rust-100-rust"><code>rhythmcache/payload-dumper-rust</code> · ⭐100 · Rust<a class="headerlink" href="#rhythmcachepayload-dumper-rust-100-rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用 Rust 写的快速 Android OTA payload 提取器。</li>
+<li><strong>做什么</strong>: 从 Android OTA 的 payload.bin 或 ROM ZIP 里提取 boot/system/vendor 等分区镜像，支持多核并行、直接从 ZIP/URL 提取（只下需要的部分）、跨平台（含 Termux）和实验性增量 OTA。</li>
+<li><strong>适用场景</strong>: 刷机/做 ROM 时需要从官方 OTA 里解出分区镜像时用；对标 payload-dumper-go 但更快更省流量。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="agg23adbd_wifi-5-c"><code>agg23/adbd_wifi</code> · ⭐5 · C++<a class="headerlink" href="#agg23adbd_wifi-5-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 用户态运行的 ADB over TCP，专为锁死设备（如 Humane Ai Pin）设计。</li>
+<li><strong>做什么</strong>: 从 AOSP 源码裁剪出静态链接的 adbd，剥离后可在用户态运行并提供 TCP ADB 访问，无需 root。把 adbd_wifi push 到 /data/local/tmp 后启动，就能 <code>adb connect</code> 网络连接做 shell 和 scrcpy。</li>
+<li><strong>适用场景</strong>: 给没法 root、ADB 无线没开的锁死安卓设备开启网络调试通道时使用。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="zh-xijunaction-adbd-builder-1-shell"><code>ZH-XiJun/action-adbd-builder</code> · ⭐1 · Shell<a class="headerlink" href="#zh-xijunaction-adbd-builder-1-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用 GitHub Actions 构建自定义 adbd 的尝试。</li>
+<li><strong>做什么</strong>: 一个 GitHub Actions 工作流，用于编译自定义的 adbd 二进制。当前会下载整个 AOSP 源码（对 adbd 而言没必要），作者计划后续只拉取 adbd 必需的那部分源码。</li>
+<li><strong>适用场景</strong>: 需要自己编译定制版 adbd（如做用户态/精简 adbd）时参考或复用。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="lanrhymemicyou-3325-rust"><code>LanRhyme/MicYou</code> · ⭐3325 · Rust<a class="headerlink" href="#lanrhymemicyou-3325-rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 把 Android 手机变成 PC 的高质量麦克风的工具。</li>
+<li><strong>做什么</strong>: 手机端 App 通过 Wi-Fi/USB(ADB)/扫码 Web 模式把音频流到 PC，桌面端支持 Windows/Linux/macOS，带 GUI/CLI/TUI；内置 AI 与传统降噪、回声消除、均衡器、AGC、VAD，可路由到 VB-CABLE/PipeWire/BlackHole 用于通话直播录音。</li>
+<li><strong>适用场景</strong>: 没有好麦克风、想用手机当麦克风开会/直播/录音时使用，面向音质与低延迟需求。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>media-game</code></li>
+</ul>
+<h3 id="miuzartescrcpyforandroid-569-kotlin"><code>Miuzarte/ScrcpyForAndroid</code> · ⭐569 · Kotlin<a class="headerlink" href="#miuzartescrcpyforandroid-569-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: scrcpy 的 Android 客户端（非官方），用手机镜像控制另一台设备。</li>
+<li><strong>做什么</strong>: 通过 ADB Wireless 连接设备镜像音视频并用触摸/键鼠控制，支持中文输入、剪贴板同步、双向文件传输、内置 adb 终端、画中画、录制等，无需 root 也无需在受控设备装应用。</li>
+<li><strong>适用场景</strong>: 想用一台手机远程投屏+操控另一台 Android 设备时使用，对标 scrcpy 的移动端入口。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="nmeumandroid-tools-302-cmake"><code>nmeum/android-tools</code> · ⭐302 · CMake<a class="headerlink" href="#nmeumandroid-tools-302-cmake" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 给 adb/fastboot 等 Android 命令行工具提供 CMake 构建系统的非官方方案。</li>
+<li><strong>做什么</strong>: 用简单 CMake 构建系统打包 adb、fastboot、mke2fs.android、simg2img、lpdump、mkbootimg、avbtool 等命令工具，附带开箱即用 tarball，免去手动 clone 一堆依赖仓库，已用于 Alpine Linux 的 android-tools 包。</li>
+<li><strong>适用场景</strong>: Linux 发行版打包 Android 命令行工具、或想从源码快速编译 adb/fastboot 时使用。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="unix3dgforcelpunpack-219-python"><code>unix3dgforce/lpunpack</code> · ⭐219 · Python<a class="headerlink" href="#unix3dgforcelpunpack-219-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 从 Android super 分区镜像中提取分区镜像的命令行工具。</li>
+<li><strong>做什么</strong>: 一个 lpunpack.py 脚本，读取 super 镜像并把其中的分区（system/vendor 等）解出到指定目录，支持按分区名提取、打印分区元数据(text/json)，A/B slot 提取尚未实现。</li>
+<li><strong>适用场景</strong>: 刷机、ROM 定制、解包动态分区提取镜像时使用，对标 Android 原生 lpunpack 工具的 Python 实现。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="svoboda18e2fstool-10-c"><code>svoboda18/e2fstool</code> · ⭐10 · C<a class="headerlink" href="#svoboda18e2fstool-10-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 支持 Windows 的 Android ext4 镜像提取器。</li>
+<li><strong>做什么</strong>: 用 C 写的高级 ext4 镜像提取工具，可直接提取 sparse 镜像无需转换，处理 Android 的 selinux context 与 capabilities 等 xattr，兼容 SaR 提取，Windows 下用 MINGW 编译并生成 CYGWIN 兼容 symlink 便于再打包。</li>
+<li><strong>适用场景</strong>: ROM 开发者在 Windows 下解包/提取 Android ext4 分区镜像时使用。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="ptx64android_xiaomi_edl-1-python"><code>PTX64/android_xiaomi_edl</code> · ⭐1 · Python<a class="headerlink" href="#ptx64android_xiaomi_edl-1-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 高通 Sahara/Firehose EDL 刷机与 Diag 工具的小米修复版。</li>
+<li><strong>做什么</strong>: 基于 bkerler 的 edl，本 fork 修复了 Sahara V3 协议无法读取芯片信息的问题，用 cmd=0x0A 读取 V3 设备 MSM_ID/OEM_ID 等扩展信息并恢复 loader 自动检测，支持内存 dump、firehose 攻击、diag 工具，已测骁龙与小米设备。</li>
+<li><strong>适用场景</strong>: EDL 9008 救砖、dump 手机内存、深度刷机与研究高通 Sahara/Firehose 协议时使用。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>android-root</code></li>
+</ul>
+<h3 id="mygodvpnhotspot-6359-kotlin"><code>Mygod/VPNHotspot</code> · ⭐6359 · Kotlin<a class="headerlink" href="#mygodvpnhotspot-6359-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 把手机的 VPN 连接通过热点或中继共享给其他设备（需 root）。</li>
+<li><strong>做什么</strong>: 让不支持 VPN 的设备（如 Chromecast）、不方便装 VPN 的设备通过手机热点共享代理上网，可识别、监控、屏蔽连接的客户端，还能绕过运营商热点限制。部分高级功能需装成系统应用获得特权权限。</li>
+<li><strong>适用场景</strong>: 公司防火墙后给机顶盒/游戏机翻墙、共享科学上网给没 VPN 能力的设备，安卓上类似的还有 TetherMe(iOS)。</li>
+<li><strong>标签</strong>: <code>android-root</code> <code>device-tools</code></li>
+</ul>
+<h3 id="senzhkadbkeyboard-1943-java"><code>senzhk/ADBKeyBoard</code> · ⭐1943 · Java<a class="headerlink" href="#senzhkadbkeyboard-1943-java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 通过 ADB 广播向安卓设备发送文本的虚拟键盘，解决 adb input 不能输 Unicode 的痛点。</li>
+<li><strong>做什么</strong>: 一个虚拟输入法，接收系统广播 intent（ADB_INPUT_TEXT/B64/CODE/CHARS 等）来实现文本、按键、组合键（Ctrl+A）、清空等输入，支持中文和 emoji，可通过 adb 一键启用和切换。专为设备自动化和测试设计。</li>
+<li><strong>适用场景</strong>: 自动化测试、批量往安卓设备输入中文/特殊字符，替代 <code>adb shell input text</code> 的编码缺陷。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="cocool97adb_client-387-rust"><code>cocool97/adb_client</code> · ⭐387 · Rust<a class="headerlink" href="#cocool97adb_client-387-rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 纯 Rust 实现的 ADB 客户端库，附带 Python 封装和改版 CLI。</li>
+<li><strong>做什么</strong>: 不依赖 <code>adb</code> shell 命令，直接实现 ADB 服务端和终端设备两套协议，支持经 adb-server 代理或直连设备（USB/TCP/IP），实现 framebuffer 等隐藏功能，并提供 pyadb_client 给 Python 调用。</li>
+<li><strong>适用场景</strong>: 在 Rust/Python 项目里以编程方式控制安卓设备、写自动化或调试工具时用，替代 shelling out 调 adb。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="j67678zdesk-21-c"><code>j67678/ZDesk</code> · ⭐21 · C++<a class="headerlink" href="#j67678zdesk-21-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 低延迟高画质的开源远程桌面软件，内置 P2P 组网。</li>
+<li><strong>做什么</strong>: 用 DirectX(DXGI/D3D11) 硬件加速捕捉和编码、WASAPI+FFmpeg 处理低延迟音频，鼠标键盘走独立 UDP 通道，支持密码保护。内置 EasyTier 做 P2P 穿透组网、虚拟局域网、魔法 DNS、NAT 穿透，无需公网 IP 即可直连。</li>
+<li><strong>适用场景</strong>: 需要流畅远程控制另一台电脑、跨网络组虚拟局域网自主组网时用，对标自建 TeamViewer/Parsec。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>dev-tools</code></li>
+</ul>
+<h3 id="wxxsfxyzminstallerx-revived-6347-kotlin"><code>wxxsfxyzm/InstallerX-Revived</code> · ⭐6347 · Kotlin<a class="headerlink" href="#wxxsfxyzminstallerx-revived-6347-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 现代 Android 应用安装器，InstallerX 的社区续作。</li>
+<li><strong>做什么</strong>: 替代系统自带安装器，支持 APK/APKS/APKM/XAPK/ZIP 批量安装、静默安装；通过 Shizuku/Root/Dhizuku 获取高权限实现自动安装，可自定义安装配置档，Material 3/Miuix 双风格 UI。</li>
+<li><strong>适用场景</strong>: 频繁装大量 APK、想要静默/自动安装和更精致安装体验的折腾党，配合 Shizuku/Root 使用。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>android-root</code></li>
+</ul>
+<h3 id="omnimind-aiomnibot-1929-dart"><code>omnimind-ai/OmniBot</code> · ⭐1929 · Dart<a class="headerlink" href="#omnimind-aiomnibot-1929-dart" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 跑在手机上的端侧 AI Agent，能操作终端和 Android 系统。</li>
+<li><strong>做什么</strong>: 用 Kotlin + Flutter 写的端侧 AI 助手，围绕"理解→决策→执行→反思"闭环，集成 Skills、Alpine 终端环境、浏览器、MCP 和 Android 系统级能力，支持定时任务、日历、记忆系统和文件读写。</li>
+<li><strong>适用场景</strong>: 想把 AI Agent 直接跑在自己 Android 手机上、让它操作系统和终端干活时用，对标 openclaw/claw。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>device-tools</code></li>
+</ul>
+<h3 id="stevenmxzwinlator-ludashi-1045-c"><code>StevenMXZ/Winlator-Ludashi</code> · ⭐1045 · C<a class="headerlink" href="#stevenmxzwinlator-ludashi-1045-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 在 Android 上跑 Windows 应用的 Winlator Bionic 分支。</li>
+<li><strong>做什么</strong>: 基于 Wine + Box86/Box64（或 FEXCore/wowbox64 的 Arm64EC 容器）在 Android 上跑 x86_64 Windows 程序。Ludashi/RedMagic 等构建通过伪装包名，触发小米/红魔手机的"性能模式"或硬件插帧，间接提升游戏性能。</li>
+<li><strong>适用场景</strong>: 想在手机上玩/用 Windows 游戏和软件、尤其是小米/红魔设备想榨性能时用。</li>
+<li><strong>标签</strong>: <code>media-game</code> <code>device-tools</code></li>
+</ul>
+<h3 id="tiannadb_root-281-shell"><code>tiann/adb_root</code> · ⭐281 · Shell<a class="headerlink" href="#tiannadb_root-281-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 让 Android 11+ 量产机的 adb root 可用的 Magisk 模块。</li>
+<li><strong>做什么</strong>: 一个 Magisk 模块，安装后启用生产构建设备（user 版系统）上的 adb root，方便调试。基于 wuxianlin 的 adb_root 整理。</li>
+<li><strong>适用场景</strong>: 调试 user 版设备想临时开 adb root（推送文件、跑 shell 命令）时刷入。</li>
+<li><strong>标签</strong>: <code>android-root</code> <code>device-tools</code></li>
+</ul>
+<h3 id="althafvlyamlogickitchen-214-python"><code>althafvly/AmlogicKitchen</code> · ⭐214 · Python<a class="headerlink" href="#althafvlyamlogickitchen-214-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 面向 Amlogic/Rockchip/AllWinner 的 Android 固件厨房。</li>
+<li><strong>做什么</strong>: 解包/重打包 Amlogic、Rockchip、AllWinner 固件镜像，处理 boot、recovery、logo、dtb、super 分区，支持从可刷 ZIP 生成 Amlogic 镜像、mask ROM 模式 dump ROM、自定义密钥签名 ROM。</li>
+<li><strong>适用场景</strong>: 折腾电视盒子/晶晨、瑞芯微设备的固件定制、魔改 ROM 时用（仅 Linux x86_64）。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>android-root</code></li>
+</ul>
+<h3 id="sekaiacgerofs-tools-179-c"><code>sekaiacg/erofs-tools</code> · ⭐179 · C++<a class="headerlink" href="#sekaiacgerofs-tools-179-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 提取 erofs 镜像（含 fs_config/files_context）的工具。</li>
+<li><strong>做什么</strong>: 基于 erofs-utils 实现的 erofs 镜像提取工具，能解出文件并额外提取 fs_config、files_context、mkfs_option 等元数据，支持多线程、按路径提取、只提取配置等选项。</li>
+<li><strong>适用场景</strong>: 解包 Android 固件里的 erofs 分区镜像、还原文件权限和 SELinux 上下文时用。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>android-root</code></li>
+</ul>
+<h3 id="nlitsmeextfstools-140-c"><code>nlitsme/extfstools</code> · ⭐140 · C++<a class="headerlink" href="#nlitsmeextfstools-140-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 从 ext2/3/4 文件系统镜像提取文件的工具。</li>
+<li><strong>做什么</strong>: 一组读取 ext2/ext3/ext4 镜像的工具（主要是 ext2rd），能把整个文件系统导出、列出文件、按 inode/路径 hexdump 或保存，作者主要用它从 Android system 镜像里抽文件。</li>
+<li><strong>适用场景</strong>: 需要从 ext 格式的 Android 镜像里提取文件、做固件取证分析时用。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>security</code></li>
+</ul>
+<h3 id="uotan-devfh-loader-4-c"><code>Uotan-Dev/Fh-loader</code> · ⭐4 · C<a class="headerlink" href="#uotan-devfh-loader-4-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 低活跃</li>
+<li><strong>一句话</strong>: 高通 fh_loader 烧写工具的二次开发版本。</li>
+<li><strong>做什么</strong>: 基于高通官方 fh_loader 源码，新增 Simg 的 CRC 区块支持和"跳过设备自动配置"以规避特殊设备，Windows(MSVC)、macOS(gcc)、Linux 平台可编译，但仅供学习参考，与 release 实际代码不一致。</li>
+<li><strong>适用场景</strong>: 折腾高通设备（如部分手机固件）通过 9008 模式刷写/烧录时参考。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="suyuan87imgextractor-1-python"><code>suyuan87/imgextractor</code> · ⭐1 · Python<a class="headerlink" href="#suyuan87imgextractor-1-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 镜像提取工具（README 仅有 AGPL 许可证文本）。</li>
+<li><strong>做什么</strong>: 仓库名和语言表明是镜像解析/提取相关（Image Extractor 类工具），但 README 只有 AGPL-3.0 许可证文本，缺少功能描述，具体能力未知。</li>
+<li><strong>适用场景</strong>: 名字看是固件镜像提取类工具，但文档缺失，需自行查看源码再评估用途。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="classicoldsongapollo-10687-c"><code>ClassicOldSong/Apollo</code> · ⭐10687 · C++<a class="headerlink" href="#classicoldsongapollo-10687-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: Sunshine 的分支，主打虚拟显示器 + 原生客户端分辨率串流。</li>
+<li><strong>做什么</strong>: Apollo 是自建桌面串流服务端，配合 Artemis(Moonlight Noir) 客户端使用。内置带 HDR 的虚拟显示器，能自动匹配客户端分辨率/帧率，给每个客户端分配固定显示器身份；支持 AMD/Intel/Nvidia 硬件编码和软件编码，提供 Web UI 配置与配对，还有权限管理、剪贴板同步、连接/断开命令、纯输入模式。</li>
+<li><strong>适用场景</strong>: 想在家自建低延迟游戏/桌面串流，替代 Steam Link/Parsec，尤其需要虚拟显示器按客户端分辨率串流时。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="openbfdevsdbd-29-c"><code>openbfdev/sdbd</code> · ⭐29 · C<a class="headerlink" href="#openbfdevsdbd-29-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 与 ADBD 完全兼容的轻量调试桥守护进程（SDBD）。</li>
+<li><strong>做什么</strong>: 单文件实现、事件驱动、全异步的高性能 adbd 替代。支持 USB 3.2 SuperSpeed+、RSA-2048 认证、v2 传输协议、Shell v2、超时关闭、跨大小端、热插拔，以及 shell/exec/forward/reboot/remount/root/push/pull 等命令。带 Intel SSE2 / Arm Neon 硬件加速，宣称速度是 ADBD 的 14.2 倍，还出小内存版。</li>
+<li><strong>适用场景</strong>: 需要更快的 adbd 服务端做文件传输，或嵌入式/自定义设备接入 adb 生态时。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="bigfootacaadbd-20-c"><code>BigfootACA/adbd</code> · ⭐20 · C<a class="headerlink" href="#bigfootacaadbd-20-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 从 AOSP 移植到 Linux 的简易 adbd 守护进程。</li>
+<li><strong>做什么</strong>: 一个基于 android-tools、来自 AOSP 的 Linux 版 adbd，实现简单，作为已长期未更新（2021 年）的参考实现存在。README 极简，仅说明来源与基础信息。</li>
+<li><strong>适用场景</strong>: 需要在普通 Linux 上跑 adbd 服务以便被 adb 连接，或参考其实现作为起点。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="virtualdriversvirtual-display-driver-9959-c"><code>VirtualDrivers/Virtual-Display-Driver</code> · ⭐9959 · C++<a class="headerlink" href="#virtualdriversvirtual-display-driver-9959-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 给 Windows 加一块「虚拟显示器」的驱动</li>
+<li><strong>做什么</strong>: 在 Windows 10/11 上创建一块和物理屏一样好用的虚拟显示器，支持自定义分辨率、刷新率和 EDID。适合串流、VR、录屏以及没有接显示器的无头服务器场景。团队还有 Linux 版和虚拟声卡等配套。</li>
+<li><strong>适用场景</strong>: OBS/Sunshine 串流、虚拟机远程桌面、无头主机跑图形任务时，需要「假装有块屏幕」。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="mobile-nextmobile-mcp-6041-typescript"><code>mobile-next/mobile-mcp</code> · ⭐6041 · TypeScript<a class="headerlink" href="#mobile-nextmobile-mcp-6041-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 让 AI Agent 跨平台操控手机/模拟器的 MCP 服务器</li>
+<li><strong>做什么</strong>: 提供一个平台无关的接口，Agent 通过无障碍树（比截图省 token）或坐标点击来操控 iOS/Android 的真机、模拟器。不用会 XCUITest/Espresso，支持点按/滑动/装应用/录屏/深链等全设备控制，一套 API 通吃两端。</li>
+<li><strong>适用场景</strong>: 让 Claude Code/Codex 帮你自动化测试 App、填表单、跑多步骤用户旅程或从手机 App 提取数据。</li>
+<li><strong>标签</strong>: <code>ai-agent</code> <code>device-tools</code></li>
+</ul>
+<h3 id="ssutpayload-dumper-go-3485-go"><code>ssut/payload-dumper-go</code> · ⭐3485 · Go<a class="headerlink" href="#ssutpayload-dumper-go-3485-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 用 Go 写的 Android OTA payload 解包工具</li>
+<li><strong>做什么</strong>: 把 Android 增量/完整 OTA 里的 payload.bin 高速并行解压出来，支持增量 OTA（delta）、自动校验 sha256、就地读取原始 zip、还能当 Go 库用。比原型快很多，只需系统装个 xz。</li>
+<li><strong>适用场景</strong>: 刷机党从官方 OTA 包提取 system/boot/vendor 等分区镜像时用（个别 delta 操作暂不支持）。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>android-root</code></li>
+</ul>
+<h3 id="ktzeabysseasy-virtual-display-1682-rust"><code>KtzeAbyss/Easy-Virtual-Display</code> · ⭐1682 · Rust<a class="headerlink" href="#ktzeabysseasy-virtual-display-1682-rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 图形界面一键增删虚拟显示器的 Windows 工具</li>
+<li><strong>做什么</strong>: 用 Tauri + React 做的桌面应用，一键装驱动、增删最多 8 块虚拟屏，每块可设分辨率/刷新率/方向、自定义模式、指定绑到哪块 GPU。免命令行、免 Parsec 账号，还有托盘、开机自启、主屏断开自动补位等贴心功能。</li>
+<li><strong>适用场景</strong>: 远程控制/串流、显卡欺骗、无头 GPU 主机、给笔记本扩屏或测多屏布局。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="topjohnwusamloader-rs-260-rust"><code>topjohnwu/samloader-rs</code> · ⭐260 · Rust<a class="headerlink" href="#topjohnwusamloader-rs-260-rust" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 三星固件下载 + 刷写一体的 Rust 工具</li>
+<li><strong>做什么</strong>: 一个命令搞定三星固件下载和刷写：多连接并行下载绕过限速、边下边解密、内存中解包 TAR、LZ4 直传刷机，支持 dump/print PIT、MD5 校验、进 Download 模式等。跨 Linux/macOS/Windows，刷写核心源自 Heimdall。</li>
+<li><strong>适用场景</strong>: 三星设备刷官方固件、下载固件、备份 PIT 分区时，替代 SamFirm/Odin 类工具。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="pcboyadb-insecure-patcher-75-shell"><code>pcboy/adb-insecure-patcher</code> · ⭐75 · Shell<a class="headerlink" href="#pcboyadb-insecure-patcher-75-shell" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 让任意 ROM 的 adbd 能以 root 运行的补丁脚本</li>
+<li><strong>做什么</strong>: 遇到 <code>adb root</code> 提示「production builds 不能以 root 运行」时，运行脚本 patch ROM 的内核/ramdisk（改 default.prop），产出可 fastboot 刷入的 boot.img，从而开启 adbd root。针对小米 eu 等 Treble ROM 有说明。</li>
+<li><strong>适用场景</strong>: 老设备刷机/调试需要 adb root 权限、但官方 ROM 禁止时用。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>android-root</code></li>
+</ul>
+<h3 id="new-woa-raphaelwoa-raphael-58"><code>new-WoA-Raphael/woa-raphael</code> · ⭐58<a class="headerlink" href="#new-woa-raphaelwoa-raphael-58" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 在小米 9T Pro / 红米 K20 Pro 上装 Windows 的教程与文件集</li>
+<li><strong>做什么</strong>: 提供把 Windows 11 刷到骁龙 855 的 Redmi K20 Pro / Mi 9T Pro 上的安装指南、驱动、双启动和排错文档，由社区用户贡献文件汇总而成。明确声明与已废弃的 Renegade 项目无关，过程高风险、需自己承担变砖风险。</li>
+<li><strong>适用场景</strong>: 想在 K20 Pro/Mi 9T Pro 上跑 Windows、或研究 ARM 设备装系统时参考。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>misc</code></li>
+</ul>
+<h3 id="woa-raphaelwoa-raphael-48"><code>woa-raphael/woa-raphael</code> · ⭐48<a class="headerlink" href="#woa-raphaelwoa-raphael-48" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 给红米 K20 Pro / 小米 9T Pro 装 Windows 的早期社区指南</li>
+<li><strong>做什么</strong>: 和上面 new-WoA-Raphael 同题材的另一个仓库，项目处于早期阶段，提供安装指南、状态、双启动、重装/卸载和排错文档，同样强调改分区表风险极高、自担后果。</li>
+<li><strong>适用场景</strong>: 想要在 K20 Pro/Mi 9T Pro 上折腾 Windows 的备选指南，作为对照参考。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>misc</code></li>
+</ul>
+<h3 id="xishang0128payload-dumper-go-28-go"><code>xishang0128/payload-dumper-go</code> · ⭐28 · Go<a class="headerlink" href="#xishang0128payload-dumper-go-28-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 提取 Android OTA payload 的 Go 库与命令行工具</li>
+<li><strong>做什么</strong>: 多线程高性能解包 Android OTA payload，支持本地文件、HTTP URL 和 ZIP，支持增量 OTA，可提取单分区、列分区、取元数据，也提供 Termux 变体。功能与 ssut 版类似。</li>
+<li><strong>适用场景</strong>: 刷机党从 OTA 包或在线链接里抽取 boot/system 等分区，或作为 Go 库嵌入自己的工具。</li>
+<li><strong>标签</strong>: <code>device-tools</code> <code>android-root</code></li>
+</ul>
+<h3 id="debaucheebarrier-30837-c"><code>debauchee/barrier</code> · ⭐30837 · C<a class="headerlink" href="#debaucheebarrier-30837-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 用一套键鼠跨机控制多台电脑的开源 KVM 软件</li>
+<li><strong>做什么</strong>: 从 Synergy 1.9 分支出来的软件版 KVM，装在多台机器后，把鼠标移到屏幕边缘或按键就能切换到另一台机器控制，还支持剪贴板共享。主打稳定简单，兼容 Windows/macOS/Linux/FreeBSD。</li>
+<li><strong>适用场景</strong>: 桌面上多台电脑（或 PC+笔记本）想共用一套键鼠时用它，对标商业软件 Synergy。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="mhmdeveoplus_ota_finder-28-kotlin"><code>mhmdeve/oplus_ota_finder</code> · ⭐28 · Kotlin<a class="headerlink" href="#mhmdeveoplus_ota_finder-28-kotlin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 活跃</li>
+<li><strong>一句话</strong>: 查找并下载 OPPO/Realme/一加 OTA 更新的安卓应用</li>
+<li><strong>做什么</strong>: 安卓 App，能查到 Realme、Oppo、OnePlus 设备的最新 OTA 更新，显示版本号、文件大小、MD5、安全补丁等信息，支持直接下载或复制下载链接。</li>
+<li><strong>适用场景</strong>: 想手动下载官方 OTA 全量包刷机或存档时使用。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+<h3 id="suyuan87sdat2img-1-python"><code>suyuan87/sdat2img</code> · ⭐1 · Python<a class="headerlink" href="#suyuan87sdat2img-1-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>状态</strong>: 沉寂</li>
+<li><strong>一句话</strong>: 将 Android 稀疏数据镜像（.dat）转为 ext4 镜像</li>
+<li><strong>做什么</strong>: 一个把 system.new.dat 这类稀疏数据格式转换成可挂载的 ext4 镜像的转换工具（名称即用途），无描述，README 只有 AGPL 许可证文本。常见于 ROM 解包流程。</li>
+<li><strong>适用场景</strong>: 解包 ROM 线刷包、把 .dat/.br 转成 img 再挂载提取文件时使用。</li>
+<li><strong>标签</strong>: <code>device-tools</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
