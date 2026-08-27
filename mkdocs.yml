@@ -1,0 +1,24 @@
+site_name: GitHub Star 知识库
+site_description: qiansekai 的 GitHub star 中文速览知识库
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.instant
+    - search.highlight
+markdown_extensions:
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+nav:
+  - 首页: index.md
+  - 安卓内核与 Root: 01-android-root.md
+  - 安卓逆向与 Hook: 02-android-reverse.md
+  - 设备互联与刷机: 03-device-tools.md
+  - AI Agent 与 MCP: 04-ai-agent.md
+  - 开发工具与基础设施: 05-dev-tools.md
+  - 安全与 CTF: 06-security.md
+  - 自动化与脚本: 07-automation.md
+  - 音游、媒体与图像: 08-media-game.md
+  - 学习与考试: 09-study.md
+  - 杂项: 10-misc.md

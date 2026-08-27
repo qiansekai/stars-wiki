@@ -1,0 +1,8 @@
+# 原始数据与中间产物（可再生，不入库）
+raw/
+batches/
+cards/
+
+# 本地渲染缓存
+site/
+.cache/
